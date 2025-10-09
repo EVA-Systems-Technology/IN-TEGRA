@@ -18,7 +18,7 @@ namespace IN_TEGRA.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult CriacaoConta()
         {
             return View();
         }

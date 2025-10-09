@@ -4,27 +4,31 @@
 
 <body>
     <div class="d-flex justify-content-between">
-        <form class="rounded bg-black p-3">
-            <div class="form-group text-white">
+        <form class="p-3" style="background: #D9D9D9; border-radius: 10px; position: absolute; left: 15%;">
+            <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="rounded form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted"></small>
             </div>
-            <div class="form-group mb-4  text-white">
+            <div class="form-group mb-4">
                 <label for="exampleInputPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" style="background: #B5B2B2; border-radius: 10px; color:white;">
             </div>
             <div class="d-flex flex-column mb-2">
-                <button type="submit" class="btn btn-primary bg-black mb-2">Entrar</button>
-                <button type="submit" class="btn btn-primary bg-black">Criar Conta</button>
+                <button type="submit" class="btn btn-primary bg-#0900FF mb-2">Entrar</button>
+                <button type="submit" class="btn btn-primary bg-#0900FF">Criar Conta</button>
             </div>
             <div class="form-group mb-2">
-                <a href=""><label class="form-check-label" for="exampleCheck1">Esqueceu seu login?</label></a>
+                <a href="#" class="text-decoration-none text-black"><label class="form-check-label" for="exampleCheck1">Esqueceu seu login?</label></a>
             </div>
-            <div class="form-group form-check text-white">
+            <div class="form-group form-check text-black">
                 <label class="form-check-label" for="exampleCheck1">Lembrar-se de mim</label>
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
             </div>
         </form>
+        <div class="container_inspiracao" style="width: 20vw; min-width: 200px; position: absolute; right: 15%;">
+            <h5 style="color: #0900FF ">Conectando vidas, rompendo barreiras.</h5>
+            <img src="~/assets/slide1.png" style="width: 100%;"/>
+        </div>
     </div>
 </body>

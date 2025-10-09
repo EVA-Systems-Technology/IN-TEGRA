@@ -64,3 +64,4 @@ C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\refint\IN-TEG
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\IN-TEGRA.pdb
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\IN-TEGRA.genruntimeconfig.cache
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\ref\IN-TEGRA.dll
+C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\IN-TEGRA.sourcelink.json
