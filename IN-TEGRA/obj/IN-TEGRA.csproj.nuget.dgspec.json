@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj": {}
+    "C:\\Users\\3ds\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj": {
+    "C:\\Users\\3ds\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj",
+        "projectUniqueName": "C:\\Users\\3ds\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj",
         "projectName": "IN-TEGRA",
-        "projectPath": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj",
-        "packagesPath": "C:\\Users\\sacol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA\\obj\\",
+        "projectPath": "C:\\Users\\3ds\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj",
+        "packagesPath": "C:\\Users\\3ds\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\3ds\\Desktop\\IN-TEGRA\\IN-TEGRA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\visual studio\\shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sacol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\3ds\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
