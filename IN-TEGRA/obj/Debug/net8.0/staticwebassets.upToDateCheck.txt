@@ -3,6 +3,7 @@ wwwroot\assets\logo.png
 wwwroot\assets\lupa1.png
 wwwroot\assets\perfil.png
 wwwroot\assets\slide1.png
+wwwroot\assets\slideprincipal.png
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
