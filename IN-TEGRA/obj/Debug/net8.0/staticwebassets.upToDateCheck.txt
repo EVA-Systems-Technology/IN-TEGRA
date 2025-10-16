@@ -1,4 +1,8 @@
 wwwroot\assets\carrinho.png
+wwwroot\assets\icons\facebook white.png
+wwwroot\assets\icons\instagram white.png
+wwwroot\assets\icons\linkedin white.png
+wwwroot\assets\icons\whatsapp white.png
 wwwroot\assets\logo.png
 wwwroot\assets\lupa1.png
 wwwroot\assets\perfil.png

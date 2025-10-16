@@ -32,8 +32,16 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJyaW5oby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Compra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wcmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/CriacaoConta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmlhY2FvQ29udGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Index.cshtml]

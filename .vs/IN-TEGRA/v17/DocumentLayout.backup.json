@@ -3,60 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\wwwroot\\assets\\slideprincipal.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\wwwroot\\assets\\slideprincipal.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\wwwroot\\assets\\slide1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\wwwroot\\assets\\slide1.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\telaprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\telaprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\compra.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\compra.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\criacaoconta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\criacaoconta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\carrinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\telaprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\telaprincipal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\shared\\_layout_remove.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\shared\\_layout_remove.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\wwwroot\\assets\\slideprincipal.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\wwwroot\\assets\\slideprincipal.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,11 +70,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T02:43:03.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Compra.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Compra.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Home\\Compra.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Compra.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Views\\Home\\Compra.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAkAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-16T01:22:23.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "slideprincipal.png - PNG [3696x1840, 32 bits, PNG]",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\assets\\slideprincipal.png",
               "RelativeDocumentMoniker": "IN-TEGRA\\wwwroot\\assets\\slideprincipal.png",
@@ -82,32 +112,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "slide1.png - PNG [1716x2573, 32 bits, PNG]",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\assets\\slide1.png",
-              "RelativeDocumentMoniker": "IN-TEGRA\\wwwroot\\assets\\slide1.png",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\assets\\slide1.png - PNG [1716x2573, 32 bits, PNG]",
-              "RelativeToolTip": "IN-TEGRA\\wwwroot\\assets\\slide1.png - PNG [1716x2573, 32 bits, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-10-14T02:21:42.439Z",
-              "EditorCaption": " - PNG [1716x2573, 32 bits, PNG]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Carrinho.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Carrinho.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Home\\Carrinho.cshtml",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Carrinho.cshtml",
               "RelativeToolTip": "IN-TEGRA\\Views\\Home\\Carrinho.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-14T02:08:13.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "_Layout_remove.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\_Layout_remove.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Shared\\_Layout_remove.cshtml",
@@ -115,23 +133,25 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\Shared\\_Layout_remove.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAIwA0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-09T02:14:45.974Z"
+              "WhenOpened": "2025-10-09T02:14:45.974Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Program.cs",
               "RelativeDocumentMoniker": "IN-TEGRA\\Program.cs",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Program.cs",
               "RelativeToolTip": "IN-TEGRA\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAwwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T02:13:43.101Z"
+              "WhenOpened": "2025-10-09T02:13:43.101Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\appsettings.json",
               "RelativeDocumentMoniker": "IN-TEGRA\\appsettings.json",
@@ -143,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Shared\\Error.cshtml",
@@ -155,59 +175,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TelaPrincipal.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\TelaPrincipal.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Home\\TelaPrincipal.cshtml",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\TelaPrincipal.cshtml",
               "RelativeToolTip": "IN-TEGRA\\Views\\Home\\TelaPrincipal.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-09T01:45:12.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "IN-TEGRA\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\HomeController.cs",
               "RelativeToolTip": "IN-TEGRA\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAUwB4AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T01:22:07.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "CriacaoConta.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\CriacaoConta.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Home\\CriacaoConta.cshtml",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\CriacaoConta.cshtml",
               "RelativeToolTip": "IN-TEGRA\\Views\\Home\\CriacaoConta.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-09T01:16:00.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwDEAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwDwAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-09T01:01:23.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\_ViewStart.cshtml",
@@ -215,11 +235,12 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-09T01:01:20.354Z"
+              "WhenOpened": "2025-10-09T01:01:20.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\_ViewImports.cshtml",
@@ -227,11 +248,12 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-09T01:01:19.469Z"
+              "WhenOpened": "2025-10-09T01:01:19.469Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Home\\Index.cshtml",
@@ -239,8 +261,7 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-07T22:41:49.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T22:41:49.287Z"
             }
           ]
         }
