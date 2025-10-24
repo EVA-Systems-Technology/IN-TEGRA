@@ -1,0 +1,71 @@
+﻿@model IEnumerable<IN_TEGRA.Models.Cliente>
+
+@{
+    ViewData["Title"] = "ListaClientes";
+}
+
+<h1>ListaClientes</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenhaCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CpfCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefoneCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimentoCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenhaCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CpfCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimentoCliente)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "AtualizarCliente", new { idCliente = item.IdCliente}) |
+                @Html.ActionLink("Detalhes", "DetalhesCliente", new { idCliente = item.IdCliente}) |
+                @Html.ActionLink("Excluir", "ExcluirCliente", new { idCliente = item.IdCliente })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

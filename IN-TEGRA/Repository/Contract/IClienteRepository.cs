@@ -10,7 +10,7 @@ namespace IN_TEGRA.Repository.Contract
 
         void AtualizarCliente(Cliente cliente);
 
-        void ObterClientePorId(int IdCliente);
+        Cliente ObterClientePorId(int IdCliente);
 
         void ExcluirCliente(int IdCliente);
     }

@@ -26,5 +26,40 @@ namespace IN_TEGRA.Controllers
             }
                 return View();
         }
+
+        public IActionResult ListaClientes()
+        {
+            return View(_clienteRepository.ObterTodosClientes());
+        }
+
+        public IActionResult ExcluirCliente(int idCliente)
+        {
+            _clienteRepository.ExcluirCliente(idCliente);
+            return RedirectToAction("ListaClientes");
+        }
+
+        [HttpGet]
+        public IActionResult DetalhesCliente(int IdCliente)
+        {
+            return View(_clienteRepository.ObterClientePorId(IdCliente));
+        }
+        [HttpPost]
+        public IActionResult DetalhesCliente(Cliente cliente)
+        {
+
+            return RedirectToAction("ListaClientes");
+        }
+        [HttpGet]
+        public IActionResult AtualizarCLiente(int IdCliente)
+        {
+            return View(_clienteRepository.ObterClientePorId(IdCliente));
+        }
+        [HttpPost]
+        public IActionResult AtualizarCLiente(Cliente cliente)
+        {
+            _clienteRepository.AtualizarCliente(cliente);
+
+            return RedirectToAction("ListaClientes");
+        }
     }
 }

@@ -1,11 +1,11 @@
 create database IntegraDB;
-
 use IntegraDB;
 
 -- TABELA DO cliente (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
 
 create table tbCliente(
-	CpfCli char(11) primary key,
+	IdCliente int primary key auto_increment,
+	CpfCli char(11) not null,
     NomeCli varchar(250) not null,
     EmailCli varchar(256) unique not null,
     TelefoneCli varchar(11),
@@ -31,8 +31,8 @@ create table tbLogin(
     CpfCli char(11),
     TipoLogin varchar(11),
     DataLogin datetime not null default current_timestamp,
-    foreign key (IdFunc) references tbFuncionario(IdFunc),
-    foreign key (CpfCli) references tbCliente(CpfCli)
+    foreign key (IdFunc) references tbFuncionario(IdFunc)
+   -- foreign key (CpfCli) references tbCliente(CpfCli)
 );
 
 -- TABELA DO PRODUTO (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
@@ -79,8 +79,8 @@ create table tbEstoque(
 create table tbCarrinho (
 	IdCarrinho int primary key auto_increment,
     CpfCli char(11) not null,
-    ValorCarrinho decimal (10,2) default 0,
-    foreign key (CpfCli) references tbCliente(CpfCli)
+    ValorCarrinho decimal (10,2) default 0
+    -- foreign key (CpfCli) references tbCliente(CpfCli)
 );
 
 -- tabela do itemcarrinho blablabla vc ja sabe
@@ -103,7 +103,7 @@ create table tbPedido (
     FretePedido decimal (10,2) not null default 0,
     ValorPedido decimal(10,2) not null,
     ConfirmacaoPedido boolean not null default false,
-    foreign key (CpfCli) references tbCliente(CpfCli),
+   -- foreign key (CpfCli) references tbCliente(CpfCli),
     foreign key (IdCarrinho) references tbCarrinho(IdCarrinho)
 );
 
@@ -132,7 +132,7 @@ create table tbPagamento (
     foreign key (IdPedido) references tbPedido(IdPedido)
 );
 
-select * from tbProduto;
+select * from tbcliente;
 
 insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Cadeira de rodas xlr8", "Uma cadeira de rodas baseada na coloração do alien XLR8 do Ben 10", "image/cadeira.png", 1234.99);
 

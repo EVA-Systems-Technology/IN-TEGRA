@@ -1,13 +1,8 @@
 wwwroot\assets\carrinho.png
-wwwroot\assets\icons\facebook white.png
-wwwroot\assets\icons\instagram white.png
-wwwroot\assets\icons\linkedin white.png
-wwwroot\assets\icons\whatsapp white.png
 wwwroot\assets\logo.png
 wwwroot\assets\lupa1.png
 wwwroot\assets\perfil.png
 wwwroot\assets\slide1.png
-wwwroot\assets\slideprincipal.png
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
@@ -68,3 +63,8 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\assets\slideprincipal.png
+wwwroot\assets\icons\facebook white.png
+wwwroot\assets\icons\instagram white.png
+wwwroot\assets\icons\linkedin white.png
+wwwroot\assets\icons\whatsapp white.png
