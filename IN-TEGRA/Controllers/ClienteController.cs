@@ -59,7 +59,7 @@ namespace IN_TEGRA.Controllers
         {
             _clienteRepository.AtualizarCliente(cliente);
 
-            return RedirectToAction("ListaClientes");
+            return RedirectToAction("Index");
         }
     }
 }

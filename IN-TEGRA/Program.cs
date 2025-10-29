@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews();
 
 // Adicionando a interface como serviço 
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 var app = builder.Build();
 
@@ -24,6 +25,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Produto}/{action=Index}/{id?}");
 
 app.Run();
