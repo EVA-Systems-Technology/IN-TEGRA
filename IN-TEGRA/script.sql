@@ -1,6 +1,8 @@
 create database IntegraDB;
 use IntegraDB;
 
+
+
 -- TABELA DO cliente (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
 
 create table tbCliente(
@@ -61,18 +63,20 @@ create table tbProduto(
     NomeProd varchar(150) unique not null,
     DescProd varchar (700) not null,
     ImgProd varchar(700) not null,
-    PrecoProd decimal(10,2) not null
+    PrecoProd decimal(10,2) not null,
+    QtdProd int not null,
+    CategoriaProd varchar(150)  not null
 );
 
 -- ESQUECI O ESTOQUE ANTES VAI FICAR AQ 
-
+/*
 create table tbEstoque(
 	IdEstoque int primary key auto_increment,
     IdProd int not null,
     QtdEstoque int not null,
     foreign key (IdProd) references tbProduto(IdProd)
 );
-
+*/
 
 -- TABELA DO carrinho (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
 
@@ -133,9 +137,13 @@ create table tbPagamento (
 );
 
 select * from tbcliente;
+select * from tbproduto;
 
 insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Cadeira de rodas xlr8", "Uma cadeira de rodas baseada na coloração do alien XLR8 do Ben 10", "image/cadeira.png", 1234.99);
 
 insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Garfo Adaptado", "um garfo adaptado para facilitar a praticidade de pessoas com deficiencias motoras ao se alimentarem! ", "image/garfo.png", 78.99);
 
 insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Muletas 'The root'", "Par de muletas com tamanho ajustavel! ", "image/garfo.png", 83.99)
+
+
+-- trigger de quando fizer login ele registra na tb login

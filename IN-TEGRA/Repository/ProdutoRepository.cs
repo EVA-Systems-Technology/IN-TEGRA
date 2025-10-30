@@ -20,7 +20,7 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("Update tbProduto set NomeProd=@NomeProd, DescProd=@DescProd, ImgProd=@ImgProd, PrecoProd=@PrecoProd, QtdProd=@QtdProd where IdProd=@IdProd;", conexao);
+                MySqlCommand cmd = new MySqlCommand("Update tbProduto set NomeProd=@NomeProd, DescProd=@DescProd, ImgProd=@ImgProd, PrecoProd=@PrecoProd CategoriaProd=@CategoriaProd, QtdProd=@QtdProd where IdProd=@IdProd;", conexao);
 
                 cmd.Parameters.AddWithValue("@IdProd", produto.IdProd);
                 cmd.Parameters.AddWithValue("@NomeProd", produto.NomeProduto);
@@ -28,6 +28,7 @@ namespace IN_TEGRA.Repository
                 cmd.Parameters.AddWithValue("ImgProd", produto.ImagemProduto);
                 cmd.Parameters.AddWithValue("@PrecoProd", produto.PrecoProduto);
                 cmd.Parameters.AddWithValue("@QtdProd", produto.QuantidadeProduto);
+                cmd.Parameters.AddWithValue("@CategoriaProd", produto.CategoriaProduto);
 
                 cmd.ExecuteNonQuery();
                 conexao.Close();
@@ -42,13 +43,14 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd, QtdProd) values(@NomeProd, @DescProd, @ImgProd, @PrecoProd, @QtdProd)", conexao);
+                MySqlCommand cmd = new MySqlCommand("insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd, QtdProd, CategoriaProd) values(@NomeProd, @DescProd, @ImgProd, @PrecoProd, @QtdProd, @CategoriaProd)", conexao);
 
                 cmd.Parameters.AddWithValue("@NomeProd", produto.NomeProduto);
                 cmd.Parameters.AddWithValue("@DescProd", produto.DescricaoProduto);
                 cmd.Parameters.AddWithValue("ImgProd", produto.ImagemProduto);
                 cmd.Parameters.AddWithValue("@PrecoProd", produto.PrecoProduto);
                 cmd.Parameters.AddWithValue("@QtdProd", produto.QuantidadeProduto);
+                cmd.Parameters.AddWithValue("@CategoriaProd", produto.CategoriaProduto);
 
                 cmd.ExecuteNonQuery();
                 conexao.Close();
@@ -92,7 +94,8 @@ namespace IN_TEGRA.Repository
                                 DescricaoProduto = Convert.ToString(dr["DescProd"]),
                                 ImagemProduto = Convert.ToString(dr["ImgProd"]),
                                 PrecoProduto = Convert.ToInt32(dr["PrecoProd"]),
-                                QuantidadeProduto = Convert.ToInt32(dr["QtdProd"])
+                                QuantidadeProduto = Convert.ToInt32(dr["QtdProd"]),
+                                CategoriaProduto = Convert.ToString(dr["CategoriaProd"])
                             }
                     );
                 }
@@ -125,6 +128,7 @@ namespace IN_TEGRA.Repository
                     produto.ImagemProduto = Convert.ToString(dr["ImgProd"]);
                     produto.PrecoProduto = Convert.ToInt32(dr["PrecoProd"]);
                     produto.QuantidadeProduto = Convert.ToInt32(dr["QtdProd"]);
+                    produto.CategoriaProduto = Convert.ToString(dr["CategoriaProd"]);
 
 
 

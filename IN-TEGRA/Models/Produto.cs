@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace IN_TEGRA.Models
 {
     public class Produto
     {
         [Display(Name = "Código")]
+        [ValidateNever]
         public int IdProd { get; set; }
 
         [Display(Name = "Nome do Produto")]
@@ -26,6 +28,10 @@ namespace IN_TEGRA.Models
         [Display(Name = "Imagem do Produto")]
         [Required(ErrorMessage = "O campo imagem é obrigatorio")]
         public string ImagemProduto { get; set; }
+
+        [Display(Name = "Categoria do Produto")]
+        [Required(ErrorMessage = "O campo categoria é obrigatorio")]
+        public string CategoriaProduto { get; set; }
 
     }
 }

@@ -1,8 +1,28 @@
 ﻿@model IN_TEGRA.Models.Produto
 
+<script>
+    function Sucesso() {
+        alert("Produto cadastrado com sucesso!");
+    }
+    function Falha() {
+        alert("Falha ao cadastrar o produto. Tente novamente.");
+    }
+</script>
+
 @{
     ViewData["Title"] = "Cadastro";
+
+    if (TempData["Sucesso"] != null)
+    {
+        <script>Sucesso()</script>
+    }
+    else if (TempData["Falha"] != null)
+    {
+        <script>Falha()</script>
+        
+    }
 }
+
 
 <h1>Cadastro</h1>
 
@@ -38,11 +58,18 @@
                 <span asp-validation-for="ImagemProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="CategoriaProduto" class="control-label"></label>
+                <input asp-for="CategoriaProduto" class="form-control" />
+                <span asp-validation-for="CategoriaProduto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+
+
 
 <div>
     <a asp-action="Index">Back to List</a>

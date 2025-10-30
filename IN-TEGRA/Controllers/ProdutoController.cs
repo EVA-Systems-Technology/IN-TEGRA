@@ -25,9 +25,14 @@ namespace IN_TEGRA.Controllers
         {
             if (ModelState.IsValid)
             {
+                TempData["Sucesso"] = true;
                 _produtoRepository.CadastrarProduto(produto);
             }
-            return View();
+            else
+            {
+                TempData["Falha"] = true;
+            }
+                return RedirectToAction("Cadastro");
         }
         public IActionResult Index()
         {
