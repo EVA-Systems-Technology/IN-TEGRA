@@ -22,7 +22,7 @@
                                     <p class="card-text"><strong>Preço: R$ @produto.PrecoProduto.ToString("F2")</strong></p>
                                     <p class="card-text"><small class="text-muted">Estoque: @produto.QuantidadeProduto</small></p>
 
-                                    <form asp-controller="Carrinho" asp-action="AdicionarCarrinho" method="post">
+                                    <form asp-controller="Carrinho" asp-action="AddCarrinho" method="post">
                                         <input type="hidden" name="produtoId" value="@produto.IdProd" />
                                         <div class="form-group mb-2">
                                             <label for="quantidade-@produto.IdProd">Quantidade:</label>
@@ -49,14 +49,14 @@
     </section>
     <br />
     <section> 
-        <div class="container__produtos">
-            <aside class="sidebar__produtos">
+        <div class="container__produtos" style="display:flex;">
+            <aside class="sidebar__produtos" style="display: inline;">
                 @foreach (var produto in Model)
                 {
                     <input type="checkbox" class="categoria">@produto.CategoriaProduto
                         
                 }
-                </a>
+             </aside>
             <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex;">
                     @foreach (var produto in Model)
                     {
@@ -68,7 +68,7 @@
                                     <p class="card-text"><strong>Preço: R$ @produto.PrecoProduto.ToString("F2")</strong></p>
                                     <p class="card-text"><small class="text-muted">Estoque: @produto.QuantidadeProduto</small></p>
 
-                                    <form asp-controller="Carrinho" asp-action="AdicionarCarrinho" method="post">
+                                    <form asp-controller="Carrinho" asp-action="AddCarrinho" method="post">
                                         <input type="hidden" name="produtoId" value="@produto.IdProd" />
                                         <div class="form-group mb-2">
                                             <label for="quantidade-@produto.IdProd">Quantidade:</label>

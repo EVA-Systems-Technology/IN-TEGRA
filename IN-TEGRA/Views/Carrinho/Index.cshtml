@@ -1,0 +1,69 @@
+﻿@model List<IN_TEGRA.Models.ItemCarrinho>
+@{
+    ViewData["Title"] = "Seu Carrinho";
+}
+
+<h1>Seu Carrinho de Compras</h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço Unitário</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Produto.NomeProduto</td>
+                    <td>R$ @item.PrecoProd.ToString("F2")</td>
+                    <td>
+                        <form asp-controller="Carrinho" asp-action="AlterarQuantidadeItem" method="post" class="d-inline">
+                            <input type="hidden" name="produtoId" value="@item.ProdId" />
+                            <input type="number" name="novaQuantidade" value="@item.QuantidadeProd" min="1" style="width: 70px;"
+                                   onchange="this.form.submit()" />
+                        </form>
+                    </td>
+                    <td>R$ @item.Total.ToString("F2")</td>
+                    <td>
+                        <form asp-controller="Carrinho" asp-action="RemoverItem" method="post" class="d-inline">
+                            <input type="hidden" name="produtoId" value="@item.ProdId" />
+                            <button type="submit" class="btn btn-danger btn-sm">Remover</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right"><strong>Total do Carrinho:</strong></td>
+                <td><strong>R$ @ViewBag.TotalCarrinho.ToString("F2")</strong></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-right">
+        <a asp-controller="Pedido" asp-action="Checkout" class="btn btn-success">Finalizar Compra</a>
+        <form asp-controller="Carrinho" asp-action="LimparCarrinho" method="post" class="d-inline">
+            <button type="submit" class="btn btn-warning">Limpar Carrinho</button>
+        </form>
+    </div>
+}
+
+else
+{
+    <p>Seu carrinho está vazio.</p>
+    <a asp-controller="Produto" asp-action="Index" class="btn btn-primary">Continuar Comprando</a>
+}
