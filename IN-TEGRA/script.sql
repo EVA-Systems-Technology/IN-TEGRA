@@ -1,18 +1,19 @@
 create database IntegraDB;
 use IntegraDB;
-
+drop database IntegraDB;
 
 
 -- TABELA DO cliente (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
 
 create table tbCliente(
 	IdCliente int primary key auto_increment,
-	CpfCli char(11) not null,
+	CpfCli int not null,
     NomeCli varchar(250) not null,
     EmailCli varchar(256) unique not null,
     TelefoneCli varchar(11),
     SenhaCli varchar(100) not null,
-    NascCli date not null
+    NascCli date not null,
+    Situacao char(1) not null
 );
 
 -- TABELA DO FUNC (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
@@ -22,7 +23,8 @@ create table tbFuncionario(
     NomeFunc varchar(250) not null,
     EmailFunc varchar(256) unique not null,
     SenhaFunc varchar(100) not null,
-    CpfFunc char(11) unique not null
+    CpfFunc char(11) unique not null,
+    TipoFunc varchar(8) not null
 );
 
 -- TABELA DO LOGIN (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
@@ -30,12 +32,17 @@ create table tbFuncionario(
 create table tbLogin(
 	IdLogin int primary key auto_increment,
 	IdFunc int,
-    CpfCli char(11),
+    IdCliente int,
     TipoLogin varchar(11),
     DataLogin datetime not null default current_timestamp,
-    foreign key (IdFunc) references tbFuncionario(IdFunc)
-   -- foreign key (CpfCli) references tbCliente(CpfCli)
+    foreign key (IdFunc) references tbFuncionario(IdFunc),
+    foreign key (IdCliente) references tbCliente(IdCliente)
 );
+
+
+-- trigger de quando fizer um novo registro/login ele registra o login
+
+
 
 -- TABELA DO PRODUTO (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
 

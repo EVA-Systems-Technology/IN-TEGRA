@@ -1,3 +1,5 @@
+using IN_TEGRA.Libraries.Sessao;
+using IN_TEGRA.Libraries.Sessao.Login;
 using IN_TEGRA.Repository;
 using IN_TEGRA.Repository.Contract;
 
@@ -19,6 +21,23 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ICarrinhoRepository, CarrinhoRepository>();
+builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+
+builder.Services.AddScoped<LoginCliente>();
+builder.Services.AddScoped<Sessao>();
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+    {
+        options.IdleTimeout = TimeSpan.FromSeconds(60);
+        options.Cookie.HttpOnly = true;
+        options.Cookie.IsEssential = true;
+    }
+ );
+
+builder.Services.AddMvc().AddSessionStateTempDataProvider();
 
 var app = builder.Build();
 
@@ -34,6 +53,9 @@ app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseCookiePolicy();
+
 
 app.MapControllerRoute(
     name: "default",

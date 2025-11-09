@@ -23,7 +23,7 @@ namespace IN_TEGRA.Models
 
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "O campo CPF é obrigatorio")]
-        public char CpfCliente { get; set; }
+        public int CpfCliente { get; set; }
 
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "O campo Telefone é obrigatorio")]
@@ -34,5 +34,10 @@ namespace IN_TEGRA.Models
         [Required(ErrorMessage = "O campo Data de Nascimento é obrigatorio")]
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido.")]
         public DateOnly DataNascimentoCliente { get; set; }
+
+
+        [Display(Name = "Situação")]
+        [Required(ErrorMessage = "O campo Situação é obrigatorio")]
+        public string SituacaoCliente { get; set; } = "A";
     }
 }

@@ -7,7 +7,7 @@
         public string EmailFuncionario { get; set; }
         public string SenhaFuncionario { get; set; }
         public string CpfFuncionario { get; set; }
-        public int NivelAcesso { get; set; }
+        public string TipoFunc { get; set; }
 
 
     }
