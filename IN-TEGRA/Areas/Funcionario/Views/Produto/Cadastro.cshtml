@@ -1,28 +1,13 @@
 ﻿@model IN_TEGRA.Models.Produto
 
-<script>
-    function Sucesso() {
-        alert("Produto cadastrado com sucesso!");
-    }
-    function Falha() {
-        alert("Falha ao cadastrar o produto. Tente novamente.");
-    }
-</script>
-
 @{
     ViewData["Title"] = "Cadastro";
-
-    if (TempData["Sucesso"] != null)
-    {
-        <script>Sucesso()</script>
-    }
-    else if (TempData["Falha"] != null)
-    {
-        <script>Falha()</script>
-        
-    }
 }
 
+@if (TempData["MSG"] != null)
+{
+    <script>alert("@TempData["MSG"]")</script>
+}
 
 <h1>Cadastro</h1>
 
@@ -69,9 +54,7 @@
     </div>
 </div>
 
-
-
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="ListaProdutos">Back to List</a>
 </div>
 

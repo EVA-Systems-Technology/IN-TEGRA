@@ -1,4 +1,4 @@
-﻿using IN_TEGRA.Libraries.Sessao.Login;
+﻿using IN_TEGRA.Libraries.Login;
 using IN_TEGRA.Models;
 using IN_TEGRA.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
@@ -63,44 +63,5 @@ namespace IN_TEGRA.Controllers
         }
 
 
-
-        //[Admin]
-        public IActionResult ListaClientes()
-        {
-            return View(_clienteRepository.ObterTodosClientes());
-        }
-        //[Admin]
-        public IActionResult ExcluirCliente(int idCliente)
-        {
-            _clienteRepository.ExcluirCliente(idCliente);
-            return RedirectToAction("ListaClientes");
-        }
-        //[Admin]
-        [HttpGet]
-        public IActionResult DetalhesCliente(int IdCliente)
-        {
-            return View(_clienteRepository.ObterClientePorId(IdCliente));
-        }
-        //[Admin]
-        [HttpPost]
-        public IActionResult DetalhesCliente(Cliente cliente)
-        {
-
-            return RedirectToAction("ListaClientes");
-        }
-        //[Admin]
-        [HttpGet]
-        public IActionResult AtualizarCLiente(int IdCliente)
-        {
-            return View(_clienteRepository.ObterClientePorId(IdCliente));
-        }
-        //[Admin]
-        [HttpPost]
-        public IActionResult AtualizarCLiente(Cliente cliente)
-        {
-            _clienteRepository.AtualizarCliente(cliente);
-
-            return RedirectToAction("Index");
-        }
     }
 }

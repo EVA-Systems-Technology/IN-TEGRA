@@ -23,7 +23,7 @@ create table tbFuncionario(
     NomeFunc varchar(250) not null,
     EmailFunc varchar(256) unique not null,
     SenhaFunc varchar(100) not null,
-    CpfFunc char(11) unique not null,
+    CpfFunc int unique not null,
     TipoFunc varchar(8) not null
 );
 
@@ -145,6 +145,9 @@ create table tbPagamento (
 
 select * from tbcliente;
 select * from tbproduto;
+select * from tbfuncionario;
+
+insert into tbfuncionario (nomefunc, emailfunc, senhafunc, cpffunc, tipofunc) values ("admin", "admin@admin.com", "123", 12333, "G");
 
 insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Cadeira de rodas xlr8", "Uma cadeira de rodas baseada na coloração do alien XLR8 do Ben 10", "image/cadeira.png", 1234.99);
 

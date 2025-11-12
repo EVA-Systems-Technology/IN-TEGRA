@@ -83,7 +83,7 @@ namespace IN_TEGRA.Repository
 
                 while (dr.Read())
                 {
-                    funcionario.IdFuncionario = Convert.ToInt32(dr["IdFuncionario"]);
+                    funcionario.IdFuncionario = Convert.ToInt32(dr["IdFunc"]);
                     funcionario.NomeFuncionario = dr["NomeFunc"].ToString();    
                     funcionario.EmailFuncionario = dr["EmailFunc"].ToString();
                     funcionario.SenhaFuncionario = dr["SenhaFunc"].ToString();

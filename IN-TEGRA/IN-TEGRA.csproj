@@ -13,4 +13,9 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Funcionario\Data\" />
+    <Folder Include="Areas\Funcionario\Models\" />
+  </ItemGroup>
+
 </Project>

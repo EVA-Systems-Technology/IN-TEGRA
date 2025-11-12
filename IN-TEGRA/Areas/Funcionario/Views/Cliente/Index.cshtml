@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<IN_TEGRA.Models.Cliente>
 
 @{
-    ViewData["Title"] = "ListaClientes";
+    ViewData["Title"] = "Index";
 }
 
-<h1>ListaClientes</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -31,7 +31,7 @@
                 @Html.DisplayNameFor(model => model.TelefoneCliente)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataNascimentoCliente)
+                @Html.DisplayNameFor(model => model.SituacaoCliente)
             </th>
             <th></th>
         </tr>
@@ -58,12 +58,12 @@
                 @Html.DisplayFor(modelItem => item.TelefoneCliente)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DataNascimentoCliente)
+                @Html.DisplayFor(modelItem => item.SituacaoCliente)
             </td>
             <td>
-                @Html.ActionLink("Atualizar", "AtualizarCliente", new { idCliente = item.IdCliente}) |
-                @Html.ActionLink("Detalhes", "DetalhesCliente", new { idCliente = item.IdCliente}) |
-                @Html.ActionLink("Excluir", "ExcluirCliente", new { idCliente = item.IdCliente })
+                   @Html.ActionLink("Atualizar", "AtualizarCliente", new { idCliente = item.IdCliente }) |
+                   @Html.ActionLink("Detalhes", "DetalhesCliente", new { idCliente = item.IdCliente }) |
+                   @Html.ActionLink("Excluir", "ExcluirCliente", new { idCliente = item.IdCliente })
             </td>
         </tr>
 }

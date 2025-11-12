@@ -1,0 +1,72 @@
+﻿@model IEnumerable<IN_TEGRA.Models.Produto>
+
+@{
+    ViewData["Title"] = "ListaProdutos";
+}
+
+<h1>ListaProdutos</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagemProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoriaProduto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.IdProd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.NomeProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.PrecoProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.DescricaoProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.QuantidadeProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.ImagemProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => produto.CategoriaProduto)
+                </td>
+                <td>
+                    @Html.ActionLink("Alterar", "AtualizarProduto", new { Idprod = produto.IdProd }) |
+                    @Html.ActionLink("Detalhes", "DetalhesProduto", new { IdProd = produto.IdProd }) |
+                    @Html.ActionLink("Excluir", "ExcluirProduto", new { IdProd = produto.IdProd })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

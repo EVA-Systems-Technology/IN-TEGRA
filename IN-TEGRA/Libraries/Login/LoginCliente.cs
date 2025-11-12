@@ -1,14 +1,14 @@
 ﻿using IN_TEGRA.Models;
 using Newtonsoft.Json;
 
-namespace IN_TEGRA.Libraries.Sessao.Login
+namespace IN_TEGRA.Libraries.Login
 {
     public class LoginCliente
     {
         private string Key = "Login.Cliente";
-        private Sessao _sessao;
+        private Sessao.Sessao _sessao;
 
-        public LoginCliente(Sessao sessao)
+        public LoginCliente(Sessao.Sessao sessao)
         {
             _sessao = sessao;
         }
