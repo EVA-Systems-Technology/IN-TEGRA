@@ -16,6 +16,7 @@
 
 @foreach (var item in (List<ItemPedido>)ViewBag.itens)
 {
+    <p>@item.IdProduto</p>
     <p>@item.NomeProduto</p>
     <p>@item.QuantidadeItemPedido</p>
     <p>@item.ValorItemPedido</p>

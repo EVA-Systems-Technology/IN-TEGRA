@@ -85,16 +85,6 @@ namespace IN_TEGRA.Controllers
             var pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
             // pegando os itens do pedido
             var itenspedido = _pedidoRepository.ObterItensPedido(IdPedido);
-
-            foreach (var item in itenspedido) 
-            {
-                item.NomeProduto = item.NomeProduto;
-                item.IdProduto = item.IdProduto;
-                item.IdPedido = item.IdPedido;
-                item.QuantidadeItemPedido = item.QuantidadeItemPedido;
-                item.ValorItemPedido = item.ValorItemPedido;
-            }
-
             ViewBag.itens = itenspedido;
             return View(pedido);
 
@@ -140,11 +130,8 @@ namespace IN_TEGRA.Controllers
             // convertendo os dados para a visualização
             foreach(var item in itens) 
             {
-                item.IdProduto = item.IdProduto;
-                item.NomeProduto = item.NomeProduto;
-                item.ValorItemPedido = item.ValorItemPedido;
-                item.QuantidadeItemPedido = item.QuantidadeItemPedido;
-            
+                var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);
+                item.NomeProduto = produto.NomeProduto;
             }
             // passando os dados para a visualização
             ViewBag.itens = itens;
