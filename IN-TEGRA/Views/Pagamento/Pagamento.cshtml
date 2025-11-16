@@ -1,0 +1,22 @@
+﻿@model IN_TEGRA.Models.Pedido
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h1>Pagamento do pedido: @Model.IdPedido</h1>
+
+
+<h1>Id do cliente: @Model.IdCliente</h1>
+<h1>Frete do pedido: @Model.FretePedido</h1>
+<h1>Data do pedido: @Model.DataHoraPedido</h1>
+<h1>Confirmação do pedido: @Model.ConfirmacaoPedido</h1>
+
+
+<form asp-controller="Pagamento" asp-action="FinalizarPagamento"  method="post">
+    <input type="hidden" name="IdPedido" value="@Model.IdPedido" />
+    <button type="submit">Finalizar</button>
+</form>

@@ -55,11 +55,15 @@
     </table>
 
     <div class="text-right">
-        <a asp-controller="Pedido" asp-action="Checkout" class="btn btn-success">Finalizar Compra</a>
         <form asp-controller="Carrinho" asp-action="LimparCarrinho" method="post" class="d-inline">
             <button type="submit" class="btn btn-warning">Limpar Carrinho</button>
         </form>
+        <form asp-controller="Pagamento" asp-action="FinalizarCompra" method="post" class="d-inline">
+            <button type="submit" class="btn btn-warning">Finalizar Compra</button>>
+        </form>
     </div>
+
+
 }
 
 else

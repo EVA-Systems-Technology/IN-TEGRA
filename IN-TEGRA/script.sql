@@ -109,23 +109,22 @@ create table tbItemCarrinho (
 
 create table tbPedido (
 	IdPedido int primary key auto_increment,
-    CpfCli char(11) not null,
-    IdCarrinho int not null,
-    FretePedido decimal (10,2) not null default 0,
-    ValorPedido decimal(10,2) not null,
+	IdCliente int not null,
+    FretePedido double not null default 0,
+    ValorPedido double not null,
+	DataHoraPedido datetime ,
     ConfirmacaoPedido boolean not null default false,
-   -- foreign key (CpfCli) references tbCliente(CpfCli),
-    foreign key (IdCarrinho) references tbCarrinho(IdCarrinho)
+    foreign key (IdCliente) references tbCliente(IdCliente)
 );
 
 -- ITEM PEDIDO EH META I GUESS? pelo que eu tinha falado com o enildon lmao
 
 create table tbItemPedido(
+	IdItemPedido int auto_increment primary key,
 	IdPedido int not null,
     IdProd int not null,
-    QtdItemPedido int not null check (QtdItemPedido > 0),
-    PrecoItemPedido decimal(10,2) not null,
-    primary key (IdPedido, IdProd),
+	Quantidade int not null,
+    PrecoItemPedido double not null,
     foreign key (IdPedido) references tbPedido(IdPedido),
     foreign key (IdProd) references tbProduto(IdProd)
 );
@@ -135,13 +134,14 @@ create table tbItemPedido(
 create table tbPagamento (
 	IdPagamento int primary key auto_increment,
     IdPedido int not null,
-    ValorPagamento decimal (10,2) not null,
+    idCliente int not null,
+    ValorPagamento double not null,
     DataHoraPagamento datetime null default current_timestamp ,
     TipoPagamento varchar(50) null,
-    ConfirmacaoPagamento boolean default false,
-    NfPagamento varchar(100) unique not null,
-    foreign key (IdPedido) references tbPedido(IdPedido)
+    foreign key (IdPedido) references tbPedido(IdPedido),
+    foreign key (IdCliente) references tbCliente(IdCliente)
 );
+
 
 select * from tbcliente;
 select * from tbproduto;
