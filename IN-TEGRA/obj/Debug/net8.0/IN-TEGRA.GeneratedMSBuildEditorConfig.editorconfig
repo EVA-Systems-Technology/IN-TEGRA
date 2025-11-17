@@ -88,8 +88,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/AlterarDados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBbHRlcmFyRGFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/Cadastro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYWRhc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/DetalhesPedido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZXRhbGhlc1BlZGlkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/Login.cshtml]
@@ -98,6 +106,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/PainelCliente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxQYWluZWxDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/Pedidos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxQZWRpZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Carrinho.cshtml]
@@ -114,14 +126,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/TelaPrincipal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWxhUHJpbmNpcGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Pagamento/DetalhesPagamento.cshtml]

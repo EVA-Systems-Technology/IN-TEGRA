@@ -1,10 +1,12 @@
-﻿using IN_TEGRA.Libraries.Login;
+﻿using IN_TEGRA.Libraries.Filtro;
+using IN_TEGRA.Libraries.Login;
 using IN_TEGRA.Models;
 using IN_TEGRA.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IN_TEGRA.Controllers
 {
+    [ClienteAutorizacao]
     public class PagamentoController : Controller
     {
         private readonly ICarrinhoRepository _carrinhoRepository;
