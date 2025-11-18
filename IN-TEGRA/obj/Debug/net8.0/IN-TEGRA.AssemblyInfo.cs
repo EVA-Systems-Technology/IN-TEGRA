@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IN-TEGRA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeb90606be0ef0bbc3cb1b260a9a464cdd596877")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2c02dd3c0ecc7c053deea72f27f3dddbee9ede8")]
 [assembly: System.Reflection.AssemblyProductAttribute("IN-TEGRA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IN-TEGRA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,0 @@
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\abridor_potes.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\botao_comunicador.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\cadeira.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\calcador_meias.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\campainha_luz.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\disco_transferencia.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\pinca_alcancador.png
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\wwwroot\images\tabua_adaptada.png
