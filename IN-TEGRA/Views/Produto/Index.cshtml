@@ -13,32 +13,29 @@
                 <div class="carousel__slides js-carousel-slides">
                     @foreach (var produto in Model)
                     {
+                      
                         <div class="col">
-                            <div class="card" style="width: 300px;">
-                                <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: cover; ">
-                                <div class="card-body" style="background: #171717; color: white; border: 0;">
-                                    <h5 class="card-title">@produto.NomeProduto</h5>
-                                    <p class="card-text">@produto.DescricaoProduto</p>
-                                    <p class="card-text"><strong>Preço: R$ @produto.PrecoProduto.ToString("F2")</strong></p>
-                                    <p class="card-text"><small class="text-muted">Estoque: @produto.QuantidadeProduto</small></p>
+                            <a style="text-decoration: none; color: white;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
+                                <div class="card" style="width: 300px;">
+                                    <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: cover; ">
+                                    <div class="card-body" style="background: #171717; color: white; border: 0;">
+                                        <h5 class="card-title">@produto.NomeProduto</h5>
+                                        <p class="card-text">@produto.DescricaoProduto</p>
+                                        <p class="card-text"><strong>Preço: R$ @produto.PrecoProduto.ToString("F2")</strong></p>
+                                        <p class="card-text"><small class="text-muted">Estoque: @produto.QuantidadeProduto</small></p>
 
-                                    <form asp-controller="Carrinho" asp-action="AddCarrinho" method="post">
-                                        <input type="hidden" name="produtoId" value="@produto.IdProd" />
-                                        <div class="form-group mb-2">
-                                            <label for="quantidade-@produto.IdProd">Quantidade:</label>
-                                            <input type="number" id="quantidade-@produto.IdProd" name="quantidade" class="form-control" value="1" min="1" max="@produto.QuantidadeProduto" />
-                                        </div>
-                                  
-                                        <td>
-                                            @Html.ActionLink("Alterar", "AtualizarProduto", new { Idprod = produto.IdProd }) |
-                                            @Html.ActionLink("Detalhes", "DetalhesProduto", new { IdProd = produto.IdProd }) |
-                                            @Html.ActionLink("Excluir", "ExcluirProduto", new { IdProd = produto.IdProd }) 
-                                        </td>
-                                
-                                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                                    </form>
+                                        <form asp-controller="Carrinho" asp-action="AddCarrinho" method="post">
+                                            <input type="hidden" name="produtoId" value="@produto.IdProd" />
+                                            <div class="form-group mb-2">
+                                                <label for="quantidade-@produto.IdProd">Quantidade:</label>
+                                                <input type="number" id="quantidade-@produto.IdProd" name="quantidade" class="form-control" value="1" min="1" max="@produto.QuantidadeProduto" />
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     }
                 </div>

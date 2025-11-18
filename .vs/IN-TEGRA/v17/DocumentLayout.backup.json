@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\produto\\detalhesproduto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\produto\\detalhesproduto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\controllers\\pagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\controllers\\pagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\produto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\carrinho\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\carrinho\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\pedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\pedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\alterardados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\alterardados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\areas\\funcionario\\views\\cliente\\detalhescliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,14 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\alterardados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\alterardados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\areas\\funcionario\\views\\cliente\\atualizarcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -59,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\libraries\\filtro\\clienteautorizacaoattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\pedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\pedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|c:\\users\\sacol\\desktop\\in-tegra\\in-tegra\\views\\cliente\\painelcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E89C8343-884A-46D5-8F2E-48A00CD85C5F}|IN-TEGRA\\IN-TEGRA.csproj|solutionrelative:in-tegra\\views\\cliente\\painelcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -74,37 +102,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Carrinho\\Index.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Carrinho\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Carrinho\\Index.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Views\\Carrinho\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T05:21:28.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Produto\\Index.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Produto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Produto\\Index.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Views\\Produto\\Index.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T04:39:30.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DetalhesProduto.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Produto\\DetalhesProduto.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Produto\\DetalhesProduto.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Produto\\DetalhesProduto.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Views\\Produto\\DetalhesProduto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T04:38:59.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DetalhesCliente.cshtml",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
-              "RelativeDocumentMoniker": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
-              "RelativeToolTip": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T03:55:54.585Z",
+              "Title": "PagamentoController.cs",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\PagamentoController.cs",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Controllers\\PagamentoController.cs",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\PagamentoController.cs",
+              "RelativeToolTip": "IN-TEGRA\\Controllers\\PagamentoController.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T04:14:17.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Cadastrar.cshtml",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
-              "RelativeDocumentMoniker": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
-              "RelativeToolTip": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAQwCsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T03:55:46.727Z",
+              "DocumentIndex": 6,
+              "Title": "CarrinhoController.cs",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\CarrinhoController.cs",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Controllers\\CarrinhoController.cs",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\CarrinhoController.cs",
+              "RelativeToolTip": "IN-TEGRA\\Controllers\\CarrinhoController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T04:14:15.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "IN-TEGRA\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T04:14:11.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "AtualizarCLiente.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\AtualizarCLiente.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\AtualizarCLiente.cshtml",
@@ -112,12 +192,11 @@
               "RelativeToolTip": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\AtualizarCLiente.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAQwC0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T03:55:17.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T03:55:17.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "IN-TEGRA\\Models\\Cliente.cs",
@@ -125,12 +204,11 @@
               "RelativeToolTip": "IN-TEGRA\\Models\\Cliente.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAwwCYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T03:12:27.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T03:12:27.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "ClienteRepository.cs",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Repository\\ClienteRepository.cs",
               "RelativeDocumentMoniker": "IN-TEGRA\\Repository\\ClienteRepository.cs",
@@ -138,25 +216,50 @@
               "RelativeToolTip": "IN-TEGRA\\Repository\\ClienteRepository.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAArwKAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T03:10:08.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T03:10:08.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "AlterarDados.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\AlterarDados.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Cliente\\AlterarDados.cshtml",
               "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\AlterarDados.cshtml",
               "RelativeToolTip": "IN-TEGRA\\Views\\Cliente\\AlterarDados.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-18T03:01:54.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "Pedidos.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T01:08:37.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Models\\Funcionario.cs",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Models\\Funcionario.cs",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Models\\Funcionario.cs",
+              "RelativeToolTip": "IN-TEGRA\\Models\\Funcionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T04:50:37.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "_Layout_remove.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\_Layout_remove.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Shared\\_Layout_remove.cshtml",
@@ -164,12 +267,24 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\Shared\\_Layout_remove.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T02:57:20.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T02:57:20.291Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "IN-TEGRA\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAYwGcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T14:51:11.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Layout_painel.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\Layout_painel.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Shared\\Layout_painel.cshtml",
@@ -177,50 +292,11 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\Shared\\Layout_painel.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T02:23:42.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T02:23:42.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ClienteAutorizacaoAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
-              "RelativeDocumentMoniker": "IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
-              "RelativeToolTip": "IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T02:19:25.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "IN-TEGRA\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "IN-TEGRA\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T14:51:11.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "additional-methods.js",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-              "RelativeDocumentMoniker": "IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-              "RelativeToolTip": "IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-              "ViewState": "AgIAAHICAAAAAAAAAAAqwIQCAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-18T04:04:00.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Cadastro.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\Cadastro.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Cliente\\Cadastro.cshtml",
@@ -233,7 +309,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 20,
+              "Title": "Cadastrar.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Cadastrar.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwCsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T03:55:46.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ClienteAutorizacaoAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
+              "RelativeToolTip": "IN-TEGRA\\Libraries\\Filtro\\ClienteAutorizacaoAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T02:19:25.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetalhesCliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
+              "RelativeDocumentMoniker": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
+              "RelativeToolTip": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\DetalhesCliente.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T03:55:54.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "additional-methods.js",
+              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "RelativeDocumentMoniker": "IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "RelativeToolTip": "IN-TEGRA\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+              "ViewState": "AgIAAHICAAAAAAAAAAAqwIQCAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-18T04:04:00.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Index.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Index.cshtml",
@@ -241,12 +365,11 @@
               "RelativeToolTip": "IN-TEGRA\\Areas\\Funcionario\\Views\\Cliente\\Index.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAADcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T03:56:04.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T03:56:04.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
@@ -254,12 +377,11 @@
               "RelativeToolTip": "IN-TEGRA\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T02:12:50.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T02:12:50.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "PainelCliente.cshtml",
               "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\PainelCliente.cshtml",
               "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Cliente\\PainelCliente.cshtml",
@@ -268,18 +390,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-18T01:38:43.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Pedidos.cshtml",
-              "DocumentMoniker": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
-              "RelativeDocumentMoniker": "IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
-              "ToolTip": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
-              "RelativeToolTip": "IN-TEGRA\\Views\\Cliente\\Pedidos.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T01:08:37.871Z"
             }
           ]
         }

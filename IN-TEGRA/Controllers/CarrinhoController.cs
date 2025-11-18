@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IN_TEGRA.Controllers
 {
-    [ClienteAutorizacao]
     public class CarrinhoController : Controller
     {
         private readonly ICarrinhoRepository _carrinhoRepository;
