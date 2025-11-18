@@ -77,6 +77,8 @@ namespace IN_TEGRA.Controllers
             _carrinhoRepository.LimparCarrinho(HttpContext.Session);
 
 
+
+
             return RedirectToAction("Pagamento", new { IdPedido });
         }
 
