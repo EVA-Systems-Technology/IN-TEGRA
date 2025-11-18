@@ -1,4 +1,5 @@
-﻿using IN_TEGRA.Models;
+﻿using IN_TEGRA.Libraries.Login;
+using IN_TEGRA.Models;
 using IN_TEGRA.Repository;
 using IN_TEGRA.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
@@ -9,10 +10,12 @@ namespace IN_TEGRA.Controllers
     {
 
         private IProdutoRepository _produtoRepository;
+        private LoginCliente _loginCliente;
 
-        public ProdutoController(IProdutoRepository produtoRepository)
+        public ProdutoController(IProdutoRepository produtoRepository, LoginCliente loginCliente)
         {
             _produtoRepository = produtoRepository;
+            _loginCliente = loginCliente;
         }
 
         [HttpGet]
@@ -37,7 +40,16 @@ namespace IN_TEGRA.Controllers
         public IActionResult Index()
         {
             var produtos = _produtoRepository.ObterTodosProdutos();
+            var cliente = _loginCliente.GetCliente();
 
+            if(cliente != null)
+            {
+                ViewBag.Cliente = cliente;
+            }
+            else
+            {
+                ViewBag.Cliente = null;
+            }
             ViewBag.Categorias = produtos.Select(produto => produto.CategoriaProduto).Distinct().ToList();
             return View(produtos);
         }

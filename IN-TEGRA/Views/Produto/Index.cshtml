@@ -13,7 +13,6 @@
                 <div class="carousel__slides js-carousel-slides">
                     @foreach (var produto in Model)
                     {
-                      
                         <div class="col">
                             <a style="text-decoration: none; color: white;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
                                 <div class="produto" style="width: 300px; height: 350px; background: white; border-radius: 20px;">
@@ -30,7 +29,6 @@
                 <button class="carousel__next js-carousel-button-next" type="button">&gt;</button>
             </div>
         </div>
-
     </section>
     <br />
     <section style="text-align:center; margin-top: 100px;">
@@ -40,28 +38,26 @@
                 <h2>Categorias:</h2>
                 @foreach (var categoria in (List<string>)ViewBag.Categorias)
                 {
-                    <div class="categoria" style="width: 100%; height: auto; background: white; display: flex; color: black; padding: 10px; gap: 10px; border-radius: 20px; " >
+                    <div class="categoria" style="width: 100%; height: auto; background: white; display: flex; color: black; padding: 10px; gap: 10px; border-radius: 20px; ">
                         <input type="checkbox" class="categoria" value="@categoria">@categoria
                     </div>
-                        
                 }
-             </aside>
+            </aside>
             <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex; background: #DBDBDB; padding: 30px; justify-content: space-between; width: 100%; gap: 20px; border-radius: 20px;">
                 @foreach (var produto in Model)
                 {
                     <a style="text-decoration: none; color: white; display:flex; justify-content:center; width:300px;  border-radius: 20px;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
                         <div class="card mt-2" style="width: 300px; height: 350px;  border-radius: 20px;" data-categoria="@produto.CategoriaProduto">
-                                <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
-                                <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
-                                    <h5 class="card-text"><strong>R$ @produto.PrecoProduto.ToString("F2")</strong></h5>
-                                    <h6 class="card-title">@produto.NomeProduto</h6>
-                                </div>
+                            <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
+                            <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
+                                <h5 class="card-text"><strong>R$ @produto.PrecoProduto.ToString("F2")</strong></h5>
+                                <h6 class="card-title">@produto.NomeProduto</h6>
                             </div>
-                     </a>
+                        </div>
+                    </a>
                 }
             </div>
         </div>
-
     </section>
     <style>
 
@@ -74,13 +70,12 @@
             padding: 10px;
         }
 
-            .product__carousel .carousel {
-                border-radius: 12px;
-            }
-
+        .product__carousel .carousel {
+            border-radius: 12px;
+        }
 
         .carousel {
-            position: relative; /* Por causa dos botões absolutos */
+            position: relative; 
             overflow: hidden;
             width: 100%;
             height: 100%;
@@ -108,13 +103,13 @@
             cursor: pointer;
         }
 
-            .carousel__next:active {
-                transform: translateX(10px) translateY(-50%);
-            }
+        .carousel__next:active {
+            transform: translateX(10px) translateY(-50%);
+        }
 
-            .carousel__previous:active {
-                transform: translateX(-10px) translateY(-50%);
-            }
+        .carousel__previous:active {
+            transform: translateX(-10px) translateY(-50%);
+        }
 
         .carousel__next {
             right: 0;
