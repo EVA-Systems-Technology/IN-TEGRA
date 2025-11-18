@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "Layout_painel";
     ViewData["Title"] = "Painel do Cliente";
 }
 
@@ -11,30 +11,19 @@
 
 
 <body style="margin: 0; display: flex; height: 100vh; font-family:'ABeeZee',sans-serif;">
-    <nav style="background: #D9D9D9; width: 20%; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; ">
-        <div class="container-fluid">
-            <a href="#" style="text-decoration: none; color:inherit;"><h1>Dashboard</h1></a>
-            <a href="#" style="text-decoration: none; color:inherit;"><h1>Conta</h1></a>
-            <a asp-action="Pedidos" style="text-decoration: none; color:inherit;"><h1>Pedidos</h1></a>
-        </div>
 
-
-
-        <button class="" style="padding: 30px; background: #0900FF; border-radius: 15px; color: white;"><h1>RETORNAR</h1></button>
-    </nav>
-
-    <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-        <div style="background: #D9D9D9; border-radius: 15px; width: 50%; height: 50%; padding: 50px;">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding-top: 10%;">
+        <div style="background: #D9D9D9; border-radius: 30px; width: 100%; height: 50%; padding: 50px;">
 
             <h1>Bem vindo: @ViewBag.nomeCliente!!</h1>
 
-            <div class="Dados" style="width: 100%; height: 80%; padding: 20px; background: #B8B5B5;">
+            <div class="Dados" style="padding: 20px; background: #B8B5B5; border-radius: 30px;">
                 <h1>Seus Dados:</h1>
-                <p>CPF: @ViewBag.cpf</p>
-                <p>DATA DE NASCIMENTO: @ViewBag.DataNascimento</p>
-                <p>EMAIL: @ViewBag.email</p>
-                <p>TELEFONE: @ViewBag.telefone</p>
-                <p>SENHA: @ViewBag.Senha</p>
+                <h2>DATA DE NASCIMENTO: @ViewBag.DataNascimento</h2>
+                <h2>EMAIL: @ViewBag.email</h2>
+                <h2>TELEFONE: @ViewBag.telefone</h2>
+                <h2>CPF: @ViewBag.cpf</h2>
+                <h2>SENHA: @ViewBag.Senha</h2>
             </div>
 
               

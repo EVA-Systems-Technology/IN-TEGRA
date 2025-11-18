@@ -160,6 +160,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jwqpkjqbzn
 
+[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/Layout_painel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dF9wYWluZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xxlugwzxx8
+
 [C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-n21knwsnly

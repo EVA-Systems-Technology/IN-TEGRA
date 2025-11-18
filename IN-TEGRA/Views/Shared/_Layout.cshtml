@@ -38,11 +38,15 @@
                         <img src="~/assets/lupa1.png" style="width: 100%; height:100%;"/>
                     </button>
                 </form>
-                <div class="d-flex align-items-center g-2" style="gap: 06px;">
-                    <img src="~/assets/carrinho.png" style="width: 40px; height: 40px;" />
-                    <h4>Carrinho</h4>
-                    <img src="~/assets/perfil.png" style="width: 40px; height: 40px;" />
-                    <h4>Perfil</h4>
+                <div class="d-flex align-items-center " style="gap: 06px;">
+                    <a asp-controller="carrinho" asp-action="index" style="text-decoration: none; color: black;  display:flex; align-items:center; gap:6px;">
+                        <img src="~/assets/carrinho.png" style="width: 40px; height: 40px;" />
+                        <h4>Carrinho</h4>
+                    </a>
+                    <a asp-controller="cliente" asp-action="PainelCliente" style="text-decoration: none; color: black;  display:flex; align-items:center; gap:6px;">
+                        <img src="~/assets/perfil.png" style="width: 40px; height: 40px;" />
+                        <h4>Perfil</h4>
+                    </a>
                 </div>
             </div>
         </nav>

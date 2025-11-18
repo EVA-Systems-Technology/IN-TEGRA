@@ -331,7 +331,6 @@ C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\rjsmrazor.dswa.cache.j
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\Areas\Funcionario\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout_remove.cshtml.rz.scp.css
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\bundle\IN-TEGRA.styles.css
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\projectbundle\IN-TEGRA.bundle.scp.css
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\staticwebassets.build.json
@@ -345,3 +344,5 @@ C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\refint\IN-TEGRA.dll
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\IN-TEGRA.pdb
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\IN-TEGRA.genruntimeconfig.cache
 C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\ref\IN-TEGRA.dll
+C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\Views\Shared\Layout_painel.cshtml.rz.scp.css
+C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout_remove.cshtml.rz.scp.css

@@ -1,22 +1,17 @@
 ﻿@model IN_TEGRA.Models.Cliente
 
 @{
-    ViewData["Title"] = "AlterarDados";
+    ViewData["Title"] = "Alterar seus dados";
+    Layout = "Layout_painel";
 }
 
-<h1>AlterarDados</h1>
-
-<h4>Cliente</h4>
+<h1>Alterar seus dados:</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AlterarDados">
+        <form asp-action="AlterarDados" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="IdCliente" class="control-label"></label>
-                <input asp-for="IdCliente" class="form-control" />
-                <span asp-validation-for="IdCliente" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="IdCliente" />
             <div class="form-group">
                 <label asp-for="NomeCliente" class="control-label"></label>
                 <input asp-for="NomeCliente" class="form-control" />
@@ -43,23 +38,14 @@
                 <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SituacaoCliente" class="control-label"></label>
-                <input asp-for="SituacaoCliente" class="form-control" />
-                <span asp-validation-for="SituacaoCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="DataNascimentoCliente" class="control-label"></label>
                 <input asp-for="DataNascimentoCliente" class="form-control" />
                 <span asp-validation-for="DataNascimentoCliente" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

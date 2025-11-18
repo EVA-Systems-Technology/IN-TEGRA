@@ -18,7 +18,7 @@ namespace IN_TEGRA.Libraries.Filtro
             {
                 context.Result = new ContentResult()
                 {
-                    Content = "Acesso Negado."
+                    Content = "Acesso Negado. Faça login para acessar esta pagina!!"
                 };
             }
         }

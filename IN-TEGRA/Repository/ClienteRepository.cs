@@ -21,7 +21,7 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("Update tbCliente set CpfCli=@CpfCli, NomeCli=@NomeCli, EmailCli=@EmailCli, TelefoneCli=@TelefoneCli, SenhaCli=@SenhaCli, NascCli=@NascCli, Situacao=@SituacaoCli where IdCliente=@IdCliente;", conexao);
+                MySqlCommand cmd = new MySqlCommand("Update tbCliente set CpfCli=@CpfCli, NomeCli=@NomeCli, EmailCli=@EmailCli, TelefoneCli=@TelefoneCli, SenhaCli=@SenhaCli, NascCli=@NascCli where IdCliente=@IdCliente;", conexao);
 
                 cmd.Parameters.AddWithValue("@IdCliente", cliente.IdCliente);
                 cmd.Parameters.AddWithValue("@CpfCli", cliente.CpfCliente);
@@ -30,7 +30,6 @@ namespace IN_TEGRA.Repository
                 cmd.Parameters.AddWithValue("@TelefoneCli", cliente.TelefoneCliente);
                 cmd.Parameters.AddWithValue("@SenhaCli", cliente.SenhaCliente);
                 cmd.Parameters.AddWithValue("@NascCli", cliente.DataNascimentoCliente.ToString("yyyy-MM-dd"));
-                cmd.Parameters.AddWithValue("@SituacaoCli", cliente.SituacaoCliente);
 
                 cmd.ExecuteNonQuery();
                 conexao.Close();
@@ -46,7 +45,7 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("insert into tbCliente(CpfCli, NomeCli, EmailCli, TelefoneCli, SenhaCli, NascCli, Situacao) values(@CpfCli, @NomeCli, @EmailCli, @TelefoneCli, @SenhaCli, @NascCli, @SituacaoCli)", conexao);
+                MySqlCommand cmd = new MySqlCommand("insert into tbCliente(CpfCli, NomeCli, EmailCli, TelefoneCli, SenhaCli, NascCli) values(@CpfCli, @NomeCli, @EmailCli, @TelefoneCli, @SenhaCli, @NascCli)", conexao);
             
                 cmd.Parameters.AddWithValue("@CpfCli", cliente.CpfCliente);
                 cmd.Parameters.AddWithValue("@NomeCli", cliente.NomeCliente);
@@ -54,7 +53,6 @@ namespace IN_TEGRA.Repository
                 cmd.Parameters.AddWithValue("@TelefoneCli", cliente.TelefoneCliente);
                 cmd.Parameters.AddWithValue("@SenhaCli", cliente.SenhaCliente);
                 cmd.Parameters.AddWithValue("@NascCli", cliente.DataNascimentoCliente.ToString("yyyy-MM-dd"));
-                cmd.Parameters.AddWithValue("@SituacaoCli", cliente.SituacaoCliente);
 
                 cmd.ExecuteNonQuery();
                 conexao.Close();
@@ -95,10 +93,9 @@ namespace IN_TEGRA.Repository
                     cliente.NomeCliente = Convert.ToString(dr["NomeCli"]);
                     cliente.EmailCliente = Convert.ToString(dr["EmailCli"]);
                     cliente.SenhaCliente = Convert.ToString(dr["SenhaCli"]);
-                    cliente.CpfCliente = Convert.ToChar(dr["CpfCli"]);
+                    cliente.CpfCliente = Convert.ToDecimal(dr["CpfCli"]);
                     cliente.TelefoneCliente = Convert.ToString(dr["TelefoneCli"]);
                     cliente.DataNascimentoCliente = DateOnly.FromDateTime(Convert.ToDateTime(dr["NascCli"]));
-                    cliente.SituacaoCliente = Convert.ToString(dr["Situacao"]);
 
                 }
                 return cliente;
@@ -125,13 +122,12 @@ namespace IN_TEGRA.Repository
                 {
 
                     cliente.IdCliente = Convert.ToInt32(dr["IdCliente"]);
-                    cliente.CpfCliente = Convert.ToChar(dr["CpfCli"]);
+                    cliente.CpfCliente = Convert.ToDecimal(dr["CpfCli"]);
                     cliente.NomeCliente = Convert.ToString(dr["NomeCli"]);
                     cliente.EmailCliente = Convert.ToString(dr["EmailCli"]);
                     cliente.TelefoneCliente = Convert.ToString(dr["TelefoneCli"]);
                     cliente.SenhaCliente = Convert.ToString(dr["SenhaCli"]);
                     cliente.DataNascimentoCliente = DateOnly.FromDateTime(Convert.ToDateTime(dr["NascCli"]));
-                    cliente.SituacaoCliente = Convert.ToString(dr["Situacao"]);
 
                 }
                 Console.WriteLine(cliente.NomeCliente);
@@ -162,13 +158,12 @@ namespace IN_TEGRA.Repository
                             new Cliente
                             {
                                 IdCliente = Convert.ToInt32(dr["IdCliente"]),
-                                CpfCliente = Convert.ToChar(dr["CpfCli"]),
+                                CpfCliente = Convert.ToDecimal(dr["CpfCli"]),
                                 NomeCliente = Convert.ToString(dr["NomeCli"]),
                                 EmailCliente = Convert.ToString(dr["EmailCli"]),
                                 TelefoneCliente = Convert.ToString(dr["TelefoneCli"]),
                                 SenhaCliente = Convert.ToString(dr["SenhaCli"]),
                                 DataNascimentoCliente = DateOnly.FromDateTime(Convert.ToDateTime(dr["NascCli"])),
-                                SituacaoCliente = Convert.ToString(dr["Situacao"])
                             }
 
                         );

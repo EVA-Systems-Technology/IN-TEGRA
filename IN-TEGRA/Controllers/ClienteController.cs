@@ -72,7 +72,7 @@ namespace IN_TEGRA.Controllers
             return View();
 
         }
-
+        [ClienteAutorizacao]
         public IActionResult Pedidos()
         {
             var IdCliente = _loginCliente.GetCliente().IdCliente;
@@ -81,26 +81,41 @@ namespace IN_TEGRA.Controllers
             ViewBag.pedidos = pedidos;
             return View(pedidos);
         }
-
+        [ClienteAutorizacao]
+        [HttpGet]
         public IActionResult DetalhesPedido(int IdPedido)
         {
             var itens = _pedidoRepository.ObterItensPedido(IdPedido);
-            ViewBag.ItensPedido = itens;     
-            
-            return View(itens);
-        }
+            foreach (var item in itens)
+            {
+                var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);
+                item.NomeProduto = produto.NomeProduto;
+            }
 
-        [HttpGet]
-        public IActionResult AlterarDados(int IdCliente)
-        {
-            return View(_clienteRepository.ObterClientePorId(IdCliente));
+            return View(itens);
+
         }
+        [ClienteAutorizacao]
+        [HttpGet]
+        public IActionResult AlterarDados()
+        {
+            var cliente = _loginCliente.GetCliente().IdCliente;
+            var identificacaocliente = _clienteRepository.ObterClientePorId(cliente);
+            return View(identificacaocliente);
+        }
+        [ClienteAutorizacao]
         [HttpPost]
         public IActionResult AlterarDados(Cliente cliente)
         {
             _clienteRepository.AtualizarCliente(cliente);
 
             return RedirectToAction("PainelCliente");
+        }
+        [ClienteAutorizacao]
+        public IActionResult Logout() 
+        {
+            _loginCliente.Logout();
+            return RedirectToAction("index", "Produto");
         }
 
     }
