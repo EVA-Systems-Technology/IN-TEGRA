@@ -6,7 +6,7 @@ namespace IN_TEGRA.Repository.Contract
     {
         int CadastrarPedido(Models.Pedido pedido);
         Pedido ObterPedidoPorId(int IdPedido);
-        List<Pedido> ObterPedidosCliente(int IdCliente);
+        List<Pedido> ObterPedidosCliente(int IdCli);
         public List<ItemPedido> ObterItensPedido(int IdPedido);
     }
 }

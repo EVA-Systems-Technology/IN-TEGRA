@@ -3,7 +3,7 @@
     public class Pedido
     {
         public int IdPedido { get; set; }
-        public int IdCliente { get; set; }
+        public int IdCli { get; set; }
         public double ValorPedido { get; set; }
         public double FretePedido { get; set; }
         public DateTime DataHoraPedido { get; set; }

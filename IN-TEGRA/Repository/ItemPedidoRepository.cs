@@ -20,11 +20,11 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbItemPedido (IdPedido, IdProd, Quantidade, PrecoItemPedido) VALUES (@IdPedido, @IdProd, @Quantidade, @PrecoItemPedido);", conexao);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbItemPedido (IdPedido, IdProd, QtdItemPedido, PrecoItemPedido) VALUES (@IdPedido, @IdProd, @QtdItemPedido, @PrecoItemPedido);", conexao);
 
                 cmd.Parameters.AddWithValue("@IdPedido", IdPedido);
                 cmd.Parameters.AddWithValue("@IdProd", item.IdProduto);
-                cmd.Parameters.AddWithValue("@Quantidade", item.QuantidadeItemPedido);
+                cmd.Parameters.AddWithValue("@QtdItemPedido", item.QtdItemPedido);
                 cmd.Parameters.AddWithValue("@PrecoItemPedido", item.ValorItemPedido);
 
                 cmd.ExecuteNonQuery();

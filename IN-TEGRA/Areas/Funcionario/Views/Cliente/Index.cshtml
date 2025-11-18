@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.IdCliente)
+                @Html.DisplayNameFor(model => model.IdCli)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NomeCliente)
@@ -37,7 +37,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.IdCliente)
+                @Html.DisplayFor(modelItem => item.IdCli)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NomeCliente)
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.TelefoneCliente)
             </td>
             <td>
-                   @Html.ActionLink("Atualizar", "AtualizarCliente", new { idCliente = item.IdCliente }) |
-                   @Html.ActionLink("Detalhes", "DetalhesCliente", new { idCliente = item.IdCliente }) |
-                   @Html.ActionLink("Excluir", "ExcluirCliente", new { idCliente = item.IdCliente })
+                   @Html.ActionLink("Atualizar", "AtualizarCliente", new { IdCli = item.IdCli }) |
+                   @Html.ActionLink("Detalhes", "DetalhesCliente", new { IdCli = item.IdCli }) |
+                   @Html.ActionLink("Excluir", "ExcluirCliente", new { IdCli = item.IdCli })
             </td>
         </tr>
 }

@@ -27,7 +27,7 @@ namespace IN_TEGRA.Libraries.Filtro
             {
                 context.Result = new ContentResult()
                 {
-                    Content = "Acesso Negado."
+                    Content = "ERRO 401: Acesso Negado."
                 };
             }
             else

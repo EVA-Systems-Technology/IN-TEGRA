@@ -21,9 +21,9 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("Update tbCliente set CpfCli=@CpfCli, NomeCli=@NomeCli, EmailCli=@EmailCli, TelefoneCli=@TelefoneCli, SenhaCli=@SenhaCli, NascCli=@NascCli where IdCliente=@IdCliente;", conexao);
+                MySqlCommand cmd = new MySqlCommand("Update tbCliente set CpfCli=@CpfCli, NomeCli=@NomeCli, EmailCli=@EmailCli, TelefoneCli=@TelefoneCli, SenhaCli=@SenhaCli, NascCli=@NascCli where IdCli=@IdCli;", conexao);
 
-                cmd.Parameters.AddWithValue("@IdCliente", cliente.IdCliente);
+                cmd.Parameters.AddWithValue("@IdCli", cliente.IdCli);
                 cmd.Parameters.AddWithValue("@CpfCli", cliente.CpfCliente);
                 cmd.Parameters.AddWithValue("@NomeCli", cliente.NomeCliente);
                 cmd.Parameters.AddWithValue("@EmailCli", cliente.EmailCliente);
@@ -59,13 +59,13 @@ namespace IN_TEGRA.Repository
             }
         }
 
-        public void ExcluirCliente(int IdCliente)
+        public void ExcluirCliente(int IdCli)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("delete from tbCliente where IdCliente = @IdCliente", conexao);
-                cmd.Parameters.AddWithValue("@IdCliente", IdCliente);
+                MySqlCommand cmd = new MySqlCommand("delete from tbCliente where IdCli = @IdCli", conexao);
+                cmd.Parameters.AddWithValue("@IdCli", IdCli);
                 cmd.ExecuteNonQuery();
                 conexao.Close();
             }
@@ -89,11 +89,11 @@ namespace IN_TEGRA.Repository
 
                 while (dr.Read())
                 {
-                    cliente.IdCliente = Convert.ToInt32(dr["IdCliente"]);
+                    cliente.IdCli = Convert.ToInt32(dr["IdCli"]);
                     cliente.NomeCliente = Convert.ToString(dr["NomeCli"]);
                     cliente.EmailCliente = Convert.ToString(dr["EmailCli"]);
                     cliente.SenhaCliente = Convert.ToString(dr["SenhaCli"]);
-                    cliente.CpfCliente = Convert.ToDecimal(dr["CpfCli"]);
+                    cliente.CpfCliente = Convert.ToDouble(dr["CpfCli"]);
                     cliente.TelefoneCliente = Convert.ToString(dr["TelefoneCli"]);
                     cliente.DataNascimentoCliente = DateOnly.FromDateTime(Convert.ToDateTime(dr["NascCli"]));
 
@@ -102,15 +102,15 @@ namespace IN_TEGRA.Repository
             }
         }
 
-        public Cliente ObterClientePorId(int IdCliente)
+        public Cliente ObterClientePorId(int IdCli)
         {
             List<Cliente> clientes = new List<Cliente>();
 
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from tbCliente where IdCliente=@IdCliente", conexao);
-                cmd.Parameters.AddWithValue("@IdCliente", IdCliente);
+                MySqlCommand cmd = new MySqlCommand("select * from tbCliente where IdCli=@IdCli", conexao);
+                cmd.Parameters.AddWithValue("@IdCli", IdCli);
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
@@ -121,8 +121,8 @@ namespace IN_TEGRA.Repository
                 while (dr.Read())
                 {
 
-                    cliente.IdCliente = Convert.ToInt32(dr["IdCliente"]);
-                    cliente.CpfCliente = Convert.ToDecimal(dr["CpfCli"]);
+                    cliente.IdCli = Convert.ToInt32(dr["IdCli"]);
+                    cliente.CpfCliente = Convert.ToDouble(dr["CpfCli"]);
                     cliente.NomeCliente = Convert.ToString(dr["NomeCli"]);
                     cliente.EmailCliente = Convert.ToString(dr["EmailCli"]);
                     cliente.TelefoneCliente = Convert.ToString(dr["TelefoneCli"]);
@@ -157,8 +157,8 @@ namespace IN_TEGRA.Repository
                         (
                             new Cliente
                             {
-                                IdCliente = Convert.ToInt32(dr["IdCliente"]),
-                                CpfCliente = Convert.ToDecimal(dr["CpfCli"]),
+                                IdCli = Convert.ToInt32(dr["IdCli"]),
+                                CpfCliente = Convert.ToDouble(dr["CpfCli"]),
                                 NomeCliente = Convert.ToString(dr["NomeCli"]),
                                 EmailCliente = Convert.ToString(dr["EmailCli"]),
                                 TelefoneCliente = Convert.ToString(dr["TelefoneCli"]),

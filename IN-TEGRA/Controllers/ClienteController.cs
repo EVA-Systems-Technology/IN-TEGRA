@@ -75,8 +75,8 @@ namespace IN_TEGRA.Controllers
         [ClienteAutorizacao]
         public IActionResult Pedidos()
         {
-            var IdCliente = _loginCliente.GetCliente().IdCliente;
-            var pedidos = _pedidoRepository.ObterPedidosCliente(IdCliente);
+            var IdCli = _loginCliente.GetCliente().IdCli;
+            var pedidos = _pedidoRepository.ObterPedidosCliente(IdCli);
 
             ViewBag.pedidos = pedidos;
             return View(pedidos);
@@ -99,7 +99,7 @@ namespace IN_TEGRA.Controllers
         [HttpGet]
         public IActionResult AlterarDados()
         {
-            var cliente = _loginCliente.GetCliente().IdCliente;
+            var cliente = _loginCliente.GetCliente().IdCli;
             var identificacaocliente = _clienteRepository.ObterClientePorId(cliente);
             return View(identificacaocliente);
         }
@@ -108,8 +108,8 @@ namespace IN_TEGRA.Controllers
         public IActionResult AlterarDados(Cliente cliente)
         {
             _clienteRepository.AtualizarCliente(cliente);
-
-            return RedirectToAction("PainelCliente");
+            _loginCliente.Logout();
+            return RedirectToAction("Login");
         }
         [ClienteAutorizacao]
         public IActionResult Logout() 

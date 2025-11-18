@@ -46,7 +46,7 @@
                         
                 }
              </aside>
-            <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex; background: #DBDBDB; padding: 30px; justify-content:center; width: 100%; gap: 20px; border-radius: 20px;">
+            <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex; background: #DBDBDB; padding: 30px; justify-content: space-between; width: 100%; gap: 20px; border-radius: 20px;">
                 @foreach (var produto in Model)
                 {
                     <a style="text-decoration: none; color: white; display:flex; justify-content:center; width:300px;  border-radius: 20px;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">

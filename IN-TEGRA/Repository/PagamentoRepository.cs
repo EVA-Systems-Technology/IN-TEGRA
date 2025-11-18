@@ -19,10 +19,10 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbPagamento (IdPedido, IdCliente, ValorPagamento, TipoPagamento, DataHoraPagamento) VALUES (@IdPedido, @IdCliente, @ValorPagamento, @TipoPagamento, NOW()); SELECT LAST_INSERT_ID();", conexao);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbPagamento (IdPedido, IdCli, ValorPagamento, TipoPagamento, DataHoraPagamento) VALUES (@IdPedido, @IdCli, @ValorPagamento, @TipoPagamento, NOW()); SELECT LAST_INSERT_ID();", conexao);
 
                 cmd.Parameters.AddWithValue("@IdPedido", pagamento.IdPedido);
-                cmd.Parameters.AddWithValue("@IdCliente", pagamento.IdCliente);
+                cmd.Parameters.AddWithValue("@IdCli", pagamento.IdCli);
                 cmd.Parameters.AddWithValue("@ValorPagamento", pagamento.ValorPagamento);
                 cmd.Parameters.AddWithValue("@TipoPagamento", pagamento.TipoPagamento);
 

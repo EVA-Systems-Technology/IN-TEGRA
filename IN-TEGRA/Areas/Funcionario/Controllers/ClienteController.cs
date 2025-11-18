@@ -25,16 +25,16 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
             return View(_clienteRepository.ObterTodosClientes());
         }
 
-        public IActionResult ExcluirCliente(int idCliente)
+        public IActionResult ExcluirCliente(int IdCli)
         {
-            _clienteRepository.ExcluirCliente(idCliente);
+            _clienteRepository.ExcluirCliente(IdCli);
             return RedirectToAction("ListaClientes");
         }
 
         [HttpGet]
-        public IActionResult DetalhesCliente(int IdCliente)
+        public IActionResult DetalhesCliente(int IdCli)
         {
-            return View(_clienteRepository.ObterClientePorId(IdCliente));
+            return View(_clienteRepository.ObterClientePorId(IdCli));
         }
 
         [HttpPost]
@@ -45,9 +45,9 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         }
 
         [HttpGet]
-        public IActionResult AtualizarCLiente(int IdCliente)
+        public IActionResult AtualizarCLiente(int IdCli)
         {
-            return View(_clienteRepository.ObterClientePorId(IdCliente));
+            return View(_clienteRepository.ObterClientePorId(IdCli));
         }
 
         [HttpPost]

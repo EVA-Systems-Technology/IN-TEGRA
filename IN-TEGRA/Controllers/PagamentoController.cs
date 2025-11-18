@@ -35,7 +35,8 @@ namespace IN_TEGRA.Controllers
         [HttpPost]
         public IActionResult FinalizarCompra()
         {
-            var usuario = _loginCliente.GetCliente().IdCliente;
+            var usuario = _loginCliente.GetCliente().IdCli;
+                
             var itensCarrinho = _carrinhoRepository.ItensCarrinho(HttpContext.Session);
 
 
@@ -50,7 +51,7 @@ namespace IN_TEGRA.Controllers
             // criando novo pedido no sistema
             var pedido = new Pedido
             {
-                IdCliente = usuario,
+                IdCli = usuario,
                 FretePedido = 0,
                 ValorPedido = (double)_carrinhoRepository.TotalCarrinho(HttpContext.Session),
                 ConfirmacaoPedido = false
@@ -66,7 +67,7 @@ namespace IN_TEGRA.Controllers
                 {
                     IdPedido = IdPedido,
                     IdProduto = item.ProdId,
-                    QuantidadeItemPedido = item.QuantidadeProd,
+                    QtdItemPedido = item.QuantidadeProd,
                     ValorItemPedido = (double)item.PrecoProd
                 };
                 _itemPedidoRepository.CadastrarItemPedido(IdPedido, itemPedido);
@@ -105,7 +106,7 @@ namespace IN_TEGRA.Controllers
             var pagamento = new Pagamento
             {
                 IdPedido = IdPedido,
-                IdCliente = pedido.IdCliente,
+                IdCli = pedido.IdCli,
                 TipoPagamento = TipoPagamento,
                 DataHoraPagamento = DateTime.Now,
                 ValorPagamento = pedido.ValorPedido

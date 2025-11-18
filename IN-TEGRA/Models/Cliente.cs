@@ -5,7 +5,7 @@ namespace IN_TEGRA.Models
     public class Cliente
     {
         [Display(Name = "Código")]
-        public int IdCliente { get; set; }
+        public int IdCli { get; set; }
 
         [Display(Name = "Nome Completo")]
         [Required(ErrorMessage = "O campo nome é obrigatorio")]
@@ -23,7 +23,7 @@ namespace IN_TEGRA.Models
 
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "O campo CPF é obrigatorio")]
-        public decimal CpfCliente { get; set; }
+        public double CpfCliente { get; set; }
 
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "O campo Telefone é obrigatorio")]
