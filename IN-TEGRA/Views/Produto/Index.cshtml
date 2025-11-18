@@ -6,8 +6,8 @@
 <body>
     <img src="\assets\slideprincipal.png" width="100%" height="100%" style="margin-bottom: 100px;">
     <section style="text-align:center;">
-        <h1>PROMOÇÕES</h1>
-        <div class="product__carousel">
+        <h1>NOVIDADES</h1>
+        <div class="product__carousel" style="height: 370px;">
             <div class="carousel js-carousel-of-product">
                 <button class="carousel__previous js-carousel-button-previous" type="button">&lt;</button>
                 <div class="carousel__slides js-carousel-slides">
@@ -16,23 +16,11 @@
                       
                         <div class="col">
                             <a style="text-decoration: none; color: white;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
-                                <div class="card" style="width: 300px;">
-                                    <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: cover; ">
-                                    <div class="card-body" style="background: #171717; color: white; border: 0;">
-                                        <h5 class="card-title">@produto.NomeProduto</h5>
-                                        <p class="card-text">@produto.DescricaoProduto</p>
-                                        <p class="card-text"><strong>Preço: R$ @produto.PrecoProduto.ToString("F2")</strong></p>
-                                        <p class="card-text"><small class="text-muted">Estoque: @produto.QuantidadeProduto</small></p>
-
-                                        <form asp-controller="Carrinho" asp-action="AddCarrinho" method="post">
-                                            <input type="hidden" name="produtoId" value="@produto.IdProd" />
-                                            <div class="form-group mb-2">
-                                                <label for="quantidade-@produto.IdProd">Quantidade:</label>
-                                                <input type="number" id="quantidade-@produto.IdProd" name="quantidade" class="form-control" value="1" min="1" max="@produto.QuantidadeProduto" />
-                                            </div>
-
-                                            <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                                        </form>
+                                <div class="card" style="width: 300px; height: 350px;">
+                                    <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
+                                    <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
+                                        <h5 class="card-text"><strong>R$ @produto.PrecoProduto.ToString("F2")</strong></h5>
+                                        <h6 class="card-title">@produto.NomeProduto</h6>
                                     </div>
                                 </div>
                             </a>
@@ -45,44 +33,34 @@
 
     </section>
     <br />
-    <section> 
+    <section style="text-align:center; margin-top: 100px;">
+        <h1>PRODUTOS</h1>
         <div class="container__produtos" style="display:flex;">
-            <aside class="sidebar__produtos" style="display: inline;">
-                @foreach (var produto in Model)
+            <aside class="sidebar__produtos" style="display: flex; flex-direction:column; background: gray; padding: 30px; gap: 10px; margin-right: 50px;">
+                <h2>Categorias:</h2>
+                @foreach (var categoria in (List<string>)ViewBag.Categorias)
                 {
-                    <input type="checkbox" class="categoria">@produto.CategoriaProduto
+                    <div class="categoria" style="width: 100%; height: auto; background: red; display: flex;" >
+                        <input type="checkbox" class="categoria" value="@categoria">@categoria
+                    </div>
                         
                 }
              </aside>
             <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex;">
-                    @foreach (var produto in Model)
-                    {
-                            <div class="card" style="width: 300px;">
-                                <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: cover; ">
-                                <div class="card-body" style="background: #171717; color: white; border: 0;">
-                                    <h5 class="card-title">@produto.NomeProduto</h5>
-                                    <p class="card-text">@produto.DescricaoProduto</p>
-                                    <p class="card-text"><strong>Preço: R$ @produto.PrecoProduto.ToString("F2")</strong></p>
-                                    <p class="card-text"><small class="text-muted">Estoque: @produto.QuantidadeProduto</small></p>
-
-                                    <form asp-controller="Carrinho" asp-action="AddCarrinho" method="post">
-                                        <input type="hidden" name="produtoId" value="@produto.IdProd" />
-                                        <div class="form-group mb-2">
-                                            <label for="quantidade-@produto.IdProd">Quantidade:</label>
-                                            <input type="number" id="quantidade-@produto.IdProd" name="quantidade" class="form-control" value="1" min="1" max="@produto.QuantidadeProduto" />
-                                        </div>
-                                        <!-- DESCOBRIR COMO FAZ PARA QUE SOMENTES ADMINS VEJAM ESSA PARTE
-                                        <td>
-                                           // @Html.ActionLink("Alterar", "AtualizarProduto", new { Idprod = produto.IdProd }) |
-                                           // @Html.ActionLink("Detalhes", "DetalhesProduto", new { IdProd = produto.IdProd }) |
-                                           // @Html.ActionLink("Excluir", "ExcluirProduto", new { IdProd = produto.IdProd })
-                                        </td>
-                                        !-->
-                                        <button type="submit" class="btn btn-primary">Adicionar ao Carrinho</button>
-                                    </form>
+                @foreach (var produto in Model)
+                {
+                    <div class="col">
+                        <a style="text-decoration: none; color: white;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
+                            <div class="card mt-2" style="width: 300px; height: 350px;">
+                                <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
+                                <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
+                                    <h5 class="card-text"><strong>R$ @produto.PrecoProduto.ToString("F2")</strong></h5>
+                                    <h6 class="card-title">@produto.NomeProduto</h6>
                                 </div>
-                            </div>  
-                    }
+                            </div>
+                        </a>
+                    </div>
+                }
             </div>
         </div>
 

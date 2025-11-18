@@ -36,7 +36,10 @@ namespace IN_TEGRA.Controllers
         }
         public IActionResult Index()
         {
-            return View(_produtoRepository.ObterTodosProdutos());
+            var produtos = _produtoRepository.ObterTodosProdutos();
+
+            ViewBag.Categorias = produtos.Select(produto => produto.CategoriaProduto).Distinct().ToList();
+            return View(produtos);
         }
         [HttpGet]
         public IActionResult AtualizarProduto(int IdProd)
