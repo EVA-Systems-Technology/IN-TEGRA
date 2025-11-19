@@ -14,6 +14,44 @@ namespace IN_TEGRA.Repository
             _conexaoMySQL = conf.GetConnectionString("ConexaoMySQL");
         }
 
+        
+        public IEnumerable<Produto> PesquisarProduto(string searchTerm)
+        {
+            List<Produto> produtos = new List<Produto>();
+
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbProduto WHERE NomeProd LIKE @searchTerm", conexao);
+                
+                cmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+        
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+                conexao.Close();
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    produtos.Add(
+                        new Produto 
+                        {
+                            IdProd = Convert.ToInt32(dr["IdProd"]),
+                            NomeProduto = Convert.ToString(dr["NomeProd"]),
+                            DescricaoProduto = Convert.ToString(dr["DescProd"]),
+                            ImagemProduto = Convert.ToString(dr["ImgProd"]),
+                            PrecoProduto = Convert.ToDecimal(dr["PrecoProd"]),
+                            QuantidadeProduto = Convert.ToInt32(dr["QtdProd"]),
+                            CategoriaProduto = Convert.ToString(dr["CategoriaProd"])
+                        }
+                    );
+                }
+            }
+            return produtos;
+        }
+        
         public void AtualizarProduto(Produto produto)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
@@ -93,7 +131,7 @@ namespace IN_TEGRA.Repository
                                 NomeProduto = Convert.ToString(dr["NomeProd"]),
                                 DescricaoProduto = Convert.ToString(dr["DescProd"]),
                                 ImagemProduto = Convert.ToString(dr["ImgProd"]),
-                                PrecoProduto = Convert.ToInt32(dr["PrecoProd"]),
+                                PrecoProduto = Convert.ToDecimal(dr["PrecoProd"]),
                                 QuantidadeProduto = Convert.ToInt32(dr["QtdProd"]),
                                 CategoriaProduto = Convert.ToString(dr["CategoriaProd"])
                             }
@@ -126,7 +164,7 @@ namespace IN_TEGRA.Repository
                     produto.NomeProduto = Convert.ToString(dr["NomeProd"]);
                     produto.DescricaoProduto = Convert.ToString(dr["DescProd"]);
                     produto.ImagemProduto = Convert.ToString(dr["ImgProd"]);
-                    produto.PrecoProduto = Convert.ToInt32(dr["PrecoProd"]);
+                    produto.PrecoProduto = Convert.ToDecimal(dr["PrecoProd"]);
                     produto.QuantidadeProduto = Convert.ToInt32(dr["QtdProd"]);
                     produto.CategoriaProduto = Convert.ToString(dr["CategoriaProd"]);
 

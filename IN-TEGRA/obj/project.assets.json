@@ -6566,31 +6566,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sacol\\.nuget\\packages\\": {},
-    "D:\\visual studio\\shared\\NuGetPackages": {}
+    "/home/mikazittas/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj",
+      "projectUniqueName": "/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/IN-TEGRA.csproj",
       "projectName": "IN-TEGRA",
-      "projectPath": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\IN-TEGRA.csproj",
-      "packagesPath": "C:\\Users\\sacol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sacol\\Desktop\\IN-TEGRA\\IN-TEGRA\\obj\\",
+      "projectPath": "/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/IN-TEGRA.csproj",
+      "packagesPath": "/home/mikazittas/.nuget/packages/",
+      "outputPath": "/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\visual studio\\shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sacol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/mikazittas/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6647,7 +6640,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/mikazittas/.dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

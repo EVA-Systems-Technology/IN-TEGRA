@@ -18,6 +18,25 @@ namespace IN_TEGRA.Controllers
             _loginCliente = loginCliente;
         }
 
+        
+        [HttpGet]
+        public IActionResult Pesquisar(string searchTerm)
+        {
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                return Json(new List<object>());
+            }
+            var produtos = _produtoRepository.PesquisarProduto(searchTerm);
+            
+            var resultado = produtos.Select(p => new {
+                id = p.IdProd,
+                nome = p.NomeProduto,
+                preco = p.PrecoProduto.ToString("C2", new System.Globalization.CultureInfo("pt-BR")) 
+            });
+            
+            return Json(resultado);
+        }
+        
         [HttpGet]
         public IActionResult Cadastro()
         {
