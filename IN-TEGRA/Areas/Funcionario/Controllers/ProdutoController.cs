@@ -50,7 +50,7 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         {
             _IProdutoRepository.AtualizarProduto(produto);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ListaProdutos");
         }
         [HttpGet]
         public IActionResult DetalhesProduto(int IdProd)
@@ -60,12 +60,12 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         [HttpPost]
         public IActionResult DetalhesProduto(Produto produto)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("ListaProdutos");
         }
         public IActionResult ExcluirProduto(int IdProd)
         {
             _IProdutoRepository.ExcluirProduto(IdProd);
-            return RedirectToAction("Index");
+            return RedirectToAction("ListaProdutos");
         }
     }
 }

@@ -2,47 +2,48 @@
 
 @{
     ViewData["Title"] = "Login";
+    Layout = "_Layout_remove";
 }
 
-@if(TempData["MSG"] != null)
-{
-     <script>
-        alert("@TempData["MSG"]");
-     </script>
-}
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+</head>
 
-<main role="main">
-    <br />
-    <br />
-    <section class="container">
-        <aside class="col-sm-6">
-            <h6 class="subtitle-doc">Login do Colaborador</h6>
 
-            <div id="code_login1">
-                <div class="card">
-                    <article class="card-body">
 
-                        <h4 class="card-title mb-4 mt-1">Entrar</h4>
-
-                        <form method="post">
-                            <div class="form-group">
-                                <label>E-mail</label>
-                                <input asp-for="EmailFuncionario" class="form-control" placeholder="Email" type="email" />
-                            </div>
-
-                            <div class="form-group">
-                                <a class="float-right" href="#">Esqueceu?</a>
-                                <label>Senha</label>
-                                <input asp-for="SenhaFuncionario" class="form-control" placeholder="*******" type="password" />
-                            </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Acessar</button>
-                            </div>
-                        </form>
-                    </article>
+<body style="font-family: 'Alexandria', sans-serif;">
+    <div class="d-flex justify-content-between">
+        <div class="container_left">
+            <img src="~/assets/logo.png" style="max-height: 200px; max-width: 240px;" />
+            <form class="p-3" method="post" style="background: #5A5F8B; border-radius: 10px; ">
+                <div class="form-group">
+                    <label for="Email" style="color: white;" placeholder="Email" type="email">Email</label>
+                    <input asp-for="EmailFuncionario" type="email" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
-            </div>
-        </aside>
-    </section>
-</main>
+                <div class="form-group mb-4">
+                    <label for="Senha" style="color: white;" >Senha</label>
+                    <input asp-for="SenhaFuncionario" type="password" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
+                </div>
+                <div class="d-flex flex-column mb-2">
+                    <button type="submit" class="mb-2" style="background: #04128D; color: white; padding: 10px; border: 0px transparent; border-radius: 10px;">Entrar</button>
+                    <a asp-action="Cadastro" style="background: #FF0054; color: white; padding: 10px; border: 0px transparent; border-radius: 10px;" class="btn btn-primary bg-#0900FF">Criar Conta</a>
+                </div>
+                <div>
+                    <a asp-action="RecuperaSenha" style="color: white; text-decoration:underline;">Esqueceu o nome de usuário?</a>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <label class="form-check-label" style="color: white; text-decoration:underline">Lembrar-se de mim</label>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                </div>
+            </form>
+        </div>
+   
+        <div class="container_inspiracao" style="width: 20vw; min-width: 200px;">
+            <h5 style="color: #0900FF ">Conectando vidas, rompendo barreiras.</h5>
+            <img src="~/assets/slide1.png" style="width: 100%;" />
+        </div>
+    </div>
+</body>

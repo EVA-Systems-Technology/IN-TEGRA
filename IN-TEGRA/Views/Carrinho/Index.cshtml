@@ -3,19 +3,14 @@
     ViewData["Title"] = "Seu Carrinho";
 }
 
-<h1>Seu Carrinho de Compras</h1>
-
-@if (TempData["MSG"] != null)
-{
-    <div class="alert alert-info">@TempData["Message"]</div>
-}
+<h1 style="font-family:'ABeeZee',sans-serif;">Seu Carrinho de Compras</h1>
 
 @if (Model.Any())
 {
-    <div class="container" style="background:#D9D9D9; border-radius: 20px; padding: 30px 30px 10px 30px;">
+    <div class="container" style="background:#5A5F8B; border-radius: 20px; padding: 30px 30px 10px 30px;">
             @foreach (var item in Model)
             {
-            <div class="card" style="background: #CACACA; width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center; gap: 30px; padding: 10px 20px 10px 20px; border: 0px transparent; border-radius: 20px; margin-bottom: 20px;">
+            <div class="card" style="background: #DADDF5; width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center; gap: 30px; padding: 10px 20px 10px 20px; border: 0px transparent; border-radius: 20px; margin-bottom: 20px; font-family:'Alexandria',sans-serif;">
                 <img src="@item.Produto.ImagemProduto" style="object-fit: contain; height: 100%; border-radius: 20px;" />
 
                 <h5 style="flex-grow: 1">@item.Produto.NomeProduto</h5>
@@ -30,24 +25,24 @@
                         <div>
                             <form asp-controller="Carrinho" asp-action="RemoverItem" method="post" class="d-inline">
                                 <input type="hidden" name="produtoId" value="@item.ProdId" />
-                                <button type="submit" class="btn btn-danger btn-sm">Remover</button>
+                                <button type="submit" class="btn btn-danger btn-sm">X</button>
                             </form>
                         </div>
 
                 </div>
             }
-            <div>
+            <div style="color: white;">
                 <strong>Total do Carrinho:</strong>
                 <strong>R$@ViewBag.TotalCarrinho.ToString("F2")</strong>
             </div>
     </div>
 
     <div class="text-right mt-5">
-        <form asp-controller="Pagamento" asp-action="FinalizarCompra" method="post" class="d-inline">
-            <button type="submit" class="btn btn-success" style="padding: 20px; background: #0900FF; border-radius: 15px; color: white; border: 0px transparent;">Finalizar Compra</button>
+        <form asp-controller="Pagamento" asp-action="FinalizarCompra" method="post" class="d-inline" style="font-family:'ABeeZee',sans-serif;">
+            <button type="submit" class="btn btn-success" style="padding: 20px; background: #04128D; border-radius: 15px; color: white; border: 0px transparent;">Finalizar Compra</button>
         </form>
-        <form asp-controller="Carrinho" asp-action="LimparCarrinho" method="post" class="d-inline">
-            <button type="submit" class="btn btn-warning" style="padding: 20px; background: #0900FF; border-radius: 15px; color: white; border: 0px transparent;">Limpar Carrinho</button>
+        <form asp-controller="Carrinho" asp-action="LimparCarrinho" method="post" class="d-inline" style="font-family:'ABeeZee',sans-serif;">
+            <button type="submit" class="btn btn-warning" style="padding: 20px; background: #FF0054; border-radius: 15px; color: white; border: 0px transparent;">Limpar Carrinho</button>
         </form>
     </div>
 

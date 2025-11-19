@@ -28,7 +28,7 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         public IActionResult ExcluirCliente(int IdCli)
         {
             _clienteRepository.ExcluirCliente(IdCli);
-            return RedirectToAction("ListaClientes");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -41,7 +41,7 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         public IActionResult DetalhesCliente(Cliente cliente)
         {
 
-            return RedirectToAction("ListaClientes");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

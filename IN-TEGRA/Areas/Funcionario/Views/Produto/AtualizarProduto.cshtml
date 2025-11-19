@@ -1,55 +1,48 @@
 ﻿@model IN_TEGRA.Models.Produto
 
 @{
-    ViewData["Title"] = "AtualizarProduto";
+    Layout = "Layout_painel_funcionario";
+    ViewData["Title"] = "Atualizar o produto";
 }
 
-<h1>AtualizarProduto</h1>
-
-<h4>Produto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="AtualizarProduto">
+<h1>Alterar Informações do Produto</h1>
+<div class="container__produto" style="background: #DADDF5; display: flex; justify-content: center; border-radius: 20px;">
+        <form asp-action="AtualizarProduto" style="background: #5A5F8B; padding: 50px; border-radius: 20px; width: 80%;">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="IdProd" type="hidden" class="form-control" />
             <div class="form-group">
-                <label asp-for="NomeProduto" class="control-label"></label>
+                <label asp-for="NomeProduto" class="control-label" style="color: white;"></label>
                 <input asp-for="NomeProduto" class="form-control" />
                 <span asp-validation-for="NomeProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PrecoProduto" class="control-label"></label>
+                <label asp-for="PrecoProduto" class="control-label" style="color: white;"></label>
                 <input asp-for="PrecoProduto" class="form-control" />
                 <span asp-validation-for="PrecoProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DescricaoProduto" class="control-label"></label>
+                <label asp-for="DescricaoProduto" class="control-label" style="color: white;"></label>
                 <input asp-for="DescricaoProduto" class="form-control" />
                 <span asp-validation-for="DescricaoProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="QuantidadeProduto" class="control-label"></label>
+                <label asp-for="QuantidadeProduto" class="control-label" style="color: white;"></label>
                 <input asp-for="QuantidadeProduto" class="form-control" />
                 <span asp-validation-for="QuantidadeProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImagemProduto" class="control-label"></label>
+                <label asp-for="ImagemProduto" class="control-label" style="color: white;"></label>
                 <input asp-for="ImagemProduto" class="form-control" />
                 <span asp-validation-for="ImagemProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CategoriaProduto" class="control-label"></label>
+                <label asp-for="CategoriaProduto" class="control-label" style="color: white;"></label>
                 <input asp-for="CategoriaProduto" class="form-control" />
                 <span asp-validation-for="CategoriaProduto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group mt-5">
+                <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Salvar</button>
             </div>
         </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="ListaProdutos">Back to List</a>
 </div>
 

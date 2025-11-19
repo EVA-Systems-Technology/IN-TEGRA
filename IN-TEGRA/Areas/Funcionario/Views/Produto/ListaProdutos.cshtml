@@ -1,72 +1,33 @@
 ﻿@model IEnumerable<IN_TEGRA.Models.Produto>
 
 @{
-    ViewData["Title"] = "ListaProdutos";
+    Layout = "Layout_painel_funcionario";
+    ViewData["Title"] = "Lista dos Produtos";
 }
 
-<h1>ListaProdutos</h1>
+<h1>Produtos Cadastrados no Sistema</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdProd)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrecoProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescricaoProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QuantidadeProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagemProduto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CategoriaProduto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var produto in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.IdProd)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.NomeProduto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.PrecoProduto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.DescricaoProduto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.QuantidadeProduto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.ImagemProduto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => produto.CategoriaProduto)
-                </td>
-                <td>
-                    @Html.ActionLink("Alterar", "AtualizarProduto", new { Idprod = produto.IdProd }) |
-                    @Html.ActionLink("Detalhes", "DetalhesProduto", new { IdProd = produto.IdProd }) |
-                    @Html.ActionLink("Excluir", "ExcluirProduto", new { IdProd = produto.IdProd })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<body style="font-family:'ABeeZee',sans-serif;">
+    <div style="background: #DADDF5; padding: 50px;">
+        <div style="display:flex; justify-content: space-between;">
+            <h1>PRODUTOS</h1>
+            <a asp-action="cadastro">Cadastrar</a>
+        </div>
+        <div class="container__produtos" style="display: flex; flex-wrap:wrap; justify-content: center; gap: 30px;">
+            @foreach(var item in Model)
+            {
+                <div class="card mt-2" style="width: 300px; height: 450px;  border-radius: 20px;" data-categoria="@item.CategoriaProduto">
+                    <img src="/@item.ImagemProduto" class="card-img-top" alt="@item.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
+                    <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
+                        <h5 class="card-text"><strong>R$ @item.PrecoProduto.ToString("F2")</strong></h5>
+                        <h6 class="card-title">@item.NomeProduto</h6>
+
+                        @Html.ActionLink("Alterar", "AtualizarProduto", new { Idprod = item.IdProd }) 
+                        @Html.ActionLink("Detalhes", "DetalhesProduto", new { IdProd = item.IdProd }) 
+                        @Html.ActionLink("Excluir", "ExcluirProduto", new { IdProd = item.IdProd })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>

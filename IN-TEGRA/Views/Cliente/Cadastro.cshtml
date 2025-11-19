@@ -5,45 +5,50 @@
     Layout = "_Layout_remove";
 }
 
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+</head>
 
-<body>
-    <h2 style=" margin-bottom: 30px;">Formulario de Criação de Conta</h2>
-    <form asp-action="Cadastro" class="p-3" style="background: #D9D9D9; border-radius: 10px;">
+<body style="font-family: 'Alexandria', sans-serif;">
+    <h2 style="margin-bottom: 30px;">Precisamos de algumas informações</h2>
+    <form asp-action="Cadastro" class="p-3" style="background: #5A5F8B; border-radius: 0px 10px 10px 10px; color: white; max-width: 400px; ">
         <div class="form-group">
             <label asp-for="NomeCliente">Nome Completo</label>
-            <input asp-for="NomeCliente" type="text" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;">
+            <input asp-for="NomeCliente" type="text" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
             <span asp-validation-for="NomeCliente" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="EmailCliente">Email</label>
-            <input asp-for="EmailCliente" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;">
+            <input asp-for="EmailCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
             <span asp-validation-for="EmailCliente" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="SenhaCliente">Senha</label>
-            <input asp-for="SenhaCliente" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;">
+            <input asp-for="SenhaCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
             <span asp-validation-for="SenhaCliente" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="CpfCliente">CPF</label>
-            <input asp-for="CpfCliente" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;">
+            <input asp-for="CpfCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
             <span asp-validation-for="CpfCliente" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="TelefoneCliente">Telefone</label>
-            <input asp-for="TelefoneCliente" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;">
+            <input asp-for="TelefoneCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
             <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="DataNascimentoCliente">Data de Nascimento</label>
-            <input asp-for="DataNascimentoCliente" class="form-control" style="background: #B5B2B2; border-radius: 10px; color:white;">
+            <input asp-for="DataNascimentoCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
             <span asp-validation-for="DataNascimentoCliente" class="text-danger"></span>
         </div>
-        <div class="d-flex flex-column mb-2 mt-2">
-            <button type="submit" class="btn btn-primary bg-#0900FF">Criar Conta</button>
+        <div class="d-flex flex-column mb-2 mt-4">
+            <button type="submit" class="btn" style="background: #FF0054; color: white; border-radius: 0px 10px 10px 10px">Criar Conta</button>
         </div>
-        <div class="form-group form-check text-black">
-            <label class="form-check-label">Lembrar-se de mim</label>
+        <div>
+            <label class="form-check-label" style="text-decoration: underline;">Lembrar-se de mim</label>
             <input type="checkbox">
         </div>
     </form>

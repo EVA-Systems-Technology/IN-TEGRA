@@ -1,65 +1,26 @@
 ﻿@model IEnumerable<IN_TEGRA.Models.Cliente>
 
 @{
-    ViewData["Title"] = "Index";
+    Layout = "Layout_painel_funcionario";
+    ViewData["Title"] = "Clientes";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdCli)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmailCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SenhaCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CpfCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TelefoneCliente)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdCli)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SenhaCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CpfCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefoneCliente)
-            </td>
-            <td>
-                   @Html.ActionLink("Atualizar", "AtualizarCliente", new { IdCli = item.IdCli }) |
-                   @Html.ActionLink("Detalhes", "DetalhesCliente", new { IdCli = item.IdCli }) |
-                   @Html.ActionLink("Excluir", "ExcluirCliente", new { IdCli = item.IdCli })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<body>
+    <div class="container" style="background: #DADDF5; padding: 50px;">
+        <div style="display: flex;">
+            <h1>Cadastro dos Clientes</h1>
+        </div>
+        @foreach(var cliente in Model)
+        {
+        <div style="background: #5A5F8B; border-radius: 20px; display: flex; justify-content: space-between; padding: 20px; color: white; margin-bottom: 15px;">
+            <p>@cliente.IdCli</p>
+            <p>@cliente.NomeCliente</p>
+            <p>@cliente.EmailCliente</p>
+            <div class="utilitarios" style="color: white; text-decoration: none;">
+                    @Html.ActionLink("Atualizar", "AtualizarCliente", new { IdCli = cliente.IdCli }) 
+                    @Html.ActionLink("Detalhes", "DetalhesCliente", new { IdCli = cliente.IdCli }) 
+                    @Html.ActionLink("Excluir", "ExcluirCliente", new { IdCli = cliente.IdCli })
+            </div>
+        </div>
+        }
+    </div>
+</body>

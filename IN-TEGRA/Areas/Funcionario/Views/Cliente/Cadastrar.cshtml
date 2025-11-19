@@ -1,6 +1,7 @@
 ﻿@model IN_TEGRA.Models.Cliente
 
 @{
+    Layout = "Layout_painel_funcionario";
     ViewData["Title"] = "Cadastrar";
 }
 
@@ -10,46 +11,44 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Cadastrar">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="Cadastrar" class="p-3" style="background: #5A5F8B; border-radius: 0px 10px 10px 10px; color: white; max-width: 400px; ">
             <div class="form-group">
-                <label asp-for="IdCli" class="control-label"></label>
-                <input asp-for="IdCli" class="form-control" />
-                <span asp-validation-for="IdCli" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NomeCliente" class="control-label"></label>
-                <input asp-for="NomeCliente" class="form-control" />
+                <label asp-for="NomeCliente">Nome Completo</label>
+                <input asp-for="NomeCliente" type="text" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
                 <span asp-validation-for="NomeCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EmailCliente" class="control-label"></label>
-                <input asp-for="EmailCliente" class="form-control" />
+                <label asp-for="EmailCliente">Email</label>
+                <input asp-for="EmailCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
                 <span asp-validation-for="EmailCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SenhaCliente" class="control-label"></label>
-                <input asp-for="SenhaCliente" class="form-control" />
+                <label asp-for="SenhaCliente">Senha</label>
+                <input asp-for="SenhaCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
                 <span asp-validation-for="SenhaCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CpfCliente" class="control-label"></label>
-                <input asp-for="CpfCliente" class="form-control" />
+                <label asp-for="CpfCliente">CPF</label>
+                <input asp-for="CpfCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
                 <span asp-validation-for="CpfCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TelefoneCliente" class="control-label"></label>
-                <input asp-for="TelefoneCliente" class="form-control" />
+                <label asp-for="TelefoneCliente">Telefone</label>
+                <input asp-for="TelefoneCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
                 <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="DataNascimentoCliente">Data de Nascimento</label>
+                <input asp-for="DataNascimentoCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
+                <span asp-validation-for="DataNascimentoCliente" class="text-danger"></span>
+            </div>
+            <div class="d-flex flex-column mb-2 mt-4">
+                <button type="submit" class="btn" style="background: #FF0054; color: white; border-radius: 0px 10px 10px 10px">Cadastrar</button>
             </div>
         </form>
+        <div>
+            <a asp-controller="Cliente" asp-action="Index" style=" background:#FF0054; padding: 10px; outline: none; border: 0px transparent; color: white; border-radius: 20px;">Voltar</a>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

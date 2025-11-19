@@ -58,7 +58,7 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("Update tbProduto set NomeProd=@NomeProd, DescProd=@DescProd, ImgProd=@ImgProd, PrecoProd=@PrecoProd CategoriaProd=@CategoriaProd, QtdProd=@QtdProd where IdProd=@IdProd;", conexao);
+                MySqlCommand cmd = new MySqlCommand("Update tbProduto set NomeProd=@NomeProd, DescProd=@DescProd, ImgProd=@ImgProd, PrecoProd=@PrecoProd, CategoriaProd=@CategoriaProd, QtdProd=@QtdProd where IdProd=@IdProd;", conexao);
 
                 cmd.Parameters.AddWithValue("@IdProd", produto.IdProd);
                 cmd.Parameters.AddWithValue("@NomeProd", produto.NomeProduto);

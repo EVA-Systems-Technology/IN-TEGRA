@@ -1,55 +1,47 @@
 ﻿@model IN_TEGRA.Models.Cliente
 
 @{
+    Layout = "Layout_painel_funcionario";
     ViewData["Title"] = "AtualizarCLiente";
 }
 
-<h1>AtualizarCLiente</h1>
-
-<h4>Cliente</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="AtualizarCLiente">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="IdCli" class="control-label"></label>
-                <input asp-for="IdCli" class="form-control" />
-                <span asp-validation-for="IdCli" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NomeCliente" class="control-label"></label>
-                <input asp-for="NomeCliente" class="form-control" />
-                <span asp-validation-for="NomeCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EmailCliente" class="control-label"></label>
-                <input asp-for="EmailCliente" class="form-control" />
-                <span asp-validation-for="EmailCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SenhaCliente" class="control-label"></label>
-                <input asp-for="SenhaCliente" class="form-control" />
-                <span asp-validation-for="SenhaCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CpfCliente" class="control-label"></label>
-                <input asp-for="CpfCliente" class="form-control" />
-                <span asp-validation-for="CpfCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TelefoneCliente" class="control-label"></label>
-                <input asp-for="TelefoneCliente" class="form-control" />
-                <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+<h1>Alterar Informações do Cliente</h1>
+<div class="container__cliente" style="background: #DADDF5; display: flex; justify-content: center; border-radius: 20px;">
+    <form asp-action="AtualizarCLiente" style="background: #5A5F8B; padding: 50px; border-radius: 20px; width: 80%;">
+       <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="IdCli" type="hidden" class="form-control" />
+       <div class="form-group">
+           <label asp-for="NomeCliente" class="control-label"></label>
+            <input asp-for="NomeCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;" />
+           <span asp-validation-for="NomeCliente" class="text-danger"></span>
+       </div>
+       <div class="form-group">
+           <label asp-for="EmailCliente" class="control-label"></label>
+            <input asp-for="EmailCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;" />
+           <span asp-validation-for="EmailCliente" class="text-danger"></span>
+       </div>
+       <div class="form-group">
+           <label asp-for="SenhaCliente" class="control-label"></label>
+            <input asp-for="SenhaCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;" />
+           <span asp-validation-for="SenhaCliente" class="text-danger"></span>
+       </div>
+       <div class="form-group">
+           <label asp-for="CpfCliente" class="control-label"></label>
+            <input asp-for="CpfCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;" />
+           <span asp-validation-for="CpfCliente" class="text-danger"></span>
+       </div>
+       <div class="form-group">
+           <label asp-for="TelefoneCliente" class="control-label"></label>
+            <input asp-for="TelefoneCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;" />
+           <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
+       </div>
+        <div class="form-group mt-3 mb-3">
+            <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Salvar</button>
+        </div>
+        <div>
+            <a asp-controller="Cliente" asp-action="Index" style=" background:#FF0054; padding: 10px; outline: none; border: 0px transparent; color: white; border-radius: 20px;">Voltar</a>
+        </div>
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
