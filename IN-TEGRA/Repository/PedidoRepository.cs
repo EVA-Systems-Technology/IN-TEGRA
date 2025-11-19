@@ -48,6 +48,7 @@ namespace IN_TEGRA.Repository
                     var item = new ItemPedido()
                     {
                         IdPedido = IdPedido,
+                        NomeProduto = dr["NomeProd"].ToString(),
                         IdProduto = Convert.ToInt32(dr["IdProd"]),
                         QtdItemPedido = Convert.ToInt32(dr["QtdItemPedido"]),
                         ValorItemPedido= Convert.ToDouble(dr["PrecoItemPedido"])

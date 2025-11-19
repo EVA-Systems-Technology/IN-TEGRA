@@ -118,5 +118,10 @@ namespace IN_TEGRA.Controllers
             return RedirectToAction("index", "Produto");
         }
 
+        public IActionResult RecuperaSenha()
+        {
+            return View();
+        }
+
     }
 }

@@ -67,11 +67,7 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
 
             return View();
         }
-        [FuncionarioAutorizacao]
-        public IActionResult Painel() 
-        {
-            return View();
-        }
+       
         [FuncionarioAutorizacao]
         public IActionResult Logout()
         {

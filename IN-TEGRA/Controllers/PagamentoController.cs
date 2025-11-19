@@ -63,10 +63,12 @@ namespace IN_TEGRA.Controllers
             // cadastrando os itens do pedido
             foreach (var item in itensCarrinho)
             {
+                var produtoBanco = _produtoRepository.ObterProdutoPorId(item.ProdId);
                 var itemPedido = new ItemPedido
                 {
                     IdPedido = IdPedido,
                     IdProduto = item.ProdId,
+                    NomeProduto = produtoBanco.NomeProduto,
                     QtdItemPedido = item.QuantidadeProd,
                     ValorItemPedido = (double)item.PrecoProd
                 };
@@ -75,8 +77,6 @@ namespace IN_TEGRA.Controllers
 
             // limpando o carrinho apos finalizar a compra
             _carrinhoRepository.LimparCarrinho(HttpContext.Session);
-
-
 
 
             return RedirectToAction("Pagamento", new { IdPedido });
@@ -90,7 +90,7 @@ namespace IN_TEGRA.Controllers
             var pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
             // pegando os itens do pedido
             var itenspedido = _pedidoRepository.ObterItensPedido(IdPedido);
-            ViewBag.itens = itenspedido;
+            pedido.PedidoItens = itenspedido;
             return View(pedido);
 
         }

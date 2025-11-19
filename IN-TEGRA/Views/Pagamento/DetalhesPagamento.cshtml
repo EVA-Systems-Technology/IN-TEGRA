@@ -5,20 +5,43 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    var msg = "";
+    @if (@Model.ConfirmacaoPedido == true)
+    {
+        msg = "Confirmado";
+    }
+    else
+    {
+        msg = "Não Confirmado";
+    }
 }
+<body>
+    <h1 style="margin: 20px;">COMPRA:</h1>
+    <div class="container" style="background: #D9D9D9; width: 100%; height: 100%; padding: 50px; border-radius: 20px; ">
+        <h1>Informações:</h1>
+        <div class="pedido" style="background: #6F9BB5; padding: 50px; border-radius: 20px; color: white; margin-bottom: 40px;">
 
-<h1>@Model.IdPedido</h1>
-<h1>@Model.DataHoraPedido</h1>
-<h1>@Model.ValorPedido</h1>
-<h1>@Model.FretePedido</h1>
-<h1>@Model.ConfirmacaoPedido</h1>
+            <h1>Codigo do Pedido: @Model.IdPedido</h1>
+            <h1>Data do pedido: @Model.DataHoraPedido</h1>
+            <h1>Valor: R$@Model.ValorPedido,00</h1>
+            <h1>Frete: R$@Model.FretePedido,00</h1>
+            <h1>Status Pedido: @msg </h1>
 
 
-@foreach (var item in (List<ItemPedido>)ViewBag.itens)
-{
-    <p>@item.IdProduto</p>
-    <p>@item.NomeProduto</p>
-    <p>@item.QtdItemPedido</p>
-    <p>@item.ValorItemPedido</p>
-    <p>@item.ValorTotalPedido</p>
-}
+        </div>
+        <h1>Produtos no Pedido:</h1>
+        <div class="produtos" style="background: #6F9BB5; padding: 50px; border-radius: 20px;">
+
+            @foreach (var item in (List<ItemPedido>)ViewBag.itens)
+            {
+                <div style="background: white; padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; gap: 30px; margin-bottom: 15px;">
+                    <h3>Codigo: @item.IdProduto</h3>
+                    <h3>@item.NomeProduto</h3>
+                    <h3>Quantidade: @item.QtdItemPedido</h3>
+                    <h3>Valor: @item.ValorItemPedido</h3>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
