@@ -7,26 +7,38 @@
 }
 
 <body>
-    <div class="container">
-
-        <div class="produtos">
-            @foreach(var item in Model.PedidoItens)
+    <h1 style="margin: 20px;">COMPRA:</h1>
+    <div class="container" style="background: #D9D9D9; width: 100%; height: 100%; padding: 50px; border-radius: 20px; ">
+        <h1 style="color:black;">Produtos:</h1>
+        <div class="produtos" style="background: #6F9BB5; padding: 50px; border-radius: 20px;">
+            @foreach (var item in Model.PedidoItens)
             {
-                <h1>Nome: @item.NomeProduto</h1>
-                <h1>Quantidade: @item.QtdItemPedido</h1>
-                <h1>Valor: @item.ValorItemPedido</h1>
+                <div style="background: white; padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; gap: 30px; margin-bottom: 15px;">
+
+                    <h3 style="flex-grow: 1;">Nome: @item.NomeProduto</h3>
+                    <p>Quantidade: @item.QtdItemPedido</p>
+                    <p>Valor: @item.ValorItemPedido</p>
+
+                </div>
             }
         </div>
-        <h1>COMPRA:</h1>
-        <h1>Pagamento do pedido: @Model.IdPedido</h1>
-            <div class="Container__FormasPagamento">
-                <div class="Pix"></div>
-                <div class="Credito"></div>
-                <div class="Debito"></div>
-                <div class="Boleto"></div>
-            </div>
+        <h1 class="pt-5">Forma de Pagamento</h1>
+        <div class="Container__FormasPagamento" style="display: flex; justify-content: space-around;">
+            <button class="Pix" style="width: 200px; height: 200px; border-radius: 20px; background: grey; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; ">
+                <h1>Pix</h1>
+            </button>
+            <button class="Credito" style="width: 200px; height: 200px; border-radius: 20px; background: grey; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent;">
+                <h1>Crédito</h1>
+            </button>
+            <button class="Debito" style="width: 200px; height: 200px; border-radius: 20px; background: grey; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent;">
+                <h1>Débito</h1>
+            </button>
+            <button class="Boleto" style="width: 200px; height: 200px; border-radius: 20px; background: grey; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent;">
+                <h1>Boleto</h1>
+            </button>
+        </div>
         <h1>Confirmar os Dados:</h1>
-        <div class="ConfirmarDados">
+        <div class="ConfirmarDados" style="width: 100%; height: 300px; background: #6F9BB5; padding: 30px 0px 30px 30px; border-radius: 20px; color: white;">
             <h1>Id do cliente: @Model.IdCli</h1>
             <h1>Frete do pedido: @Model.FretePedido</h1>
             <h1>Data do pedido: @Model.DataHoraPedido</h1>
@@ -45,3 +57,9 @@
         </form>
     </div>
 </body>
+<style>
+    .Pix:active, .Credito:active, .Debito:active, .Boleto:active {
+        background-color: red;
+        transform: scale(0.98);
+    }
+</style>
