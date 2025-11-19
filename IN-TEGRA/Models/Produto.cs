@@ -15,7 +15,7 @@ namespace IN_TEGRA.Models
 
         [Display(Name = "Preço do Produto")]
         [Required(ErrorMessage = "O campo preço é obrigatorio")]
-        public double PrecoProduto { get; set; }
+        public decimal PrecoProduto { get; set; }
 
         [Display(Name = "Descrição do Produto")]
         [Required(ErrorMessage = "O campo descrição é obrigatorio")]

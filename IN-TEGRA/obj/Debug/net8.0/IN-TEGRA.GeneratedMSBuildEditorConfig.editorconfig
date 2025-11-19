@@ -17,161 +17,161 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = IN_TEGRA
 build_property.RootNamespace = IN_TEGRA
-build_property.ProjectDir = C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA\
+build_property.ProjectDir = /home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\sacol\Desktop\IN-TEGRA\IN-TEGRA
+build_property.MSBuildProjectDirectory = /home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/AtualizarCLiente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcQ2xpZW50ZVxBdHVhbGl6YXJDTGllbnRlLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/AtualizarCLiente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvQ2xpZW50ZS9BdHVhbGl6YXJDTGllbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/Cadastrar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcQ2xpZW50ZVxDYWRhc3RyYXIuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvQ2xpZW50ZS9DYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/DetalhesCliente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcQ2xpZW50ZVxEZXRhbGhlc0NsaWVudGUuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/DetalhesCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvQ2xpZW50ZS9EZXRhbGhlc0NsaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Cliente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvQ2xpZW50ZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvSG9tZS9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/Painel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcSG9tZVxQYWluZWwuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/Painel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvSG9tZS9QYWluZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/PainelFuncionario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcSG9tZVxQYWluZWxGdW5jaW9uYXJpby5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/PainelFuncionario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvSG9tZS9QYWluZWxGdW5jaW9uYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/PainelGerente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcSG9tZVxQYWluZWxHZXJlbnRlLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Home/PainelGerente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvSG9tZS9QYWluZWxHZXJlbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/AtualizarProduto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcUHJvZHV0b1xBdHVhbGl6YXJQcm9kdXRvLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/AtualizarProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvUHJvZHV0by9BdHVhbGl6YXJQcm9kdXRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/Cadastro.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcUHJvZHV0b1xDYWRhc3Ryby5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvUHJvZHV0by9DYWRhc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/DetalhesProduto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcUHJvZHV0b1xEZXRhbGhlc1Byb2R1dG8uY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/DetalhesProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvUHJvZHV0by9EZXRhbGhlc1Byb2R1dG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/ListaProdutos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcUHJvZHV0b1xMaXN0YVByb2R1dG9zLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Produto/ListaProdutos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvUHJvZHV0by9MaXN0YVByb2R1dG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Carrinho/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cSW5kZXguY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Carrinho/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FycmluaG8vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/AlterarDados.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBbHRlcmFyRGFkb3MuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Cliente/AlterarDados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZS9BbHRlcmFyRGFkb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/Cadastro.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYWRhc3Ryby5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Cliente/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZS9DYWRhc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/DetalhesPedido.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZXRhbGhlc1BlZGlkby5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Cliente/DetalhesPedido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZS9EZXRhbGhlc1BlZGlkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxMb2dpbi5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Cliente/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZS9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/PainelCliente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxQYWluZWxDbGllbnRlLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Cliente/PainelCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZS9QYWluZWxDbGllbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Cliente/Pedidos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxQZWRpZG9zLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Cliente/Pedidos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xpZW50ZS9QZWRpZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Carrinho.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJyaW5oby5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Home/Carrinho.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DYXJyaW5oby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Compra.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wcmEuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Home/Compra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db21wcmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/CriacaoConta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmlhY2FvQ29udGEuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Home/CriacaoConta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DcmlhY2FvQ29udGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Home/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Pagamento/DetalhesPagamento.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnYW1lbnRvXERldGFsaGVzUGFnYW1lbnRvLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Pagamento/DetalhesPagamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnYW1lbnRvL0RldGFsaGVzUGFnYW1lbnRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Pagamento/Pagamento.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnYW1lbnRvXFBhZ2FtZW50by5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Pagamento/Pagamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnYW1lbnRvL1BhZ2FtZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Produto/DetalhesProduto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xEZXRhbGhlc1Byb2R1dG8uY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Produto/DetalhesProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9EZXRhbGhlc1Byb2R1dG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Produto/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xJbmRleC5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Produto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnVuY2lvbmFyaW9cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-jwqpkjqbzn
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Areas/Funcionario/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvRnVuY2lvbmFyaW8vVmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-vafif8uleu
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/Layout_painel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dF9wYWluZWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-xxlugwzxx8
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Shared/Layout_painel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xheW91dF9wYWluZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5r93t9blyc
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-n21knwsnly
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-h29kggloz2
 
-[C:/Users/sacol/Desktop/IN-TEGRA/IN-TEGRA/Views/Shared/_Layout_remove.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfcmVtb3ZlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = b-713mvwizcl
+[/home/mikazittas/Dev/TCC/IN-TEGRA/IN-TEGRA/Views/Shared/_Layout_remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRfcmVtb3ZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-yh743z5sci

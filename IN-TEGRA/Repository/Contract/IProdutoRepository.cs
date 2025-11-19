@@ -13,5 +13,7 @@ namespace IN_TEGRA.Repository.Contract
         Produto ObterProdutoPorId(int IdProduto);
 
         void ExcluirProduto(int IdProduto);
+        
+        IEnumerable<Produto> PesquisarProduto(string searchTerm);
     }
 }
