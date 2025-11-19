@@ -85,7 +85,7 @@ namespace IN_TEGRA.Repository
 
                 cmd.Parameters.AddWithValue("@NomeProd", produto.NomeProduto);
                 cmd.Parameters.AddWithValue("@DescProd", produto.DescricaoProduto);
-                cmd.Parameters.AddWithValue("ImgProd", produto.ImagemProduto);
+                cmd.Parameters.AddWithValue("@ImgProd", produto.ImagemProduto);
                 cmd.Parameters.AddWithValue("@PrecoProd", produto.PrecoProduto);
                 cmd.Parameters.AddWithValue("@QtdProd", produto.QuantidadeProduto);
                 cmd.Parameters.AddWithValue("@CategoriaProd", produto.CategoriaProduto);

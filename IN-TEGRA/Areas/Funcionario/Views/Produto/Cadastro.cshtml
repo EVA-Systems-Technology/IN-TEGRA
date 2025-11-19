@@ -1,6 +1,7 @@
 ﻿@model IN_TEGRA.Models.Produto
 
 @{
+    Layout = "Layout_painel";
     ViewData["Title"] = "Cadastro";
 }
 
@@ -9,52 +10,163 @@
     <script>alert("@TempData["MSG"]")</script>
 }
 
-<h1>Cadastro</h1>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    
+    <style>
+        .config-container {
+            background-color: #535679; 
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+            font-family: 'ABeeZee', sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            grid-gap: 30px;
+           
+        }
 
-<h4>Produto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Cadastro">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NomeProduto" class="control-label"></label>
-                <input asp-for="NomeProduto" class="form-control" />
+        
+        .image-preview-area {
+            background-color: #EAEAEA;
+            border-radius: 15px;
+            height: 300px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            grid-column: 1 / 2; 
+            grid-row: 1 / 3;    
+        }
+        
+        .small-images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15px;
+        }
+
+        .small-image-box {
+            background-color: #EAEAEA;
+            border-radius: 10px;
+            height: 100px;
+        }
+
+     
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+       
+        .custom-input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: #EAEAEA;
+            color: #333;
+        }
+
+        
+        .btn-confirmar {
+            background-color: #000080; 
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%; 
+            max-width: 200px;
+        }
+
+        
+        .area-nome { grid-column: 1 / 2; }
+        .area-preco { grid-column: 2 / 3; }
+        .area-descricao { grid-column: 1 / 3; } 
+        .area-categoria { grid-column: 1 / 2; }
+        .area-extra { grid-column: 2 / 3; background: #EAEAEA; border-radius: 15px; height: 150px; } 
+    </style>
+</head>
+
+<div style="padding: 20px;">
+    <h2 style="margin-bottom: 20px; color: #333;">CONFIGURAÇÃO DO PRODUTO</h2>
+
+    @if (TempData["MSG"] != null)
+    {
+        <div class="alert alert-success">@TempData["MSG"]</div>
+    }
+
+    <form asp-action="Cadastro">
+        <div class="config-container">
+            
+            <div class="image-preview-area">
+                <span>Imagem Principal</span>
+                </div>
+
+            <div class="small-images-grid">
+                <div style="grid-column: 1/3; margin-bottom: 5px;">Adicionar Imagens</div>
+                <div class="small-image-box"></div>
+                <div class="small-image-box"></div>
+                <div class="small-image-box"></div>
+                <div class="small-image-box"></div>
+            </div>
+
+            <div class="form-group area-nome">
+                <label asp-for="NomeProduto">Nome:</label>
+                <input asp-for="NomeProduto" class="custom-input" />
                 <span asp-validation-for="NomeProduto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="PrecoProduto" class="control-label"></label>
-                <input asp-for="PrecoProduto" class="form-control" />
+
+            <div class="form-group area-preco">
+                <label asp-for="PrecoProduto">Preço:</label>
+                <input asp-for="PrecoProduto" class="custom-input" />
                 <span asp-validation-for="PrecoProduto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="DescricaoProduto" class="control-label"></label>
-                <input asp-for="DescricaoProduto" class="form-control" />
+
+            <div class="form-group area-descricao">
+                <label asp-for="DescricaoProduto">Alterar descrição</label>
+                <textarea asp-for="DescricaoProduto" class="custom-input" style="height: 100px; border-radius: 15px;"></textarea>
                 <span asp-validation-for="DescricaoProduto" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="QuantidadeProduto" class="control-label"></label>
-                <input asp-for="QuantidadeProduto" class="form-control" />
-                <span asp-validation-for="QuantidadeProduto" class="text-danger"></span>
+
+            <div class="area-categoria">
+                <div class="form-group">
+                    <label asp-for="CategoriaProduto">Alterar Categoria</label>
+                    <input asp-for="CategoriaProduto" class="custom-input" />
+                    <span asp-validation-for="CategoriaProduto" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="QuantidadeProduto">Quantidade:</label>
+                    <input asp-for="QuantidadeProduto" class="custom-input" />
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="ImagemProduto">Caminho da Imagem:</label>
+                    <input asp-for="ImagemProduto" class="custom-input" />
+                </div>
+
+                <br/>
+                <button type="submit" class="btn-confirmar">CONFIRMAR</button>
             </div>
-            <div class="form-group">
-                <label asp-for="ImagemProduto" class="control-label"></label>
-                <input asp-for="ImagemProduto" class="form-control" />
-                <span asp-validation-for="ImagemProduto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoriaProduto" class="control-label"></label>
-                <input asp-for="CategoriaProduto" class="form-control" />
-                <span asp-validation-for="CategoriaProduto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+
+            <div class="area-extra"></div>
+
+        </div>
+    </form>
+    
+    <div style="margin-top: 20px;">
+        <a asp-action="ListaProdutos" class="btn btn-link">Voltar para Lista</a>
     </div>
 </div>
 
-<div>
-    <a asp-action="ListaProdutos">Back to List</a>
-</div>
-
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
