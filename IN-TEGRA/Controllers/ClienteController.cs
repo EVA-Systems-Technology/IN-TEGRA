@@ -14,8 +14,9 @@ namespace IN_TEGRA.Controllers
         private IItemPedidoRepository _itemPedidoRepository;
         private IPedidoRepository _pedidoRepository;
         private IProdutoRepository _produtoRepository;
+        private ILoginRepository _loginRepository;
 
-        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPagamentoRepository pagamentoRepository, IItemPedidoRepository itempedidoRepository, IPedidoRepository pedidoRepository, IProdutoRepository produtoRepository)
+        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPagamentoRepository pagamentoRepository, IItemPedidoRepository itempedidoRepository, IPedidoRepository pedidoRepository, IProdutoRepository produtoRepository, ILoginRepository loginRepository)
         {
             _clienteRepository = clienteRepository;
             _loginCliente = logincliente;
@@ -23,6 +24,7 @@ namespace IN_TEGRA.Controllers
             _produtoRepository = produtoRepository;
             _pedidoRepository = pedidoRepository;
             _itemPedidoRepository = itempedidoRepository;
+            _loginRepository = loginRepository;
         }
         [HttpGet]
         public IActionResult Cadastro()
@@ -50,7 +52,7 @@ namespace IN_TEGRA.Controllers
         [HttpPost]
         public IActionResult Login([FromForm] Cliente cliente)
         {
-            Cliente clientedb = _clienteRepository.Login(cliente.EmailCliente, cliente.SenhaCliente);
+            Cliente clientedb = _loginRepository.LoginComum(cliente.EmailCliente, cliente.SenhaCliente);
             if (clientedb.EmailCliente != null && clientedb.SenhaCliente != null)
             {
                 _loginCliente.Login(clientedb);

@@ -14,6 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 
 // Adicionando a interface como serviço 
+builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ICarrinhoRepository, CarrinhoRepository>();

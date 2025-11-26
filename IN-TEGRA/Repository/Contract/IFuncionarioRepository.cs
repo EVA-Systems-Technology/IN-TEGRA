@@ -4,8 +4,6 @@ namespace IN_TEGRA.Repository.Contract
 {
     public interface IFuncionarioRepository
     {
-        Funcionario Login(string Email, string Senha);
-
         void cadastrarFuncionario(Funcionario funcionario);
         void atualizarFuncionario(Funcionario funcionario);
         void atualizarSenhaFuncionario(Funcionario funcionario);

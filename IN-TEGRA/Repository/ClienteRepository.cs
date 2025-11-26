@@ -71,36 +71,6 @@ namespace IN_TEGRA.Repository
             }
         }
 
-        public Cliente Login(string Email, string Senha)
-        {
-            using (var conexao = new MySqlConnection(_conexaoMySQL)) 
-            {
-                conexao.Open();
-
-                MySqlCommand cmd = new MySqlCommand("select * from tbCliente where EmailCli=@EmailCli and SenhaCli=@SenhaCli", conexao);
-
-                cmd.Parameters.AddWithValue("@EmailCli", Email);
-                cmd.Parameters.AddWithValue("@SenhaCli", Senha);
-
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-
-                Cliente cliente = new Cliente();
-
-                while (dr.Read())
-                {
-                    cliente.IdCli = Convert.ToInt32(dr["IdCli"]);
-                    cliente.NomeCliente = Convert.ToString(dr["NomeCli"]);
-                    cliente.EmailCliente = Convert.ToString(dr["EmailCli"]);
-                    cliente.SenhaCliente = Convert.ToString(dr["SenhaCli"]);
-                    cliente.CpfCliente = Convert.ToDouble(dr["CpfCli"]);
-                    cliente.TelefoneCliente = Convert.ToString(dr["TelefoneCli"]);
-                    cliente.DataNascimentoCliente = DateOnly.FromDateTime(Convert.ToDateTime(dr["NascCli"]));
-
-                }
-                return cliente;
-            }
-        }
 
         public Cliente ObterClientePorId(int IdCli)
         {

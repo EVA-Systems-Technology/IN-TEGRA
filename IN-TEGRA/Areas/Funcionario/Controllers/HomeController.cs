@@ -1,6 +1,7 @@
 ﻿using IN_TEGRA.Libraries.Filtro;
 using IN_TEGRA.Libraries.Login;
 using IN_TEGRA.Models.Constant;
+using IN_TEGRA.Repository;
 using IN_TEGRA.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,12 +11,14 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
     public class HomeController : Controller
     {
         private IFuncionarioRepository _funcionarioRepository;
+        private ILoginRepository _loginRepository;
         private LoginFuncionario _loginFuncionario;
 
-        public HomeController(IFuncionarioRepository funcionarioRepository, LoginFuncionario loginFuncionario)
+        public HomeController(IFuncionarioRepository funcionarioRepository, LoginFuncionario loginFuncionario, ILoginRepository loginrepository)
         {
             _funcionarioRepository = funcionarioRepository;
             _loginFuncionario = loginFuncionario;
+            _loginRepository = loginrepository;
         }
 
         public IActionResult Login()
@@ -26,7 +29,7 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         [ValidateHttpReferer]
         public IActionResult Login([FromForm] Models.Funcionario funcionario)
         {
-            Models.Funcionario funcionariodb = _funcionarioRepository.Login(funcionario.EmailFuncionario, funcionario.SenhaFuncionario);
+            Models.Funcionario funcionariodb = _loginRepository.LoginFuncionario(funcionario.EmailFuncionario, funcionario.SenhaFuncionario);
 
             if (funcionariodb.EmailFuncionario != null && funcionariodb.SenhaFuncionario != null && funcionariodb.TipoFunc != FuncionarioTipoConstant.Comum)
             {

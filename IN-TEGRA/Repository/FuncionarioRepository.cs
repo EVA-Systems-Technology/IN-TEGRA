@@ -65,34 +65,6 @@ namespace IN_TEGRA.Repository
             }
         }
 
-        public Funcionario Login(string Email, string Senha)
-        {
-            using (var conexao = new MySqlConnection(_conexaoMySQL))
-            {
-                conexao.Open();
-
-                MySqlCommand cmd = new MySqlCommand("select * from tbFuncionario where EmailFunc=@EmailFunc and SenhaFunc=@SenhaFunc", conexao);
-
-                cmd.Parameters.AddWithValue("@EmailFunc", Email);
-                cmd.Parameters.AddWithValue("@SenhaFunc", Senha);
-
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                MySqlDataReader dr = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-
-                Funcionario funcionario = new Funcionario();
-
-                while (dr.Read())
-                {
-                    funcionario.IdFuncionario = Convert.ToInt32(dr["IdFunc"]);
-                    funcionario.NomeFuncionario = dr["NomeFunc"].ToString();    
-                    funcionario.EmailFuncionario = dr["EmailFunc"].ToString();
-                    funcionario.SenhaFuncionario = dr["SenhaFunc"].ToString();
-                    funcionario.CpfFuncionario = dr["CpfFunc"].ToString();
-                    funcionario.TipoFunc = dr["TipoFunc"].ToString();
-                }
-                    return funcionario;
-            }
-        }
 
         public List<Funcionario> obterFuncionarioPorEmail(string Email)
         {
