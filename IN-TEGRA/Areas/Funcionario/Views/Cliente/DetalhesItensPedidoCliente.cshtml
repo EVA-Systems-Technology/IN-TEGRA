@@ -1,0 +1,47 @@
+﻿@model List<IN_TEGRA.Models.ItemPedido>
+
+@{
+    ViewData["Title"] = "Detalhes do Pedido";
+    Layout = "Layout_painel_funcionario";
+    var pedido = ViewBag.Pedido;
+    var Endereco = ViewBag.Endereco;
+    var ClienteId = ViewBag.Cliente.IdCli;
+
+}
+
+
+<body style="margin: 0; display: flex; height: 100vh; font-family:'ABeeZee',sans-serif; background: #EAEAEA; justify-content: center; align-items: center;">
+    <div class="container" style="background: #DADDF5; border-radius: 30px; padding: 50px;">
+        <h2>Detalhes do Pedido</h2>
+        <p>Codigo: @pedido.IdPedido</p>
+        <p>Valor: @pedido.ValorPedido</p>
+        <p>Frete: @pedido.FretePedido</p>
+        <p>Data: @pedido.DataHoraPedido</p>
+        <p>Confirmacao: @pedido.ConfirmacaoPedido</p>
+        <hr />
+        <p>Cep: @Endereco.CEP</p>
+        <p>Estado: @Endereco.Estado</p>
+        <p>Cidade: @Endereco.Cidade</p>
+        <p>Bairro: @Endereco.Bairro</p>
+        <p>Logradouro: @Endereco.Logradouro</p>
+        <p>Complemento: @Endereco.Complemento</p>
+        <p>Numero: @Endereco.Numero</p>
+
+
+        <hr />
+        <h1>Produtos:</h1>
+        @foreach (var item in Model)
+        {
+            <div class="container" style="background:#5A5F8B; border-radius: 30px; padding: 30px; color: white;">
+                <h2>Codigo: @item.IdProduto</h2>
+                <h2>Nome: @item.NomeProduto</h2>
+                <h2>Quantidade: @item.QtdItemPedido</h2>
+                <h2>Valor: @item.ValorItemPedido</h2>
+            </div>
+        }
+        <form asp-action="DetalhesCliente" class="mt-5" method="get">
+            <input type="hidden" name="IdCli" value="@ClienteId" />
+            <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Voltar</button>
+        </form>
+    </div>
+</body>

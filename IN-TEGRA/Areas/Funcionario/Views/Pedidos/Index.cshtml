@@ -1,0 +1,70 @@
+﻿@model IEnumerable<IN_TEGRA.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FretePedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataHoraPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfirmacaoPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEndereco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FretePedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataHoraPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmacaoPedido)
+            </td>
+            <td>
+                @ViewBag.Endereco.Logradouro
+            </td>
+            <td>
+                @Html.ActionLink("Detalhes", "DetalhesPedidos", new { Idpedido = item.IdPedido }) |
+                @Html.ActionLink("Excluir", "ExcluirPedido", new { Idpedido = item.IdPedido })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,6 +1,7 @@
 ﻿using IN_TEGRA.Libraries.Filtro;
 using IN_TEGRA.Libraries.Login;
 using IN_TEGRA.Models;
+using IN_TEGRA.Repository;
 using IN_TEGRA.Repository.Contract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,11 +13,17 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
     {
         private IClienteRepository _clienteRepository;
         private LoginCliente _loginCliente;
+        private IPedidoRepository _pedidoRepository;
+        private IEnderecoRepository _enderecoRepository;
+        private IProdutoRepository _produtoRepository;
 
-        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente)
+        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPedidoRepository pedidoRepository, IEnderecoRepository enderecoRepository, IProdutoRepository produtoRepository)
         {
             _clienteRepository = clienteRepository;
             _loginCliente = logincliente;
+            _pedidoRepository = pedidoRepository;
+            _enderecoRepository = enderecoRepository;
+            _produtoRepository = produtoRepository;
         }
 
 
@@ -34,14 +41,35 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         [HttpGet]
         public IActionResult DetalhesCliente(int IdCli)
         {
-            return View(_clienteRepository.ObterClientePorId(IdCli));
+            var cliente = _clienteRepository.ObterClientePorId(IdCli);
+            //implementar os pedidos no cliente
+            var pedidos = _pedidoRepository.ObterPedidosCliente(IdCli);
+            foreach(var pedido in pedidos)
+            {
+                //implementar parte endereço no cliente
+                ViewBag.Endereco = _enderecoRepository.ObterEnderecoPorId(pedido.IdEndereco);
+                
+            }
+            ViewBag.Pedidos = pedidos;
+
+            return View(cliente);
         }
-
-        [HttpPost]
-        public IActionResult DetalhesCliente(Cliente cliente)
+        [HttpGet]
+        public IActionResult DetalhesItensPedidoCliente(int IdPedido)
         {
+            var pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
+            ViewBag.cliente = _clienteRepository.ObterClientePorId(pedido.IdCli);
+            ViewBag.endereco = _enderecoRepository.ObterEnderecoPorId(pedido.IdEndereco);
+            ViewBag.pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
+            var itens = _pedidoRepository.ObterItensPedido(IdPedido);
 
-            return RedirectToAction("Index");
+            foreach (var item in itens)
+            {
+                var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);
+                item.NomeProduto = produto.NomeProduto;
+            }
+
+            return View(itens);
         }
 
         [HttpGet]

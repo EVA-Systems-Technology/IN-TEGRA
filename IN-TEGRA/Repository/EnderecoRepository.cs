@@ -14,11 +14,6 @@ namespace IN_TEGRA.Repository
             _conexaoMySQL = conf.GetConnectionString("ConexaoMySQL");
         }
 
-        public void AtualizarEndereco(Endereco endereco)
-        {
-            throw new NotImplementedException();
-        }
-
         public void CadastrarEndereco(Endereco endereco)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
@@ -42,18 +37,6 @@ namespace IN_TEGRA.Repository
             }
         }
 
-        public void ExcluirEndereco(int IdEndereco)
-        {
-            using (var conexao = new MySqlConnection(_conexaoMySQL))
-            {
-                conexao.Open();
-
-                MySqlCommand cmd = new MySqlCommand("Delete * from tbEndereco where IdEndereco=@IdEndereco", conexao);
-                cmd.Parameters.AddWithValue("@IdEndereco", IdEndereco);
-
-                cmd.ExecuteNonQuery();
-            }
-        }
 
         public Endereco ObterEnderecoPorId(int IdEndereco)
         {

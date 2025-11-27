@@ -1,6 +1,7 @@
 ﻿using IN_TEGRA.Models;
 using IN_TEGRA.Repository.Contract;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace IN_TEGRA.Repository
 {
@@ -28,6 +29,26 @@ namespace IN_TEGRA.Repository
 
 
                 return Convert.ToInt32(cmd.ExecuteScalar()); // retorna o id do pedido cadastrado com sucesso
+            }
+        }
+
+        public void ExcluirPedido(int IdPedido)
+        {
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+
+                MySqlCommand cmdPagamento = new MySqlCommand("delete from tbpagamento where IdPedido=@IdPedido", conexao);
+                cmdPagamento.Parameters.AddWithValue("@IdPedido", IdPedido);
+                cmdPagamento.ExecuteNonQuery();
+
+                MySqlCommand cmdItem = new MySqlCommand("delete from tbitempedido where IdPedido=@IdPedido", conexao);
+                cmdItem.Parameters.AddWithValue("@IdPedido", IdPedido);
+                cmdItem.ExecuteNonQuery();
+
+                MySqlCommand cmd = new MySqlCommand("Delete from tbPedido where IdPedido=@IdPedido", conexao);
+                cmd.Parameters.AddWithValue("@IdPedido", IdPedido);
+                cmd.ExecuteNonQuery();
             }
         }
 
@@ -109,8 +130,6 @@ namespace IN_TEGRA.Repository
 
                 cmd.Parameters.AddWithValue("@IdCli", IdCli);
 
-
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 MySqlDataReader dr = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
 
                 while (dr.Read()) 
@@ -133,5 +152,40 @@ namespace IN_TEGRA.Repository
 
             }
         }
+
+        public IEnumerable<Pedido> ObterTodosPedidos()
+        {
+            List<Pedido> pedidos = new List<Pedido>();
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM TBPEDIDO",conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+                conexao.Close();
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    pedidos.Add(new Pedido
+                    {
+                        IdPedido = Convert.ToInt32(dr["IdPedido"]),
+                        IdCli = Convert.ToInt32(dr["IdCli"]),
+                        FretePedido = Convert.ToDouble(dr["FretePedido"]),
+                        ValorPedido = Convert.ToDouble(dr["ValorPedido"]),
+                        DataHoraPedido = Convert.ToDateTime(dr["DataHoraPedido"]),
+                        ConfirmacaoPedido = Convert.ToBoolean(dr["ConfirmacaoPedido"]),
+                        IdEndereco = Convert.ToInt32(dr["IdEndereco"])
+                    });
+
+                }
+                return pedidos;
+            }
+        }
     }
 }
+
+           
