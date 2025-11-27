@@ -15,6 +15,7 @@ namespace IN_TEGRA.Controllers
         private IItemPedidoRepository _itemPedidoRepository;
         private IPedidoRepository _pedidoRepository;
         private readonly IProdutoRepository _produtoRepository;
+        private readonly IEnderecoRepository _enderecoRepository;
 
         public PagamentoController(
             ICarrinhoRepository carrinhoRepository,
@@ -22,7 +23,8 @@ namespace IN_TEGRA.Controllers
             IItemPedidoRepository itemPedidoRepository,
             IPedidoRepository pedidoRepository,
             IProdutoRepository produtoRepository,
-            LoginCliente logincliente)
+            LoginCliente logincliente,
+            IEnderecoRepository enderecoRepository)
         {
             _carrinhoRepository = carrinhoRepository;
             _pagamentoRepository = pagamentoRepository;
@@ -30,10 +32,11 @@ namespace IN_TEGRA.Controllers
             _pedidoRepository = pedidoRepository;
             _produtoRepository = produtoRepository;
             _loginCliente = logincliente;
+            _enderecoRepository = enderecoRepository;
         }
 
-        [HttpPost]
-        public IActionResult FinalizarCompra()
+        [HttpGet]
+        public IActionResult FinalizarCompra(int IdEndereco)
         {
             var usuario = _loginCliente.GetCliente().IdCli;
                 
@@ -54,7 +57,8 @@ namespace IN_TEGRA.Controllers
                 IdCli = usuario,
                 FretePedido = 0,
                 ValorPedido = (double)_carrinhoRepository.TotalCarrinho(HttpContext.Session),
-                ConfirmacaoPedido = false
+                ConfirmacaoPedido = false,
+                IdEndereco = IdEndereco
 
             };
             // cadastra o pedido e retorna o id do pedido cadastrado
@@ -91,6 +95,7 @@ namespace IN_TEGRA.Controllers
             // pegando os itens do pedido
             var itenspedido = _pedidoRepository.ObterItensPedido(IdPedido);
             pedido.PedidoItens = itenspedido;
+            ViewBag.endereco = _enderecoRepository.ObterEnderecoPorId(pedido.IdEndereco);
             return View(pedido);
 
         }

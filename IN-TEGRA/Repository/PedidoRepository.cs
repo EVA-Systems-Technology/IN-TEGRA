@@ -19,11 +19,13 @@ namespace IN_TEGRA.Repository
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbPedido (IdCli, FretePedido, ValorPedido, DataHoraPedido, ConfirmacaoPedido) VALUES (@IdCli, @FretePedido, @ValorPedido, NOW(), true);   SELECT LAST_INSERT_ID();", conexao); // pega o ultimo id registrado para retornar
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO tbPedido (IdCli, FretePedido, ValorPedido, DataHoraPedido, ConfirmacaoPedido, IdEndereco) VALUES (@IdCli, @FretePedido, @ValorPedido, NOW(), true, @IdEndereco);   SELECT LAST_INSERT_ID();", conexao); // pega o ultimo id registrado para retornar
 
                 cmd.Parameters.AddWithValue("@IdCli", pedido.IdCli);
                 cmd.Parameters.AddWithValue("@FretePedido", pedido.FretePedido);
                 cmd.Parameters.AddWithValue("@ValorPedido", pedido.ValorPedido);
+                cmd.Parameters.AddWithValue("@IdEndereco", pedido.IdEndereco);
+
 
                 return Convert.ToInt32(cmd.ExecuteScalar()); // retorna o id do pedido cadastrado com sucesso
             }
@@ -84,6 +86,7 @@ namespace IN_TEGRA.Repository
                     pedido.ValorPedido = Convert.ToDouble(dr["ValorPedido"]);
                     pedido.DataHoraPedido = Convert.ToDateTime(dr["DataHoraPedido"]);
                     pedido.ConfirmacaoPedido = Convert.ToBoolean(dr["ConfirmacaoPedido"]);
+                    pedido.IdEndereco = Convert.ToInt32(dr["IdEndereco"]);
 
                 }
                 if (pedido != null) 
@@ -119,7 +122,8 @@ namespace IN_TEGRA.Repository
                         FretePedido = Convert.ToDouble(dr["FretePedido"]),
                         ValorPedido = Convert.ToDouble(dr["ValorPedido"]),
                         DataHoraPedido = Convert.ToDateTime(dr["DataHoraPedido"]),
-                        ConfirmacaoPedido = Convert.ToBoolean(dr["ConfirmacaoPedido"])
+                        ConfirmacaoPedido = Convert.ToBoolean(dr["ConfirmacaoPedido"]),
+                        IdEndereco = Convert.ToInt32(dr["IdEndereco"])
                     };
 
                     pedido.PedidoItens = ObterItensPedido(pedido.IdPedido);

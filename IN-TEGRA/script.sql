@@ -73,28 +73,22 @@ create table tbProduto(
     CategoriaProd varchar(150)  not null
 );
 
-create table tbUF (
-	IdUF int primary key auto_increment,
-    SiglaUF char(2) not null
-);
-
-create table tbcidade (
-	IdCidade int primary key auto_increment,
-    NomeCidade	varchar(60) not null
-);
     
 create table tbEndereco (
 	IdEndereco int primary key auto_increment,
-    CepEndereco Char(8) not null,
-    NumEndereco int not null,
-    LogradouroEndereco varchar(60) not null,
-    ComplementoEndereco varchar(100),
-    IdCidade int not null,
-    IdUF int not null,
-    foreign key (IdCidade) references tbCidade(IdCidade),
-    foreign key (IdUF) references tbUF(IdUF)
+    CEP varchar(8) not null,
+    Estado varchar(100) not null,
+    Cidade varchar(100) not null,
+    Bairro varchar(100) not null,
+    LogradouroEndereco varchar(100) not null,
+	Numero int not null,
+    Complemento varchar(100)
 );
 
+drop table Tbendereco;
+drop table tbpedido;
+drop table tbpagamento;
+drop table tbItemPedido;
 
 
 -- tabela do itemcarrinho blablabla vc ja sabe
@@ -140,44 +134,16 @@ create table tbPagamento (
 select * from tbcliente;
 select * from tbproduto;
 select * from tbfuncionario;
-
-
 SELECT * FROM tbpedido;
-insert into tbfuncionario (nomefunc, emailfunc, senhafunc, cpffunc, tipofunc) values ("admin", "admin@admin.com", "123", 12333, "G");
-
-insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Cadeira de rodas xlr8", "Uma cadeira de rodas baseada na coloração do alien XLR8 do Ben 10", "image/cadeira.png", 1234.99);
-
-insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Garfo Adaptado", "um garfo adaptado para facilitar a praticidade de pessoas com deficiencias motoras ao se alimentarem! ", "image/garfo.png", 78.99);
-
-insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Muletas 'The root'", "Par de muletas com tamanho ajustavel! ", "image/garfo.png", 83.99);
-
-
-
-INSERT INTO tbProduto(NomeProd, DescProd, ImgProd, PrecoProd, QtdProd, CategoriaProd)
-VALUES
-("Abridor de Potes Elétrico", "Abre potes e tampas de garrafa com um único toque, ideal para quem tem artrite ou força limitada nas mãos.", "image/abridor_potes.png", 189.90, 30, "Acessórios"),
-("Tábua de Corte Adaptada", "Tábua com pinos de inox e borda elevada, permite fixar alimentos para cortar usando apenas uma mão.", "image/tabua_adaptada.png", 139.90, 25, "Acessórios"),
-("Calçador de Meias", "Dispositivo curvo que ajuda a vestir meias e meias de compressão sem precisar se curvar ou levantar as pernas.", "image/calcador_meias.png", 45.00, 50, "Acessórios"),
-("Pinça Pegadora Dobrável 80cm", "Braço extensor leve com gatilho para pegar objetos em locais altos ou no chão, evitando quedas.", "image/pinca_alcancador.png", 65.00, 75, "Acessórios"),
-("Campainha sem Fio com Alerta Visual", "Campainha com receptor portátil que pisca luzes de LED e vibra. Ideal para deficiência auditiva.", "image/campainha_luz.png", 175.00, 30, "Audição"),
-("Botão Comunicador de Voz Gravável", "Botão de fácil pressão que grava e reproduz uma mensagem de 30 segundos. Para comunicação alternativa (AAC).", "image/botao_comunicador.png", 250.00, 20, "Comunicação"),
-("Disco de Transferência Giratório", "Disco de 40cm que gira 360º, facilita a transferência segura de pacientes da cama para a cadeira.", "image/disco_transferencia.png", 210.00, 15, "Mobilidade");
-
--- trigger de quando fizer login ele registra na tb login
-
 select * from tbcliente;
 select * from tbproduto;
 select * from tbfuncionario;
-
-
+select * from tblogin;
 SELECT * FROM tbpedido;
+
+
 insert into tbfuncionario (nomefunc, emailfunc, senhafunc, cpffunc, tipofunc) values ("admin", "admin@admin.com", "123", 12333, "G");
 
-insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Cadeira de rodas xlr8", "Uma cadeira de rodas baseada na coloração do alien XLR8 do Ben 10", "image/cadeira.png", 1234.99);
-
-insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Garfo Adaptado", "um garfo adaptado para facilitar a praticidade de pessoas com deficiencias motoras ao se alimentarem! ", "image/garfo.png", 78.99);
-
-insert into tbProduto(NomeProd, DescProd, ImgProd, PrecoProd) values ("Muletas 'The root'", "Par de muletas com tamanho ajustavel! ", "image/garfo.png", 83.99);
 
 
 
@@ -191,4 +157,17 @@ VALUES
 ("Botão Comunicador de Voz Gravável", "Botão de fácil pressão que grava e reproduz uma mensagem de 30 segundos. Para comunicação alternativa (AAC).", "image/botao_comunicador.png", 250.00, 20, "Comunicação"),
 ("Disco de Transferência Giratório", "Disco de 40cm que gira 360º, facilita a transferência segura de pacientes da cama para a cadeira.", "image/disco_transferencia.png", 210.00, 15, "Mobilidade");
 
--- trigger de quando fizer login ele registra na tb login
+INSERT INTO tbProduto(NomeProd, DescProd, ImgProd, PrecoProd, QtdProd, CategoriaProd)
+VALUES
+('Facilitador de Punho e Polegar', 'Dispositivo auxiliar para facilitar a pegada e escrita.', 'image/facilitador_punho.jpg', 110.00, 50, 'Acessórios'),
+('Aranha Mola', 'Acessório de reabilitação para exercícios de coordenação motora.', 'image/aranha_mola.jpg', 44.00, 100, 'Acessórios'),
+('Tesoura Mola', 'Tesoura adaptada com mecanismo de mola para facilitar o corte.', 'image/tesoura_mola.jpg', 42.00, 80, 'Acessórios'),
+('Caderno de Pauta Ampliada (100 Folhas)', 'Caderno com linhas mais espaçadas, ideal para baixa visão.', 'image/caderno_ampliado.jpg', 40.00, 200, 'Visão'),
+('Facilitador Dorsal', 'Auxiliar para posicionamento e conforto dorsal.', 'image/facilitador_dorsal.jpg', 60.00, 75, 'Mobilidade'),
+('Prancha de Comunicação Alternativa', 'Prancha com símbolos e imagens para comunicação não-verbal.', 'image/prancha_comunicacao.jpg', 180.00, 40, 'Comunicação'),
+('Globo em alto relevo', 'Globo terrestre tátil para pessoas com deficiência visual.', 'image/globo_alto_relevo.jpg', 280.00, 25, 'Visão'),
+('Colher Adaptada', 'Colher com cabo e formato ergonômico para facilitar a alimentação.', 'image/colher_adaptada.jpg', 35.00, 150, 'Acessórios'),
+('Garfo Adaptado', 'Garfo com cabo e formato ergonômico para facilitar a alimentação.', 'image/garfo_adaptado.jpg', 35.00, 150, 'Acessórios'),
+('Mesa Escolar Adaptada', 'Mesa escolar ajustável e adaptada para diferentes necessidades.', 'image/mesa_escolar.jpg', 850.00, 15, 'Mobilidade'),
+('Teclado Adaptado em Libras', 'Teclado com marcações em Libras para auxílio na digitação.', 'image/teclado_libras.jpg', 180.00, 30, 'Visão');
+

@@ -14,7 +14,7 @@
                 <div class="left-content">
                     <h2>Pedido N°: @item.IdPedido</h2>
                     <h3>Data do pedido: @item.DataHoraPedido</h3>
-                    <h3>Valor do Pedido: R$@item.ValorPedido,00 </h3>
+                    <h3>Valor do Pedido: R$@item.ValorPedido </h3>
                     @if (item.ConfirmacaoPedido == false)
                     {
                         <div style="display: flex; gap: 7px;">
@@ -27,7 +27,7 @@
                             <h3>Pagamento: </h3><h3 style="color:#1BFF06;">Confirmado</h3>
                         </div>
                     }
-                    <h3>Frete: R$@item.FretePedido,00</h3>
+                    <h3>Frete: R$@item.FretePedido</h3>
                 </div>
                 <div class="right-content">
                     <form asp-action="DetalhesPedido" method="get">

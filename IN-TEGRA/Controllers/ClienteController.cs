@@ -14,9 +14,10 @@ namespace IN_TEGRA.Controllers
         private IItemPedidoRepository _itemPedidoRepository;
         private IPedidoRepository _pedidoRepository;
         private IProdutoRepository _produtoRepository;
+        private IEnderecoRepository _EnderecoRepository;
         private ILoginRepository _loginRepository;
 
-        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPagamentoRepository pagamentoRepository, IItemPedidoRepository itempedidoRepository, IPedidoRepository pedidoRepository, IProdutoRepository produtoRepository, ILoginRepository loginRepository)
+        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPagamentoRepository pagamentoRepository, IItemPedidoRepository itempedidoRepository, IPedidoRepository pedidoRepository, IProdutoRepository produtoRepository, ILoginRepository loginRepository, IEnderecoRepository enderecoRepository)
         {
             _clienteRepository = clienteRepository;
             _loginCliente = logincliente;
@@ -25,6 +26,7 @@ namespace IN_TEGRA.Controllers
             _pedidoRepository = pedidoRepository;
             _itemPedidoRepository = itempedidoRepository;
             _loginRepository = loginRepository;
+            _EnderecoRepository = enderecoRepository;
         }
         [HttpGet]
         public IActionResult Cadastro()
@@ -56,7 +58,7 @@ namespace IN_TEGRA.Controllers
             if (clientedb.EmailCliente != null && clientedb.SenhaCliente != null)
             {
                 _loginCliente.Login(clientedb);
-                return RedirectToAction("PainelCliente", "Cliente");
+                return RedirectToAction("Index", "Produto");
             }
             TempData["Falha"] = "Cliente ou senha inválidos.";
             return View();
@@ -87,7 +89,11 @@ namespace IN_TEGRA.Controllers
         [HttpGet]
         public IActionResult DetalhesPedido(int IdPedido)
         {
+            var pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
+            ViewBag.endereco = _EnderecoRepository.ObterEnderecoPorId(pedido.IdEndereco);
+            ViewBag.pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
             var itens = _pedidoRepository.ObterItensPedido(IdPedido);
+            
             foreach (var item in itens)
             {
                 var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);

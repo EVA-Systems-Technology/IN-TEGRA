@@ -8,6 +8,7 @@
         public double FretePedido { get; set; }
         public DateTime DataHoraPedido { get; set; }
         public bool ConfirmacaoPedido { get; set; }
+        public int IdEndereco { get; set; }
 
         // Array com os produtos dentro do pedido
         public List<ItemPedido> PedidoItens { get; set; }
