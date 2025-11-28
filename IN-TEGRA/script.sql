@@ -27,7 +27,7 @@ create table tbFuncionario(
 
 -- TABELA DO LOGIN (SE EU SOFRER COM ALGO VAI FICAR ANOTADO AQUI):
 
-create table tbLogin(
+create table tblogin(
 	IdLogin int primary key auto_increment,
 	IdFunc int,
     IdCli int,
@@ -86,6 +86,7 @@ create table tbEndereco (
 );
 
 drop table Tbendereco;
+drop table tbLogin;
 drop table tbpedido;
 drop table tbpagamento;
 drop table tbItemPedido;
@@ -142,7 +143,7 @@ select * from tblogin;
 SELECT * FROM tbpedido;
 
 
-insert into tbfuncionario (nomefunc, emailfunc, senhafunc, cpffunc, tipofunc) values ("admin", "admin@admin.com", "123", 12333, "G");
+insert into tbFuncionario (nomefunc, emailfunc, senhafunc, cpffunc, tipofunc) values ("admin", "admin@admin.com", "123", 12333, "G");
 
 
 
