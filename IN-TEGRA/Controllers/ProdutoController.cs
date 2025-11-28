@@ -31,6 +31,7 @@ namespace IN_TEGRA.Controllers
             var resultado = produtos.Select(p => new {
                 id = p.IdProd,
                 nome = p.NomeProduto,
+                imagem = p.ImagemProduto,
                 preco = p.PrecoProduto.ToString("C2", new System.Globalization.CultureInfo("pt-BR")) 
             });
             

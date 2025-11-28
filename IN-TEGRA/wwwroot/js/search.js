@@ -27,8 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         link.className = 'item-resultado';
 
                         link.innerHTML = `
-                                <span class="item-nome">${prod.nome}</span>
-                                <span class="item-preco">${prod.preco}</span>
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <img src="${prod.imagem}" alt="${prod.nome}" style="width: 50px; height: 50px; object-fit: contain;">
+                                    <div style="display: flex; flex-direction: column;">
+                                        <span class="item-nome">${prod.nome}</span>
+                                        <span class="item-preco">${prod.preco}</span>
+                                    </div>
+                                </div>
                             `;
 
                         listaResultados.appendChild(link);
