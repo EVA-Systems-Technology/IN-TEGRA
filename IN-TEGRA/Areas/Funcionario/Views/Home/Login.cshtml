@@ -16,7 +16,9 @@
 <body style="font-family: 'Alexandria', sans-serif;">
     <div class="d-flex justify-content-between">
         <div class="container_left">
-            <img src="~/assets/logo.png" style="max-height: 200px; max-width: 240px;" />
+            <a asp-action="index" asp-controller="produto" asp-area="">
+                <img src="~/assets/logo.png" style="max-height: 200px; max-width: 240px;" />
+            </a>
             <form class="p-3" method="post" style="background: #5A5F8B; border-radius: 10px; ">
                 <div class="form-group">
                     <label for="Email" style="color: white;" placeholder="Email" type="email">Email</label>

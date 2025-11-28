@@ -12,40 +12,61 @@
 </head>
 
 <body style="font-family: 'Alexandria', sans-serif;">
-    <h2 style="margin-bottom: 30px;">Precisamos de algumas informações</h2>
-    <form asp-action="Cadastro" class="p-3" style="background: #5A5F8B; border-radius: 0px 10px 10px 10px; color: white; max-width: 400px; ">
-        <div class="form-group">
-            <label asp-for="NomeCliente">Nome Completo</label>
-            <input asp-for="NomeCliente" type="text" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
-            <span asp-validation-for="NomeCliente" class="text-danger"></span>
+    <h2 style="margin-top: 50px; margin-bottom: 30px; ">Precisamos de algumas informações</h2>
+    <form asp-action="Cadastro" style="background: #5A5F8B; color: white; width: 100%; padding: 30px 50px 50px 50px; border-radius: 20px;">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="NomeCliente">Nome Completo</label>
+                    <input asp-for="NomeCliente" type="text" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
+                    <span asp-validation-for="NomeCliente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EmailCliente">Email</label>
+                    <input asp-for="EmailCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
+                    <span asp-validation-for="EmailCliente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Confirmar Email:</label>
+                    <input class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
+                    <span asp-validation-for="EmailCliente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TelefoneCliente">Telefone</label>
+                    <input asp-for="TelefoneCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
+                    <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label asp-for="DataNascimentoCliente">Data de Nascimento</label>
+                    <input asp-for="DataNascimentoCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
+                    <span asp-validation-for="DataNascimentoCliente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CpfCliente">CPF</label>
+                    <input asp-for="CpfCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
+                    <span asp-validation-for="CpfCliente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SenhaCliente">Senha</label>
+                    <input asp-for="SenhaCliente" type="password" class="form-control" style="background: white; border-radius: 10px; color:black;">
+                    <span asp-validation-for="SenhaCliente" class="text-danger"></span>
+                </div>
+
+                <div class="form-group ">
+                    <label>Confirmar Senha</label>
+                    <input type="password" class="form-control" style="background: white; border-radius: 10px; color:black;">
+                    <span asp-validation-for="SenhaCliente" class="text-danger"></span>
+                </div>
+
+            </div>
+
         </div>
-        <div class="form-group">
-            <label asp-for="EmailCliente">Email</label>
-            <input asp-for="EmailCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px;  color:black;">
-            <span asp-validation-for="EmailCliente" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="SenhaCliente">Senha</label>
-            <input asp-for="SenhaCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
-            <span asp-validation-for="SenhaCliente" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="CpfCliente">CPF</label>
-            <input asp-for="CpfCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
-            <span asp-validation-for="CpfCliente" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="TelefoneCliente">Telefone</label>
-            <input asp-for="TelefoneCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
-            <span asp-validation-for="TelefoneCliente" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="DataNascimentoCliente">Data de Nascimento</label>
-            <input asp-for="DataNascimentoCliente" class="form-control" style="background: white; border-radius: 0px 10px 10px 10px; color:black;">
-            <span asp-validation-for="DataNascimentoCliente" class="text-danger"></span>
-        </div>
-        <div class="d-flex flex-column mb-2 mt-4">
-            <button type="submit" class="btn" style="background: #FF0054; color: white; border-radius: 0px 10px 10px 10px">Criar Conta</button>
+       
+        <div class="d-flex mb-2 mt-4 gap-3">
+            <button type="submit" class="btn" style="background: #FF0054; color: white; border-radius: 10px; padding: 20px;">Criar Conta</button>
+            <a asp-action="login" class="btn" style="background: #04128D; color: white; border-radius: 10px; padding: 20px;">Voltar</a>
         </div>
         <div>
             <label class="form-check-label" style="text-decoration: underline;">Lembrar-se de mim</label>

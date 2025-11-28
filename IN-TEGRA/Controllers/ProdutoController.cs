@@ -87,6 +87,7 @@ namespace IN_TEGRA.Controllers
         [HttpGet]
         public IActionResult DetalhesProduto(int IdProd)
         {
+            ViewBag.Produtos = _produtoRepository.ObterTodosProdutos();
             return View(_produtoRepository.ObterProdutoPorId(IdProd));
         }
         [HttpPost]

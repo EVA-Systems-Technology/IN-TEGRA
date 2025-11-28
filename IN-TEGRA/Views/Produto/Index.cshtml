@@ -4,10 +4,10 @@
     ViewData["Title"] = "Produtos";
 }
 <body>
-    <img src="\assets\slideprincipal.png" width="100%" height="100%" style="margin-bottom: 100px;">
+    <img src="\assets\slideprincipal.png" style="width: 100%; height: auto; object-fit: fill; margin-bottom: 50px; border-radius: 20px;">
     <section style="text-align:center;">
         <h1>NOVIDADES</h1>
-        <div class="product__carousel" style="height: 370px;">
+        <div class="product__carousel" style="height: 390px;">
             <div class="carousel js-carousel-of-product">
                 <button class="carousel__previous js-carousel-button-previous" type="button">&lt;</button>
                 <div class="carousel__slides js-carousel-slides">
@@ -15,7 +15,7 @@
                     {
                         <div class="col">
                             <a style="text-decoration: none; color: white;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
-                                <div class="produto" style="width: 300px; height: 350px; background: white; border-radius: 20px;">
+                                <div class="produto" style="width: 310px; height: 350px; background: white; border-radius: 20px;">
                                     <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
                                     <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
                                         <h5 class="card-text"><strong>R$@produto.PrecoProduto.ToString()</strong></h5>
@@ -30,11 +30,12 @@
             </div>
         </div>
     </section>
+    <img src="~/assets/slideParceria.png" class="parceria">
     <br />
-    <section style="text-align:center; margin-top: 100px;">
-        <h1>PRODUTOS</h1>
-        <div class="container__produtos" style="display:flex;">
-            <aside class="sidebar__produtos" style="display: flex; flex-direction:column; background: #5A5F8B; padding: 30px; gap: 10px; margin-right: 50px; border-radius: 20px;">
+    <section style="text-align:center; margin-top: 100px; margin-bottom: 100px;">
+        <h1 style="margin-bottom: 40px;">PRODUTOS</h1>
+        <div class="container__produtos" style="display:flex; background: #5A5F8B; border-radius: 20px;">
+            <aside class="sidebar__produtos" style="display: flex; flex-direction:column; margin-left: 20px; padding: 30px; gap: 10px; margin-right: 50px; border-radius: 20px;">
                 <h2 style="color: white;">Categorias:</h2>
                 @foreach (var categoria in (List<string>)ViewBag.Categorias)
                 {
@@ -43,12 +44,12 @@
                     </div>
                 }
             </aside>
-            <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex; background: #04128D; padding: 30px; justify-content: space-between; width: 100%; gap: 20px; border-radius: 20px;">
+            <div class="container__carousel__produtos" style="flex-wrap:wrap; display: flex; padding: 30px; justify-content: left; width: 100%; gap: 20px; border-radius: 20px;">
                 @foreach (var produto in Model)
                 {
                     <a style="text-decoration: none; color: white; display:flex; justify-content:center; width:300px;  border-radius: 20px;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
-                        <div class="card mt-2" style="width: 300px; height: 350px;  border-radius: 20px;" data-categoria="@produto.CategoriaProduto">
-                            <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
+                        <div class="card mt-2" style="width: 290px; height: 350px;  border-radius: 20px;" data-categoria="@produto.CategoriaProduto">
+                            <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; border-radius: 20px;">
                             <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
                                 <h5 class="card-text"><strong>R$ @produto.PrecoProduto.ToString("F2")</strong></h5>
                                 <h6 class="card-title">@produto.NomeProduto</h6>
@@ -65,9 +66,9 @@
             box-sizing: border-box;
             overflow: hidden;
             width: 100%;
-            border-radius: 15px;
-            background-color: #04128D;
-            padding: 10px;
+            background-color: #5A5F8B;
+            border-radius: 20px;
+            padding: 20px;
         }
 
         .product__carousel .carousel {
@@ -87,7 +88,7 @@
             top: 50%;
             appearance: none;
             overflow: hidden;
-            background-color: #DBDBDB;
+            background-color: #FFFFFF;
             width: 50px;
             height: 50px;
             padding: 0;
@@ -127,10 +128,21 @@
             flex-wrap: nowrap;
             align-items: flex-start;
             justify-content: flex-start;
-            gap: 10px;
+            gap: 20px;
             width: fit-content;
             transition: transform 0.4s ease-in-out;
-            will-change: transform;
+            will-change: transform;   
+        }
+
+        .parceria{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            margin-top: 100px;
+            cursor: pointer;
         }
 
     </style>
