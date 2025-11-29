@@ -55,7 +55,7 @@ namespace IN_TEGRA.Controllers
             var pedido = new Pedido
             {
                 IdCli = usuario,
-                FretePedido = 0,
+                FretePedido = new Random().Next(15, 90),
                 ValorPedido = (double)_carrinhoRepository.TotalCarrinho(HttpContext.Session),
                 ConfirmacaoPedido = false,
                 IdEndereco = IdEndereco
@@ -120,33 +120,11 @@ namespace IN_TEGRA.Controllers
             };
             // mandando os dados para o banco de dados
             _pagamentoRepository.RegistrarPagamento(pagamento);
-
-            TempData["MSG"] = "Pagamento realizado com sucesso!!!";
+             
             
-            return RedirectToAction("DetalhesPagamento", new { idPedido = IdPedido });
+            // !!!!!!!! revisar qual pagina enviar
+            return RedirectToAction("index", "Produto", new { idPedido = IdPedido });
 
-        }
-        [HttpGet]
-        public IActionResult DetalhesPagamento(int IdPedido)
-        {
-            // pegando os dados do pedido pelo id
-            var pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
-            if (pedido == null)
-            {
-                return NotFound();
-            }
-            // pegando os itens do pedido pelo id do pedido
-            var itens = _pedidoRepository.ObterItensPedido(IdPedido);
-            // convertendo os dados para a visualização
-            foreach(var item in itens) 
-            {
-                var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);
-                item.NomeProduto = produto.NomeProduto;
-            }
-            // passando os dados para a visualização
-            ViewBag.itens = itens;
-
-            return View(pedido);
         }
     }
 }

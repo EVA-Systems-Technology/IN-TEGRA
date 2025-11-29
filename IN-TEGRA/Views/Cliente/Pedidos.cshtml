@@ -4,35 +4,38 @@
 @{
     ViewData["Title"] = "Pedidos";
     Layout = "Layout_painel";
+
+    var nome = ViewBag.NomeCli;
 }
-<body style="padding-top: 5%;">
-    <div style="display:flex; flex: 1; flex-direction:column; flex-wrap:wrap; gap:20px; background: #DADDF5; padding: 50px;  border-radius: 30px; ">
+<body style="margin: 0; font-family:'ABeeZee',sans-serif;">
+    <div style="display:flex; flex: 1; flex-direction:column; gap:20px; background: white; margin-top: 50px; padding: 50px; border-radius: 30px; margin-bottom: 50px; ">
         <h1>Pedidos Realizados</h1>
         @foreach (var item in Model)
         {
             <div class="container" style="width: 100%; height: 100%; background: #5A5F8B; padding: 20px; display:flex; justify-content: space-between; border-radius: 30px; color: white;">
                 <div class="left-content">
                     <h2>Pedido N°: @item.IdPedido</h2>
-                    <h3>Data do pedido: @item.DataHoraPedido</h3>
-                    <h3>Valor do Pedido: R$@item.ValorPedido </h3>
+                    <h4>Nome do Cliente: @nome</h4>
+                    <h4>Valor do Pedido: R$@item.ValorPedido </h4>
+                    <h4>Data do pedido: @item.DataHoraPedido</h4>
                     @if (item.ConfirmacaoPedido == false)
                     {
                         <div style="display: flex; gap: 7px;">
-                            <h3>Pagamento: </h3><h3 style="color:#FF0004;">Pendente</h3>
+                            <h4>Situação: </h4><h4 style="color:#FF0004;">Pendente</h4>
                         </div>
                     }
                     else
                     {
                         <div style="display: flex; gap: 7px;">
-                            <h3>Pagamento: </h3><h3 style="color:#1BFF06;">Confirmado</h3>
+                            <h4>Situação: </h4><h4 style="color:#1BFF06;">Concluído</h4>
                         </div>
                     }
-                    <h3>Frete: R$@item.FretePedido</h3>
+                    <h4>Frete: R$@item.FretePedido</h4>
                 </div>
                 <div class="right-content">
                     <form asp-action="DetalhesPedido" method="get">
                         <input type="hidden" name="IdPedido" value="@item.IdPedido" />
-                        <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Detalhes</button>
+                        <button type="submit" style="border-radius: 30px; background:#04128D; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Detalhes</button>
                     </form>
                 </div>
             </div>

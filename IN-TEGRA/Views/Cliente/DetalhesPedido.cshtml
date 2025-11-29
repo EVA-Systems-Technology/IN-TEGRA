@@ -5,39 +5,63 @@
     Layout = "Layout_painel";
     var pedido = ViewBag.Pedido;
     var Endereco = ViewBag.Endereco;
+    var Cliente = ViewBag.NomeCli;
+    var Imagens = ViewBag.Imagem;
+    var index = 0;
 
 }
 
 
-<body style="margin: 0; display: flex; height: 100vh; font-family:'ABeeZee',sans-serif; background: #EAEAEA; justify-content: center; align-items: center;">
-    <div class="container" style="background: #DADDF5; border-radius: 30px; padding: 50px;">
-        <h2>Detalhes do Pedido</h2>
-        <p>Codigo: @pedido.IdPedido</p>
-        <p>Valor: @pedido.ValorPedido</p>
-        <p>Frete: @pedido.FretePedido</p>
-        <p>Data: @pedido.DataHoraPedido</p>
-        <p>Confirmacao: @pedido.ConfirmacaoPedido</p>
-        <hr />
-        <p>Cep: @Endereco.CEP</p>
-        <p>Estado: @Endereco.Estado</p>
-        <p>Cidade: @Endereco.Cidade</p>
-        <p>Bairro: @Endereco.Bairro</p>
-        <p>Logradouro: @Endereco.Logradouro</p>
-        <p>Complemento: @Endereco.Complemento</p>
-        <p>Numero: @Endereco.Numero</p>
-
-
-        <hr />
-        <h1>Produtos:</h1>
-        @foreach (var item in Model)
-        {
-            <div class="container" style="background:#5A5F8B; border-radius: 30px; padding: 30px; color: white;">
-                <h2>Codigo: @item.IdProduto</h2>
-                <h2>Nome: @item.NomeProduto</h2>
-                <h2>Quantidade: @item.QtdItemPedido</h2>
-                <h2>Valor: @item.ValorItemPedido</h2>
+<body style="margin: 0; font-family:'ABeeZee',sans-serif; justify-content: center;">
+    <div class="container" style="background: white; border-radius: 30px; padding: 50px; margin-top: 40px;">
+        <div style="display: flex;">
+            <div class="left_content" style="display: flex; flex-direction: column; flex-grow: 1">
+                <h2>Pedido Nº: @pedido.IdPedido</h2>
+                <h4>Nome do Cliente: @Cliente</h4>
+                <h4>Preço do Pedido: @pedido.ValorPedido</h4>
+                <h4>Data do Pedido: @pedido.DataHoraPedido</h4>
+                <h4>Cep: @Endereco.CEP</h4>
+                <h4>Frete: @pedido.FretePedido</h4>
+                @if (pedido.ConfirmacaoPedido == false)
+                {
+                    <div style="display: flex; gap: 7px;">
+                        <h4>Situação: </h4><h4 style="color:#FF0004;">Pendente</h4>
+                    </div>
+                }
+                else
+                {
+                    <div style="display: flex; gap: 7px;">
+                        <h4>Situação: </h4><h4 style="color:#1BFF06;">Concluído</h4>
+                    </div>
+                }
             </div>
-        }
+            <a style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white; text-decoration: none; color: white;height: 60px;" asp-controller="Cliente" asp-action="ExcluirPedido" asp-route-IdPedido="@pedido.IdPedido">Cancelar</a>
+            
+        </div>
+        <hr />
+        
+        <h2>Produtos:</h2>
+
+        <div class="produtos" style="gap: 30px; display: flex; flex-direction:column;">
+            @foreach (var item in Model)
+            {
+                <div class="container" style="background:#5A5F8B; border-radius: 30px; padding: 30px; color: white; display: flex; justify-content: left; gap: 30px;">
+                    <div class="img__container" style="width: 150px;">
+                        <img src="/@Imagens[index]" style="width: 100%; height: auto; display: block; border-radius: 20px;" />
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex-grow: 1">
+                        <h4>Codigo: @item.IdProduto</h4>
+                        <h4>Nome: @item.NomeProduto</h4>
+                        <h4>Quantidade: @item.QtdItemPedido</h4>
+                        <h4>Valor: @item.ValorItemPedido</h4>
+                    </div>
+                    <div class="right-content mt-3">
+                        <a style="border-radius: 30px; background:#04128D; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white; text-decoration: none; color: white;" asp-controller="Produto" asp-action="DetalhesProduto" asp-route-IdProd="@item.IdProduto">Detalhes</a>
+                    </div>
+                </div>
+                index++;
+            }
+        </div>
         <form asp-action="Pedidos" class="mt-5">
             <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Voltar</button>
         </form>

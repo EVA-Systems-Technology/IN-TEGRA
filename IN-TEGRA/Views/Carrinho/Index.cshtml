@@ -3,29 +3,53 @@
     ViewData["Title"] = "Seu Carrinho";
 }
 
-<h1 style="font-family:'ABeeZee',sans-serif;">Seu Carrinho de Compras</h1>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet" />
+</head>
+
+<style>
+
+    /*remove as setinhas do input no chrome e no safari*/
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /*remove as setinhas do input no firefox*/
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+
+<h1 style="font-family:'ABeeZee',sans-serif; margin-left: 40px;">Carrinho</h1>
 
 @if (Model.Any())
 {
-    <div class="container" style="background:#5A5F8B; border-radius: 20px; padding: 30px 30px 10px 30px;">
+    <div class="container-fluid" style="background:#5A5F8B; border-radius: 20px; padding: 30px 30px 10px 30px; font-family:'ABeeZee',sans-serif;">
             @foreach (var item in Model)
             {
-            <div class="card" style="background: #DADDF5; width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center; gap: 30px; padding: 10px 20px 10px 20px; border: 0px transparent; border-radius: 20px; margin-bottom: 20px; font-family:'Alexandria',sans-serif;">
-                <img src="@item.Produto.ImagemProduto" style="object-fit: contain; height: 100%; border-radius: 20px;" />
+            <div class="card" style="background: #DADDF5; width: 100%; height: 100px; display: flex; flex-direction: row; align-items: center; gap: 30px; padding: 10px 20px 10px 20px; border: 0px transparent; border-radius: 20px; margin-bottom: 20px; font-family:'Alexandria',sans-serif; color: black;">
+                <img src="@item.Produto.ImagemProduto" style="object-fit: cover; height: 100%; border-radius: 20px; max-width: 80px;" />
 
                 <h5 style="flex-grow: 1">@item.Produto.NomeProduto</h5>
                         <div>
-                            <form asp-controller="Carrinho" asp-action="AlterarQuantidadeItem" method="post" class="d-inline">
+                             <form id="alterarQtdForm_@item.ProdId" asp-controller="Carrinho" asp-action="AlterarQuantidadeItem" method="post" class="d-inline">
                                 <input type="hidden" name="produtoId" value="@item.ProdId" />
-                                <input type="number" name="novaQuantidade" value="@item.QuantidadeProd" min="1" style="width: 70px;"
-                                       onchange="this.form.submit()" />
+                                <div class="custom_button" style="display: flex;">
+                                    <button type="button" onclick="alterarQtd(@item.ProdId, 1)" style="border: 0px transparent; border-radius: 100% 0px 0px 100%; background: #FF0054; color: white; width: 30px;"><strong>+</strong></button>
+                                        <input id="quantidade_@item.ProdId" type="number" name="novaQuantidade" value="@item.QuantidadeProd" min="1" style="width: 70px; border: 0px transparent; text-align: center;" onchange="this.form.submit()" />
+                                    <button type="button" onclick="alterarQtd(@item.ProdId, -1)" style="border: 0px transparent; border-radius: 0px 100% 100% 0px; background: #FF0054; color: white; width: 30px;"><strong>-</strong></button>
+                                </div>
                             </form>
                         </div>
                         <div>R$@item.Total.ToString("F2")</div>
                         <div>
                             <form asp-controller="Carrinho" asp-action="RemoverItem" method="post" class="d-inline">
                                 <input type="hidden" name="produtoId" value="@item.ProdId" />
-                                <button type="submit" class="btn btn-danger btn-sm">X</button>
+                                <button type="submit" style="color: red; background: white; padding: 3px 10px 3px 10px; border: 0px transparent; text-align:center;"><strong>X</strong></button>
                             </form>
                         </div>
 
@@ -37,21 +61,41 @@
             </div>
     </div>
 
-    <div class="text-right mt-5">
+    <div class="text-right mt-3" style="font-family:'ABeeZee',sans-serif; margin-bottom: 100px;">
         <form asp-controller="Endereco" asp-action="Index" method="get" class="d-inline" style="font-family:'ABeeZee',sans-serif;">
-            <button type="submit" class="btn btn-success" style="padding: 20px; background: #04128D; border-radius: 15px; color: white; border: 0px transparent;">Finalizar Compra</button>
+            <button type="submit" class="btn btn-success" style="padding: 20px 40px 20px 40px; background: #04128D; border-radius: 15px; color: white; border: 0px transparent;">COMPRAR</button>
         </form>
         <form asp-controller="Carrinho" asp-action="LimparCarrinho" method="post" class="d-inline" style="font-family:'ABeeZee',sans-serif;">
-            <button type="submit" class="btn btn-warning" style="padding: 20px; background: #FF0054; border-radius: 15px; color: white; border: 0px transparent;">Limpar Carrinho</button>
+            <button type="submit" class="btn btn-warning" style="padding: 20px 40px 20px 40px; background: #FF0054; border-radius: 15px; color: white; border: 0px transparent;">LIMPAR CARRINHO</button>
         </form>
     </div>
 
+    <script>
+       function alterarQtd(prodId, number){
+           const input = document.getElementById("quantidade_" + prodId);
+           const form = document.getElementById("alterarQtdForm_" + prodId);
+           
+           let valorNovo = parseInt(input.value) + number;
 
+           if(valorNovo < 1){
+                 valorNovo = 1
+           } 
+
+           input.value = valorNovo;
+
+           form.submit();
+
+       }
+
+    </script>
 }
 
 
 else
 {
-    <p>Seu carrinho está vazio.</p>
-    <a asp-controller="Produto" asp-action="Index" class="btn btn-primary">Continuar Comprando</a>
+    
+    <script>
+        alert("Seu Carrinho está vazio.")
+        window.location.href = '@Url.Action("Index", "Produto")';
+    </script>
 }

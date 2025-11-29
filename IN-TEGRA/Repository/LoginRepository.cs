@@ -45,13 +45,16 @@ namespace IN_TEGRA.Repository
 
                 dr.Close();
 
-                MySqlCommand cmd2 = new MySqlCommand("insert into tblogin (IdCli, TipoLogin) values (@IdCli, @TipoLogin)", conexao);
+                if (cliente.IdCli != 0)
+                {
 
-                cmd2.Parameters.AddWithValue("@IdCli", cliente.IdCli);
-                cmd2.Parameters.AddWithValue("@TipoLogin", "Cliente");
-                
-                cmd2.ExecuteNonQuery();
+                    MySqlCommand cmd2 = new MySqlCommand("insert into tblogin (IdCli, TipoLogin) values (@IdCli, @TipoLogin)", conexao);
 
+                    cmd2.Parameters.AddWithValue("@IdCli", cliente.IdCli);
+                    cmd2.Parameters.AddWithValue("@TipoLogin", "Cliente");
+                    cmd2.ExecuteNonQuery();
+
+                }
                 conexao.Close();
 
                 return cliente;

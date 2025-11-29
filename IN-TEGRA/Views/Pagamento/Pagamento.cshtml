@@ -5,44 +5,60 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "Pagamento";
     var endereco = ViewBag.Endereco;
 }
 
-<body style="font-family:'ABeeZee',sans-serif; color: white;">
-    <h1 style="margin: 20px;">COMPRA:</h1>
-    <div class="container" style="background: #04128D; width: 100%; height: 100%; padding: 50px; border-radius: 20px; ">
-        <h1 style="color:white;">Produtos:</h1>
-        <div class="produtos" style="background: #5A5F8B; padding: 50px; border-radius: 20px;">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family:'ABeeZee',sans-serif;">
+    <h3 style="margin-left: 10px;">COMPRA</h3>
+    <div class="container-fluid" style="background: #DADDF5; width: 100%; height: 100%; padding: 50px; border-radius: 20px; ">
+        <h3 style="color: black;">Produtos</h3>
+        <div class="produtos" style="background: #FFFFFF; padding: 30px 30px 20px 30px; border-radius: 20px;">
             @foreach (var item in Model.PedidoItens)
             {
-                <div style="background: #DADDF5; padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; gap: 30px; margin-bottom: 15px; color: black;">
+                <div style="background: #EBEBEB; padding: 20px; border-radius: 20px; display: flex; justify-content: space-between; margin-bottom: 15px; color: black;">
+                    <div style="display: flex; flex-direction: column; margin-bottom: 15px; color: black;">
+                        <h3 style="margin: 0 0 5px 0;">@item.NomeProduto</h3>
+                        <p style="margin: 0 0 5px 0;">Quantidade: @item.QtdItemPedido</p>
+                        <p style="margin: 0 0 5px 0;">R$@item.ValorItemPedido</p>
 
-                    <h3 style="flex-grow: 1;">@item.NomeProduto</h3>
-                    <p>Quantidade: @item.QtdItemPedido</p>
-                    <p>Valor: R$@item.ValorItemPedido</p>
-
+                    </div>
+                    <a style="background: #04128D; padding: 5px 30px 5px 30px; height: 35px; color: white; border-radius: 20px; text-decoration:none;" asp-controller="Produto" asp-action="DetalhesProduto" asp-route-IdProd="@item.IdProduto">Detalhes</a>
                 </div>
             }
         </div>
-        <h1 class="pt-5">Forma de Pagamento</h1>
-        <div class="Container__FormasPagamento" style="display: flex; justify-content: space-around; background: #5A5F8B; border-radius: 20px; color: white; margin-bottom: 50px;">
-            <button class="Pix" style="width: 200px; height: 200px; border-radius: 20px; background: white; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
+        <h3 class="pt-5">Formas de Pagamento:</h3>
+        <div class="Container__FormasPagamento" style="display: flex; justify-content: space-around; background: #FFFFFF; border-radius: 20px; color: white; margin-bottom: 50px;">
+            <button class="button_pagamento">
                 <h1>Pix</h1>
             </button>
-            <button class="Credito" style="width: 200px; height: 200px; border-radius: 20px; background: white; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
+            <button style="width: 200px; height: 200px; border-radius: 20px; background: transparent; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
                 <h1>Crédito</h1>
             </button>
-            <button class="Debito" style="width: 200px; height: 200px; border-radius: 20px; background: white; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
+            <button style="width: 200px; height: 200px; border-radius: 20px; background: transparent; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
                 <h1>Débito</h1>
             </button>
-            <button class="Boleto" style="width: 200px; height: 200px; border-radius: 20px; background: white; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
+            <button style="width: 200px; height: 200px; border-radius: 20px; background: transparent; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s; margin: 25px 0px 25px 0px; border: 0px transparent; color: black;">
                 <h1>Boleto</h1>
             </button>
         </div>
-        <h1>Confirmar os Dados:</h1>
-        <div class="ConfirmarDados" style="width: 100%; height: 300px; background: #5A5F8B; padding: 30px 0px 30px 30px; border-radius: 20px; color: white; margin-bottom: 50px;">
-            <h3>Id do cliente: @Model.IdCli</h3>
-            <h3>Frete do pedido: R$@Model.FretePedido</h3>
+        <div class="container__pix" style="justify-content: left; gap: 100px; background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; display: none;">
+            <img src="~/assets/pix.png" style="width: 400px; height: 400px;" />
+            <div class="desc__container" style="display: flex; flex-direction: column; gap: 30px;">
+                <button style="border: 0px; background: #BDADDF; border-radius: 20px; display: flex; justify-content: center; align-items: center;"><h4>Copiar código Pix</h4></button>
+                <h3>Validade: 30 Minutos</h3>
+            </div>
+        </div>
+        <h3>Confirmar os Dados:</h3>
+        <div class="ConfirmarDados" style="width: 100%; height: 300px; background: #FFFFFF; padding: 30px 0px 30px 30px; border-radius: 20px; color: black; margin-bottom: 50px;">
+            <h3>Código do cliente: @Model.IdCli</h3>
             <h3>Data do pedido: @Model.DataHoraPedido</h3>
             <hr />
             <h3>Endereço: @endereco.Logradouro</h3>
@@ -50,27 +66,54 @@
             <h3>Cidade: @endereco.Cidade</h3>
         </div>
 
-        <h1>Detalhes de Pagamento</h1>
-        <div class="detalhes" style="background: #5A5F8B; padding: 30px 0px 30px 30px; border-radius: 20px; color: white; margin-bottom: 50px;">
-            <h2>Valor total: R$@Model.ValorPedido</h2>
+        <h3>Detalhes de Pagamento</h3>
+        <div class="detalhes" style="background: #FFFFFF; padding: 30px 0px 30px 30px; border-radius: 20px; color: black;">
+            <h3>Frete do pedido: R$@Model.FretePedido</h3>
+            <h3>Valor dos produtos: R$@Model.ValorPedido</h3>
+            <h3>Valor Total: R$@(Model.ValorPedido + Model.FretePedido)</h3>
 
-        </div>
-        <div class="buttons" style="display: flex; gap: 30px;">
-
-            <form asp-controller="Pagamento" asp-action="FinalizarPagamento" method="post">
-                <input type="hidden" name="IdPedido" value="@Model.IdPedido" />
-                <button type="submit" style="background: #021CFF; padding: 30px; color: white; border-radius: 20px; border: 0px transparent;"><h1>Finalizar Pagamento</h1></button>
-            </form>
-            <form asp-controller="produto" asp-action="index" method="post">
-                <button type="submit" style="background: #FF0054; padding: 30px; color: white; border-radius: 20px; border: 0px transparent;"><h1>Cancelar</h1></button>
-            </form>
         </div>
 
     </div>
+        <div class="buttons" style="display: flex; gap: 30px; margin-top: 30px;">
+            <form asp-controller="Pagamento" asp-action="FinalizarPagamento" method="post">
+                <input type="hidden" name="IdPedido" value="@Model.IdPedido" />
+                <button type="submit" style="background: #04128D; padding: 30px; color: white; border-radius: 20px; border: 0px transparent;" onclick="alert('Pedido confirmado.')"><h3>CONFIRMAR</h3></button>
+            </form>
+            <form asp-controller="produto" asp-action="index" method="post">
+                <button type="submit" style="background: #FF0054; padding: 30px; color: white; border-radius: 20px; border: 0px transparent;"><h3>CANCELAR</h3></button>
+            </form>
+        </div>
+    <script>
+        const buttons = document.querySelectorAll(".button_pagamento")
+        const pix = document.querySelector(".container__pix")
+        buttons.forEach(button => {
+            button.addEventListener("click",  () =>{
+                pix.style.display = "flex";
+                button.classList.add("selected");
+
+            });
+        });
+    </script>
 </body>
 <style>
-    .Pix:active, .Credito:active, .Debito:active, .Boleto:active {
-        background-color: red;
-        transform: scale(0.98);
+    .button_pagamento {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 25px 0px 25px 0px;
+        border: 0px transparent;
+        color: black;
+    }
+
+    .button_pagamento.selected {
+        background: #04128D;
+        color: white;
     }
 </style>

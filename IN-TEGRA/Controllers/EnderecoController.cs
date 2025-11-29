@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using IN_TEGRA.Repository.Contract;
 using IN_TEGRA.Models;
+using IN_TEGRA.Libraries.Filtro;
 
 namespace IN_TEGRA.Controllers
 {
+    [ClienteAutorizacao]
     public class EnderecoController : Controller
     {
         private IEnderecoRepository _enderecoRepository;

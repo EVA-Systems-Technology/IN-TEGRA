@@ -82,6 +82,7 @@ namespace IN_TEGRA.Controllers
             var IdCli = _loginCliente.GetCliente().IdCli;
             var pedidos = _pedidoRepository.ObterPedidosCliente(IdCli);
 
+            ViewBag.NomeCli = _loginCliente.GetCliente().NomeCliente;
             ViewBag.pedidos = pedidos;
             return View(pedidos);
         }
@@ -92,13 +93,17 @@ namespace IN_TEGRA.Controllers
             var pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
             ViewBag.endereco = _EnderecoRepository.ObterEnderecoPorId(pedido.IdEndereco);
             ViewBag.pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
+            ViewBag.NomeCli = _loginCliente.GetCliente().NomeCliente;
             var itens = _pedidoRepository.ObterItensPedido(IdPedido);
-            
+
+            var imagens = new List<string>();
             foreach (var item in itens)
             {
                 var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);
                 item.NomeProduto = produto.NomeProduto;
+                imagens.Add(produto.ImagemProduto);
             }
+            ViewBag.Imagem = imagens;
 
             return View(itens);
 
@@ -129,6 +134,13 @@ namespace IN_TEGRA.Controllers
         public IActionResult RecuperaSenha()
         {
             return View();
+        }
+
+        public IActionResult ExcluirPedido(int IdPedido)
+        {
+            _pedidoRepository.ExcluirPedido(IdPedido);
+            return RedirectToAction("DetalhesPedido");
+
         }
 
     }

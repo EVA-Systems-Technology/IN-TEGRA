@@ -38,9 +38,9 @@
 </head>
 <body style="padding: 0px; margin: 0px; font-family: 'ABeeZee', sans-serif;">
 
-    <div style="display:flex; width:100vw; min-height: 100vh;">
+    <div style="display:flex; min-height: 100vh;">
 
-        <nav style="background: #000050; padding: 40px; width: 250px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0;">
+        <nav style="background: #374053; padding: 40px; width: 250px; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0;">
 
             <div class="d-flex flex-column" style="margin-top: 20px;">
                 <a asp-action="PainelCliente" class="sidebar-link">Dashboard</a>
@@ -49,13 +49,13 @@
                 <a asp-controller="Produto" asp-action="Index" class="sidebar-link">Página Principal</a>
             </div>
 
-            <a asp-controller="Cliente" asp-action="Logout" style="padding: 15px; background: #F50057; border-radius: 10px; color: white; display:block; text-decoration:none; text-align: center;">
-                <span style="margin:0; color:white; font-weight: bold; font-size: 18px;">SAIR</span>
+            <a asp-controller="Cliente" asp-action="Logout" style="padding: 15px; background: white; border-radius: 10px; color: black; display:block; text-decoration:none; text-align: center;">
+                <span style="margin:0; color:black; font-weight: bold; font-size: 18px;">SAIR</span>
             </a>
         </nav>
 
-        <div style="flex-grow: 1; background: #EAEAEA; overflow-y: auto; display: flex; justify-content: center; align-items:center;">
-            <main role="main" style="height: 90%; width: 50%;">
+        <div style="flex-grow: 1; background: #DADDF5; overflow-y: clip; display: flex; justify-content: center;">
+            <main role="main" style="height: 90%; width: 60%;">
                 @RenderBody()
             </main>
         </div>
