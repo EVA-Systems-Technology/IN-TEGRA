@@ -7,11 +7,11 @@
 
 <body style="font-family: 'Alexandria', sans-serif;">
     <div class="container__image" style="width: 100%; max-height: 1200px; display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 50px;">
-        <img src="/@Model.ImagemProduto" style="max-height: 400px;" alt="Imagem não Carregada"/>
+        <img src="@Model.ImagemProduto" style="max-height: 400px;" alt="Imagem não Carregada"/>
         <div class="container__informacoes" style="padding: 30px; min-width: 280px; height: 100%; border-radius: 20px; color: black; display: flex; flex-direction: column;">
             <h2>@Model.NomeProduto</h2>
             <h3>R$@Model.PrecoProduto</h3>
-            <h3>Categoria:@Model.CategoriaProduto</h3>
+            <h3>Categoria: @Model.CategoriaProduto</h3>
             <h4>Estoque: @Model.QuantidadeProduto Unidades</h4>
             
 
@@ -38,7 +38,7 @@
                         <div class="col">
                             <a style="text-decoration: none; color: white;" asp-action="DetalhesProduto" asp-route-IdProd="@produto.IdProd">
                                 <div class="produto" style="width: 310px; height: 350px; background: white; border-radius: 20px;">
-                                    <img src="~/@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
+                                    <img src="@produto.ImagemProduto" class="card-img-top" alt="@produto.NomeProduto" style="object-fit: contain; height: 260px; width: 100%; ">
                                     <div class="card-body" style="color: black; border: 0; height: 50px; text-align: left;">
                                         <h5 class="card-text"><strong>R$@produto.PrecoProduto.ToString()</strong></h5>
                                         <h6 class="card-title">@produto.NomeProduto</h6>
