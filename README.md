@@ -12,7 +12,8 @@
 </h3>
 
 <h4>Sumário:</h4>
-[Sobre a IN-TEGRA](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki#sobre-a-in-tegra)
-[Justificativa do nome IN-TEGRA](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki#justificativa-do-nome-in-tegra)
-[Estrutura geral do projeto:](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki/Explica%C3%A7%C3%A3o-do-C%C3%B3digo#estrutura-geral-do-projeto)
-[Tecnologias Utilizadas](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki/Tecnologias-Utilizadas#tecnologias-utilizadas)
+
+[Sobre a IN-TEGRA](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki#sobre-a-in-tegra)<br>
+[Justificativa do nome IN-TEGRA](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki#justificativa-do-nome-in-tegra)<br>
+[Estrutura geral do projeto:](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki/Explica%C3%A7%C3%A3o-do-C%C3%B3digo#estrutura-geral-do-projeto)<br>
+[Tecnologias Utilizadas](https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki/Tecnologias-Utilizadas#tecnologias-utilizadas)<br>
