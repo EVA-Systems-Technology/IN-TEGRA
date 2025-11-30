@@ -3,19 +3,26 @@
 @{
     Layout = "Layout_painel_funcionario";
     ViewData["Title"] = "Clientes";
+    var ultimologin = ViewBag.UltimoLogin;
+    var index = 0;
 }
 <body>
     <div class="container" style="background: white; border-radius: 20px; padding: 50px; margin-top: 40px; margin-bottom: 40px;">
         <h1>Clientes</h1>
         @foreach(var cliente in Model)
         {
+        var ultimo = ultimologin[index];
+        index++;
         <div style="background: #5A5F8B; border-radius: 20px; display: flex; justify-content: space-between; padding: 20px; color: white; margin-bottom: 15px;">
             <div class="left_content" style="display: flex; flex-direction: column; ">
                 <h3>Cliente N°: @cliente.IdCli</h3>
                 <h4>Nome: @cliente.NomeCliente</h4>
                 <h4>CPF: @cliente.CpfCliente</h4>
                 <h4>Email: @cliente.EmailCliente</h4>
-
+            </div>
+            <div class="middle_content">
+                <h4>Último Login:</h4>
+                <h5>Data: @ultimo.DataLogin.ToString("dd/MM/yyyy HH:mm")</h5>
             </div>
             <div class="right-content" style="display: flex; flex-direction:column; gap: 20px;">
                 <form asp-action="DetalhesCliente" method="get">

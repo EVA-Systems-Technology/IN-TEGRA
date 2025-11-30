@@ -100,5 +100,33 @@ namespace IN_TEGRA.Repository
                 return funcionario;
             }
         }
+
+        public Login ObterUltimoLoginCliente(int IdCliente)
+        {
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+
+                MySqlCommand cmd = new MySqlCommand("select * from tbLogin where IdCli=@IdCli ORDER BY DataLogin DESC Limit 1", conexao);
+                cmd.Parameters.AddWithValue("@IdCli", IdCliente);
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                Login login = new Login();
+
+                while (dr.Read())
+                {
+                    login.IdLogin = Convert.ToInt32(dr["IdLogin"]);
+                    login.IdCliente = dr["IdCli"] != DBNull.Value ? Convert.ToInt32(dr["IdCli"]) : 0;
+                    login.IdFuncionario = dr["IdFunc"] != DBNull.Value ? Convert.ToInt32(dr["IdFunc"]) : 0;
+                    login.TipoLogin = dr["TipoLogin"].ToString();
+                    login.DataLogin = Convert.ToDateTime(dr["DataLogin"]);
+                }
+                dr.Close();
+                conexao.Close();
+
+                return login;
+            }
+        }
     }
 }

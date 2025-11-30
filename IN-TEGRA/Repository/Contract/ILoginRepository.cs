@@ -6,5 +6,6 @@ namespace IN_TEGRA.Repository.Contract
     {
         Cliente LoginComum(string Email, string Senha);
         Funcionario LoginFuncionario(string Email, string Senha);
+        Login ObterUltimoLoginCliente(int IdCliente);
     }
 }

@@ -16,19 +16,30 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         private IPedidoRepository _pedidoRepository;
         private IEnderecoRepository _enderecoRepository;
         private IProdutoRepository _produtoRepository;
+        private ILoginRepository _loginRepository;
 
-        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPedidoRepository pedidoRepository, IEnderecoRepository enderecoRepository, IProdutoRepository produtoRepository)
+        public ClienteController(IClienteRepository clienteRepository, LoginCliente logincliente, IPedidoRepository pedidoRepository, IEnderecoRepository enderecoRepository, IProdutoRepository produtoRepository, ILoginRepository loginRepository)
         {
             _clienteRepository = clienteRepository;
             _loginCliente = logincliente;
             _pedidoRepository = pedidoRepository;
             _enderecoRepository = enderecoRepository;
             _produtoRepository = produtoRepository;
+            _loginRepository = loginRepository;
         }
 
 
         public IActionResult Index()
         {
+            var UltimoLogin = new List<Login>();
+            var clientes = _clienteRepository.ObterTodosClientes();
+            foreach(var cliente in clientes)
+            {
+                var ultimoLogin = _loginRepository.ObterUltimoLoginCliente(cliente.IdCli);
+                UltimoLogin.Add(ultimoLogin);
+
+            }
+            ViewBag.UltimoLogin = UltimoLogin;
             return View(_clienteRepository.ObterTodosClientes());
         }
 
