@@ -12,3 +12,6 @@
 </h3>
 
 <h4>Sumário:</h4>
+  <a href="https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki">Home</a> <br>
+  <a href="https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki/Explicação-do-Código">Explicação do código</a><br>
+  <a href="https://github.com/EVA-Systems-Technology/IN-TEGRA/wiki/Tecnologias-Utilizadas">Tecnologias utilizadas</a>
