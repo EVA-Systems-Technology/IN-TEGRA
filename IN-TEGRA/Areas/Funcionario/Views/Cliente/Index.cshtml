@@ -5,20 +5,27 @@
     ViewData["Title"] = "Clientes";
 }
 <body>
-    <div class="container" style="background: #DADDF5; padding: 50px;">
-        <div style="display: flex;">
-            <h1>Cadastro dos Clientes</h1>
-        </div>
+    <div class="container" style="background: white; border-radius: 20px; padding: 50px; margin-top: 40px; margin-bottom: 40px;">
+        <h1>Clientes</h1>
         @foreach(var cliente in Model)
         {
         <div style="background: #5A5F8B; border-radius: 20px; display: flex; justify-content: space-between; padding: 20px; color: white; margin-bottom: 15px;">
-            <p>@cliente.IdCli</p>
-            <p>@cliente.NomeCliente</p>
-            <p>@cliente.EmailCliente</p>
-            <div class="utilitarios" style="color: white; text-decoration: none;">
-                    @Html.ActionLink("Atualizar", "AtualizarCliente", new { IdCli = cliente.IdCli }) 
-                    @Html.ActionLink("Detalhes", "DetalhesCliente", new { IdCli = cliente.IdCli }) 
-                    @Html.ActionLink("Excluir", "ExcluirCliente", new { IdCli = cliente.IdCli })
+            <div class="left_content" style="display: flex; flex-direction: column; ">
+                <h3>Cliente N°: @cliente.IdCli</h3>
+                <h4>Nome: @cliente.NomeCliente</h4>
+                <h4>CPF: @cliente.CpfCliente</h4>
+                <h4>Email: @cliente.EmailCliente</h4>
+
+            </div>
+            <div class="right-content" style="display: flex; flex-direction:column; gap: 20px;">
+                <form asp-action="DetalhesCliente" method="get">
+                    <input type="hidden" name="IdCli" value="@cliente.IdCli" />
+                    <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 10px 40px 10px 40px; outline: none; border: 0px transparent; color: white; width: 100%;">Pedidos</button>
+                </form>
+                <form asp-action="ExcluirCliente" method="get">
+                    <input type="hidden" name="IdCli" value="@@cliente.IdCli" />
+                    <button type="submit" style="border-radius: 30px; background:#04128D; padding: 10px 40px 10px 40px; outline: none; border: 0px transparent; color: white; width: 100%;">Excluir</button>
+                </form>
             </div>
         </div>
         }

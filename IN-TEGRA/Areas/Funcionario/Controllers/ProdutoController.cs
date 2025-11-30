@@ -1,4 +1,5 @@
-﻿using IN_TEGRA.Libraries.Filtro;
+﻿using IN_TEGRA.GerenciaArquivo;
+using IN_TEGRA.Libraries.Filtro;
 using IN_TEGRA.Models;
 using IN_TEGRA.Repository;
 using IN_TEGRA.Repository.Contract;
@@ -27,17 +28,12 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Cadastro(Produto produto)
+        public IActionResult Cadastro(Produto produto, IFormFile file)
         {
-            if (ModelState.IsValid)
-            {
-                TempData["MSG"] = "PRODUTO CADASTRADO COM SUCESSO!!";
-                _IProdutoRepository.CadastrarProduto(produto);
-            }
-            else
-            {
-                TempData["MSG"] = "ERRO: PRODUTO NAO FOI CADASTRADO!!";
-            }
+            var caminho = GerenciadorArquivos.CadastrarImagemProduto(file);
+            produto.ImagemProduto = caminho;
+            _IProdutoRepository.CadastrarProduto(produto);
+
             return RedirectToAction("Cadastro");
         }
         [HttpGet]

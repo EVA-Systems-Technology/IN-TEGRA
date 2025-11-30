@@ -5,42 +5,72 @@
     Layout = "Layout_painel_funcionario";
     var pedido = ViewBag.Pedido;
     var Endereco = ViewBag.Endereco;
-    var ClienteId = ViewBag.Cliente.IdCli;
+    var cliente = ViewBag.Cliente;
+    var produto = ViewBag.Produtos as List<IN_TEGRA.Models.Produto>;
+
+    var index = 0;
 
 }
 
 
 <body style="margin: 0; display: flex; height: 100vh; font-family:'ABeeZee',sans-serif; background: #EAEAEA; justify-content: center; align-items: center;">
-    <div class="container" style="background: #DADDF5; border-radius: 30px; padding: 50px;">
-        <h2>Detalhes do Pedido</h2>
-        <p>Codigo: @pedido.IdPedido</p>
-        <p>Valor: @pedido.ValorPedido</p>
-        <p>Frete: @pedido.FretePedido</p>
-        <p>Data: @pedido.DataHoraPedido</p>
-        <p>Confirmacao: @pedido.ConfirmacaoPedido</p>
-        <hr />
-        <p>Cep: @Endereco.CEP</p>
-        <p>Estado: @Endereco.Estado</p>
-        <p>Cidade: @Endereco.Cidade</p>
-        <p>Bairro: @Endereco.Bairro</p>
-        <p>Logradouro: @Endereco.Logradouro</p>
-        <p>Complemento: @Endereco.Complemento</p>
-        <p>Numero: @Endereco.Numero</p>
+    <div class="container" style="background: white; border-radius: 30px; padding: 50px; margin-top: 40px; margin-bottom: 40px;">
+        <div class="dados__pedido" style=" display: flex;">
+            <div class="left__dados" style="flex-grow: 1;">
+                <h2>Consulta de Pedido</h2>
+                <h3>Pedido N°: @pedido.IdPedido</h3>
+                <h5>Nome do Cliente: @cliente.NomeCliente</h5>
+                <h5>Preço do Pedido: R$@pedido.ValorPedido</h5>
+                <h5>Data do Pedido: @pedido.DataHoraPedido</h5>
+                <h5>Cep: @Endereco.CEP</h5>
+                <h5>Logradouro: @Endereco.Logradouro</h5>
+                <h5>Frete: R$@pedido.FretePedido</h5>
+                @if (pedido.ConfirmacaoPedido == false)
+                {
+                    <div style="display: flex; gap: 7px;">
+                        <h5>Situação: </h5><h5 style="color:#FF0004;">Pendente</h5>
+                    </div>
+                }
+                else
+                {
+                    <div style="display: flex; gap: 7px;">
+                        <h5>Situação: </h5><h5 style="color:#1BFF06;">Concluído</h5>
+                    </div>
+                }
+            </div>
+            <div class="right__content">
+                <form asp-action="ExcluirPedido" asp-controller="pedidos">
+                    <input type="hidden" name="IdPedido" value="@pedido.IdPedido" />
+                    <button type="submit" style="border-radius: 30px; background:#04128D; padding: 30px 40px 30px 40px; outline: none; border: 0px transparent; color: white;">Excluir Pedido</button>
+                </form>
+            </div>
+        </div>
 
 
+
         <hr />
-        <h1>Produtos:</h1>
+        <h3>Produtos:</h3>
         @foreach (var item in Model)
         {
-            <div class="container" style="background:#5A5F8B; border-radius: 30px; padding: 30px; color: white;">
-                <h2>Codigo: @item.IdProduto</h2>
-                <h2>Nome: @item.NomeProduto</h2>
-                <h2>Quantidade: @item.QtdItemPedido</h2>
-                <h2>Valor: @item.ValorItemPedido</h2>
+            <div class="container" style="background:#5A5F8B; border-radius: 30px; padding: 30px; color: white; display: flex; justify-content: left; gap: 30px;">
+                <div class="img__container" style="width: 150px;">
+                    <img src="@produto[index].ImagemProduto" style="width: 100%; height: auto; display: block; border-radius: 20px;" />
+                </div>
+                <div style="display: flex; flex-direction: column; flex-grow: 1">
+                    <h4>Nome: @produto[index].NomeProduto</h4>
+                    <h4>Categoria: @produto[index].CategoriaProduto</h4>
+                    <h4>Preço Unitário  R$@produto[index].PrecoProduto</h4>
+                    <h4>Quantidade:  @produto[index].QuantidadeProduto</h4>
+                    <h4>Preço Total: R$@(@produto[index].PrecoProduto * @produto[index].QuantidadeProduto)</h4>
+                </div>
+                <div class="right-content mt-3">
+                    <a style="border-radius: 30px; background:#04128D; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white; text-decoration: none; color: white;" asp-controller="Produto" asp-action="DetalhesProduto" asp-route-IdProd="@item.IdProduto">Detalhes</a>
+                </div>
             </div>
+           index++;
         }
         <form asp-action="DetalhesCliente" class="mt-5" method="get">
-            <input type="hidden" name="IdCli" value="@ClienteId" />
+            <input type="hidden" name="IdCli" value="@cliente.IdCli" />
             <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Voltar</button>
         </form>
     </div>

@@ -63,11 +63,16 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
             ViewBag.pedido = _pedidoRepository.ObterPedidoPorId(IdPedido);
             var itens = _pedidoRepository.ObterItensPedido(IdPedido);
 
+            var produtos = new List<Produto>();
             foreach (var item in itens)
             {
                 var produto = _produtoRepository.ObterProdutoPorId(item.IdProduto);
                 item.NomeProduto = produto.NomeProduto;
+                produtos.Add(produto);
             }
+
+            ViewBag.produtos = produtos as List<IN_TEGRA.Models.Produto>;
+
 
             return View(itens);
         }

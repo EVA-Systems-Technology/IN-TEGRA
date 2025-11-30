@@ -58,6 +58,10 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
             ViewBag.Nome = _loginFuncionario.GetFuncionario().NomeFuncionario;
             ViewBag.Tipo = _loginFuncionario.GetFuncionario().TipoFunc;
             ViewBag.Email = _loginFuncionario.GetFuncionario().EmailFuncionario;
+            ViewBag.Senha = _loginFuncionario.GetFuncionario().SenhaFuncionario;
+            ViewBag.CPF = _loginFuncionario.GetFuncionario().CpfFuncionario;
+            ViewBag.Codigo = _loginFuncionario.GetFuncionario().IdFuncionario;
+
 
             return View();
         }
@@ -67,6 +71,10 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
             ViewBag.Nome = _loginFuncionario.GetFuncionario().NomeFuncionario;
             ViewBag.Tipo = _loginFuncionario.GetFuncionario().TipoFunc;
             ViewBag.Email = _loginFuncionario.GetFuncionario().EmailFuncionario;
+            ViewBag.Senha = _loginFuncionario.GetFuncionario().SenhaFuncionario;
+            ViewBag.CPF = _loginFuncionario.GetFuncionario().CpfFuncionario;
+            ViewBag.Codigo = _loginFuncionario.GetFuncionario().IdFuncionario;
+
 
             return View();
         }

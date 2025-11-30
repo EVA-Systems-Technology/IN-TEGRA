@@ -5,10 +5,6 @@
     ViewData["Title"] = "Cadastro";
 }
 
-@if (TempData["MSG"] != null)
-{
-    <script>alert("@TempData["MSG"]")</script>
-}
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +12,10 @@
     
     <style>
         .config-container {
-            background-color: #535679; 
+            background-color: #FFFFFF;
             border-radius: 20px;
             padding: 40px;
-            color: white;
+            color: black;
             font-family: 'ABeeZee', sans-serif;
             display: grid;
             grid-template-columns: 1fr 1fr; 
@@ -36,8 +32,7 @@
             align-items: center;
             justify-content: center;
             color: #999;
-            grid-column: 1 / 2; 
-            grid-row: 1 / 3;    
+            grid-column: 1 / 2;     
         }
         
         .small-images-grid {
@@ -75,15 +70,31 @@
 
         
         .btn-confirmar {
-            background-color: #000080; 
+            background-color: #04128D;
             color: white;
             border: none;
-            padding: 10px 30px;
+            padding: 10px;
             border-radius: 10px;
             font-weight: bold;
             cursor: pointer;
             width: 100%; 
-            max-width: 200px;
+            max-width: 130px;
+        }
+
+        .btn-voltar{
+            background-color: #FF0054;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 130px;
+            height: 44px;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
         }
 
         
@@ -91,24 +102,19 @@
         .area-preco { grid-column: 2 / 3; }
         .area-descricao { grid-column: 1 / 3; } 
         .area-categoria { grid-column: 1 / 2; }
-        .area-extra { grid-column: 2 / 3; background: #EAEAEA; border-radius: 15px; height: 150px; } 
+        .area-extra { grid-column: 2 / 3; display: flex; justify-content: center; gap: 10px;  border-radius: 15px; height: auto; align-content: center; align-items: center; } 
     </style>
 </head>
 
 <div style="padding: 20px;">
-    <h2 style="margin-bottom: 20px; color: #333;">CONFIGURAÇÃO DO PRODUTO</h2>
 
-    @if (TempData["MSG"] != null)
-    {
-        <div class="alert alert-success">@TempData["MSG"]</div>
-    }
-
-    <form asp-action="Cadastro">
+    <form asp-action="Cadastro" method="post" enctype="multipart/form-data">
         <div class="config-container">
+            <h2 style="color: black; grid-column: 1 / 3; grid-row: 1; ">CONFIGURAÇÃO DO PRODUTO</h2>
             
             <div class="image-preview-area">
                 <span>Imagem Principal</span>
-                </div>
+             </div>
 
             <div class="small-images-grid">
                 <div style="grid-column: 1/3; margin-bottom: 5px;">Adicionar Imagens</div>
@@ -136,35 +142,32 @@
                 <span asp-validation-for="DescricaoProduto" class="text-danger"></span>
             </div>
 
-            <div class="area-categoria">
-                <div class="form-group">
+            <div style="display: flex; gap: 20px; grid-column: 1 / 3;">
+                <div class="form-group" style="flex:1;">
                     <label asp-for="CategoriaProduto">Alterar Categoria</label>
                     <input asp-for="CategoriaProduto" class="custom-input" />
                     <span asp-validation-for="CategoriaProduto" class="text-danger"></span>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group" style="flex:1;">
                     <label asp-for="QuantidadeProduto">Quantidade:</label>
-                    <input asp-for="QuantidadeProduto" class="custom-input" />
+                    <input asp-for="QuantidadeProduto" class="custom-input"/>
                 </div>
-                
-                <div class="form-group">
-                    <label asp-for="ImagemProduto">Caminho da Imagem:</label>
-                    <input asp-for="ImagemProduto" class="custom-input" />
-                </div>
-
-                <br/>
-                <button type="submit" class="btn-confirmar">CONFIRMAR</button>
             </div>
+            <div style="display: flex; gap: 20px; grid-column: 1 / 3;">
+                <div class="form-group" style="flex:1;">
+                    <label asp-for="ImagemProduto">Caminho da Imagem:</label>
+                    <input asp-for="ImagemProduto" class="custom-input" name="file" id="file" type="file" />
+                </div>
+                <div class="area-extra" style="flex:1;">
+                    <button type="submit" class="btn-confirmar">CONFIRMAR</button>
+                    <a asp-action="ListaProdutos" class="btn-voltar">CANCELAR</a>
 
-            <div class="area-extra"></div>
-
+                </div>
+            </div>
         </div>
     </form>
     
-    <div style="margin-top: 20px;">
-        <a asp-action="ListaProdutos" class="btn btn-link">Voltar para Lista</a>
-    </div>
 </div>
 
 @section Scripts {

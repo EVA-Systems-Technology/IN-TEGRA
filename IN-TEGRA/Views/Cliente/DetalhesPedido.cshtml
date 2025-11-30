@@ -18,10 +18,10 @@
             <div class="left_content" style="display: flex; flex-direction: column; flex-grow: 1">
                 <h2>Pedido Nº: @pedido.IdPedido</h2>
                 <h4>Nome do Cliente: @Cliente</h4>
-                <h4>Preço do Pedido: @pedido.ValorPedido</h4>
+                <h4>Preço do Pedido: R$@pedido.ValorPedido</h4>
                 <h4>Data do Pedido: @pedido.DataHoraPedido</h4>
                 <h4>Cep: @Endereco.CEP</h4>
-                <h4>Frete: @pedido.FretePedido</h4>
+                <h4>Frete: R$@pedido.FretePedido</h4>
                 @if (pedido.ConfirmacaoPedido == false)
                 {
                     <div style="display: flex; gap: 7px;">

@@ -7,10 +7,10 @@
     var Pedidos = ViewBag.Pedidos;
 }
 
-<h1>Detalhes do Cliente</h1>
 
-<div class="container__produto" style="background: #DADDF5; display: flex; justify-content: center; border-radius: 20px;">
-    <div style="background: #5A5F8B; padding: 50px; border-radius: 20px; color: white;">
+<div class="container__produto" style="display: flex; justify-content: center; border-radius: 20px; margin-top: 40px; margin-bottom: 40px;">
+    <div style="background: white; padding: 50px; border-radius: 20px; color: black;">
+        <h3>Detalhes do Cliente</h3>
         <dl class="row">
             <dt class = "col-sm-2">
                 @Html.DisplayNameFor(model => model.IdCli)
@@ -48,36 +48,40 @@
             <dd class = "col-sm-10">
                 @Html.DisplayFor(model => model.TelefoneCliente)
             </dd>
-            <hr />
-            <h1>Pedidos:</h1>
-            @foreach (var item in Pedidos)
-            {
-                <div style="background: blue;">
-                    <h2>Pedido N°: @item.IdPedido</h2>
-                    <h3>Data do pedido: @item.DataHoraPedido</h3>
-                    <h3>Valor do Pedido: R$@item.ValorPedido </h3>
-                    @if (item.ConfirmacaoPedido == false)
-                    {
-                        <div style="display: flex; gap: 7px;">
-                            <h3>Pagamento: </h3><h3 style="color:#FF0004;">Pendente</h3>
-                        </div>
-                    }
-                    else
-                    {
-                        <div style="display: flex; gap: 7px;">
-                            <h3>Pagamento: </h3><h3 style="color:#1BFF06;">Confirmado</h3>
-                        </div>
-                    }
-                    <h3>Frete: R$@item.FretePedido</h3>
-                </div>
-                <form asp-action="DetalhesItensPedidoCliente" method="get">
-                    <input type="hidden" name="IdPedido" value="@item.IdPedido" />
-                    <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 20px 40px 20px 40px; outline: none; border: 0px transparent; color: white;">Detalhes</button>
-                </form>
-            }
         </dl>
-        <div>
-            <a asp-controller="Cliente" asp-action="Index" style=" background:#FF0054; padding: 10px; outline: none; border: 0px transparent; color: white; border-radius: 20px;">Voltar</a>
-        </div>
+            <hr />
+            <h3>Pedidos:</h3>
+            <div class="pedidos" style="display: flex; flex-direction: column; gap: 20px;">
+                @foreach (var item in Pedidos)
+                {
+                     <div style="background: #5A5F8B; color: white; padding: 20px 40px 20px 40px; border-radius: 20px; display: flex; ">
+                         <div class="right__content" style="flex-grow: 1">
+                            <h4>Pedido N°: @item.IdPedido</h4>
+                            <h5>Data do pedido: @item.DataHoraPedido</h5>
+                            <h5>Valor do Pedido: R$@item.ValorPedido </h5>
+                            @if (item.ConfirmacaoPedido == false)
+                            {
+                                <div style="display: flex; gap: 7px;">
+                                    <h5>Pagamento: </h5><h5 style="color:#FF0004;">Pendente</h5>
+                                </div>
+                            }
+                            else
+                            {
+                                <div style="display: flex; gap: 7px;">
+                                    <h5>Pagamento: </h5><h5 style="color:#1BFF06;">Confirmado</h5>
+                                </div>
+                            }
+                            <h5>Frete: R$@item.FretePedido</h5>
+                         </div>
+                         <div class="right__content">
+                                <form asp-action="DetalhesItensPedidoCliente" method="get">
+                                    <input type="hidden" name="IdPedido" value="@item.IdPedido" />
+                                    <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 10px 40px 10px 40px; outline: none; border: 0px transparent; color: white;">Detalhes</button>
+                                </form>
+                         </div>
+                    </div>
+                }
+            </div>
+        <div style="margin-top: 30px;"><a asp-controller="Cliente" asp-action="Index" style=" background:#FF0054; padding: 10px; outline: none; border: 0px transparent; color: white; border-radius: 20px; margin-top: 20px; text-decoration: none;">Voltar</a></div>
     </div>
 </div>

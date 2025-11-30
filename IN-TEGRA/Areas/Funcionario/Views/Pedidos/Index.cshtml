@@ -1,70 +1,52 @@
-﻿@model IEnumerable<IN_TEGRA.Models.Pedido>
+﻿@model List<IN_TEGRA.Models.Pedido>
+
 
 @{
-    ViewData["Title"] = "Index";
-}
+    ViewData["Title"] = "Pedidos";
+    Layout = "Layout_painel_funcionario";
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdPedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdCli)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValorPedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FretePedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataHoraPedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConfirmacaoPedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdEndereco)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdPedido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdCli)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorPedido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FretePedido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataHoraPedido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmacaoPedido)
-            </td>
-            <td>
-                @ViewBag.Endereco.Logradouro
-            </td>
-            <td>
-                @Html.ActionLink("Detalhes", "DetalhesPedidos", new { Idpedido = item.IdPedido }) |
-                @Html.ActionLink("Excluir", "ExcluirPedido", new { Idpedido = item.IdPedido })
-            </td>
-        </tr>
+    var nome = ViewBag.cliente;
 }
-    </tbody>
-</table>
+<body style="margin: 0; font-family:'ABeeZee',sans-serif;">
+    <div style="display:flex; flex: 1; flex-direction:column; gap:20px; background: white; margin-top: 50px; padding: 50px; border-radius: 30px; margin-bottom: 50px; ">
+        <h1>Pedidos</h1>
+        @foreach (var item in Model)
+        {
+            <div class="container" style="width: 100%; height: 100%; background: #5A5F8B; padding: 20px; display:flex; justify-content: space-between; border-radius: 30px; color: white;">
+                <div class="left-content">
+                    <h2>Pedido N°: @item.IdPedido</h2>
+                    <h4>Nome do Cliente: @nome</h4>
+                    <h4>Valor do Pedido: R$@item.ValorPedido</h4>
+                    <h4>Data do pedido: @item.DataHoraPedido</h4>
+                    @if (item.ConfirmacaoPedido == false)
+                    {
+                        <div style="display: flex; gap: 7px;">
+                            <h4>Situação: </h4><h4 style="color:#FF0004;">Pendente</h4>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="display: flex; gap: 7px;">
+                            <h4>Situação: </h4><h4 style="color:#1BFF06;">Concluído</h4>
+                        </div>
+                    }
+                    <h4>Frete: R$@item.FretePedido</h4>
+                </div>
+                <div class="right-content" style="display: flex; flex-direction:column; gap: 20px;">
+                    <form asp-action="DetalhesPedidos" method="get">
+                        <input type="hidden" name="IdPedido" value="@item.IdPedido" />
+                        <button type="submit" style="border-radius: 30px; background:#04128D; padding: 10px 40px 10px 40px; outline: none; border: 0px transparent; color: white; width: 100%;">Detalhes</button>
+                    </form>
+                     <form asp-action="ExcluirPedido" method="get">
+                         <input type="hidden" name="IdPedido" value="@item.IdPedido" />
+                         <button type="submit" style="border-radius: 30px; background:#FF0054; padding: 10px 40px 10px 40px; outline: none; border: 0px transparent; color: white; width: 100%;">Excluir</button>
+                     </form>
+                </div>
+            </div>
+        }
+    </div>
+
+</body>
+
+
+

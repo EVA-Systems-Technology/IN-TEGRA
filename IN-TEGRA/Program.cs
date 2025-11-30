@@ -1,3 +1,4 @@
+using IN_TEGRA.GerenciaArquivo;
 using IN_TEGRA.Libraries.Login;
 using IN_TEGRA.Libraries.Sessao;
 using IN_TEGRA.Repository;
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<IItemPedidoRepository, ItemPedidoRepository>();
 builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
+builder.Services.AddScoped<GerenciadorArquivos>();
 
 builder.Services.AddScoped<IN_TEGRA.Libraries.Sessao.Sessao>();
 builder.Services.AddScoped<LoginCliente>();
