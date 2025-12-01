@@ -64,6 +64,11 @@ namespace IN_TEGRA.Repository
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
+
+                MySqlCommand cmd2 = new MySqlCommand("delete from tblogin where IdCli = @IdCli", conexao);
+                cmd2.Parameters.AddWithValue("@IdCli", IdCli);
+                cmd2.ExecuteNonQuery();
+
                 MySqlCommand cmd = new MySqlCommand("delete from tbCliente where IdCli = @IdCli", conexao);
                 cmd.Parameters.AddWithValue("@IdCli", IdCli);
                 cmd.ExecuteNonQuery();
