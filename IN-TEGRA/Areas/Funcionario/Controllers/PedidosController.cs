@@ -24,13 +24,16 @@ namespace IN_TEGRA.Areas.Funcionario.Controllers
         public IActionResult Index()
         {
             var pedidos = _pedidoRepository.ObterTodosPedidos();
+            var clientes = new List<String>();
             foreach(var pedido in pedidos)
             {
                 var cliente = _clienteRepository.ObterClientePorId(pedido.IdCli);
                 var endereco = _enderecoRepository.ObterEnderecoPorId(pedido.IdEndereco);
                 ViewBag.endereco = endereco;
-                ViewBag.cliente = cliente.NomeCliente;
+                clientes.Add(cliente.NomeCliente);
             }
+
+            ViewBag.cliente = clientes;
             return View(pedidos);
         }
         [HttpGet]

@@ -6,6 +6,7 @@
     Layout = "Layout_painel_funcionario";
 
     var nome = ViewBag.cliente;
+    var index = 0;  
 }
 <body style="margin: 0; font-family:'ABeeZee',sans-serif;">
     <div style="display:flex; flex: 1; flex-direction:column; gap:20px; background: white; margin-top: 50px; padding: 50px; border-radius: 30px; margin-bottom: 50px; ">
@@ -15,7 +16,7 @@
             <div class="container" style="width: 100%; height: 100%; background: #5A5F8B; padding: 20px; display:flex; justify-content: space-between; border-radius: 30px; color: white;">
                 <div class="left-content">
                     <h2>Pedido N°: @item.IdPedido</h2>
-                    <h4>Nome do Cliente: @nome</h4>
+                    <h4>Nome do Cliente: @nome[index]</h4>
                     <h4>Valor do Pedido: R$@item.ValorPedido</h4>
                     <h4>Data do pedido: @item.DataHoraPedido</h4>
                     @if (item.ConfirmacaoPedido == false)
@@ -43,6 +44,7 @@
                      </form>
                 </div>
             </div>
+            index++;
         }
     </div>
 

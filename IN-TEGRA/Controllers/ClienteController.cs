@@ -139,7 +139,7 @@ namespace IN_TEGRA.Controllers
         public IActionResult ExcluirPedido(int IdPedido)
         {
             _pedidoRepository.ExcluirPedido(IdPedido);
-            return RedirectToAction("DetalhesPedido");
+            return RedirectToAction("Pedidos");
 
         }
 

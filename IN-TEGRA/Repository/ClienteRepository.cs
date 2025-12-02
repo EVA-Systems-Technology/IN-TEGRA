@@ -1,4 +1,5 @@
-﻿using IN_TEGRA.Models;
+﻿using Humanizer;
+using IN_TEGRA.Models;
 using IN_TEGRA.Repository.Contract;
 using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
@@ -64,6 +65,18 @@ namespace IN_TEGRA.Repository
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
+
+                MySqlCommand cmdItemPedido = new MySqlCommand("delete item FROM tbitempedido item INNER JOIN tbpedido pedido ON item.IdPedido = pedido.IdPedido WHERE pedido.IdCli = @IdCli", conexao);
+                cmdItemPedido.Parameters.AddWithValue("@IdCli", IdCli);
+                cmdItemPedido.ExecuteNonQuery();
+
+                MySqlCommand cmdPagamento = new MySqlCommand("DELETE pagamento FROM tbpagamento pagamento INNER JOIN tbpedido pedido ON pagamento.IdPedido = pedido.IdPedido WHERE pedido.IdCli = @IdCli", conexao);
+                cmdPagamento.Parameters.AddWithValue("@IdCli", IdCli);
+                cmdPagamento.ExecuteNonQuery();
+
+                MySqlCommand cmdPedido = new MySqlCommand("delete from tbpedido where IdCli=@IdCli", conexao);
+                cmdPedido.Parameters.AddWithValue("@IdCli", IdCli);
+                cmdPedido.ExecuteNonQuery();
 
                 MySqlCommand cmd2 = new MySqlCommand("delete from tblogin where IdCli = @IdCli", conexao);
                 cmd2.Parameters.AddWithValue("@IdCli", IdCli);
